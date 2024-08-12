@@ -1,7 +1,8 @@
 'use client'
 import { useEffect } from 'react';
-import './styles.scss'
+import Image from 'next/image';
 import gsap from 'gsap';
+import './styles.scss'
 
 export default function PageReveal() {
   
@@ -21,25 +22,26 @@ export default function PageReveal() {
      <div className="loader">
       <div className="loader_imgs">
         <div className="img">
-          <img className="image" src="images/about_filter.png" alt="" />
+          <Image className="image" src="/images/about_filter.png" alt="loader" width={500} height={300} priority/>
         </div>
         <div className="img">
-          <img className="image" src="images/about_image1.png" alt="" />
+          <Image 
+            className="image" src="/images/about_image1.png" alt="loader" width={500} height={300} />
         </div>
         <div className="img">
-          <img className="image" src="images/about_image4.png" alt="" />
+          <Image className="image" src="/images/about_image4.png" alt="loader" width={500} height={300} />
         </div>
         <div className="img" id="loader-logo">
-          <img className="image" src="images/about_filter.png" alt="" />
+          <Image className="image" src="/images/about_filter.png" alt="loader" width={500} height={300}/>
         </div>
         <div className="img">
-          <img className="image" src="images/about_milk.png" alt="" />
+          <Image className="image" src="/images/about_milk.png" alt="loader" width={500} height={300} />
         </div>
         <div className="img">
-          <img className="image" src="images/home_image3.png" alt="" />
+          <Image className="image" src="/images/home_image3.png" alt="loader" width={500} height={300} />
         </div>
         <div className="img">
-          <img className="image" src="images/main_moreInformation1.png" alt="" />
+          <Image className="image" src="/images/main_moreInformation1.png" alt="loader" width={500} height={300} />
         </div>
       </div>
      </div>

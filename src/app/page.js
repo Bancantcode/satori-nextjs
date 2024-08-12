@@ -1,28 +1,39 @@
 'use client'
-
-// import Image from "next/image";
-
 import styles from "./page.module.scss";
-import { useEffect } from "react";
 import Lenis from 'lenis';
-import PageReveal from '../components/Header/PageReveal.jsx';
+import { useEffect, useState } from "react";
+import { AnimatePresence } from 'framer-motion';
+import PageReveal from '@/components/Preloader/PageReveal.jsx';
+// import Header from "@/components/Header1/Header";
 
 export default function Home() {
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    const lenis = new Lenis()
+    ( 
+      async () => {
+        const lenis = new Lenis()
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+        await function raf(time) {
+          lenis.raf(time)
+          requestAnimationFrame(raf)
+        }
 
-    requestAnimationFrame(raf)
+        requestAnimationFrame(raf)
+
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 2000)
+      }
+    )
+   
   }, [])
 
   return (
     <main className={styles.main}>
-      <PageReveal />
+      {/* <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence> */}
+      {/* <Header /> */}
     </main>
   );
 }

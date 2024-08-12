@@ -1,0 +1,41 @@
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-transform: uppercase;
+    font-family: Neue Montreal;
+
+    .logo{
+        .name {
+            text-decoration: none;
+            color: #1D1D1B;;
+            font-size: 45px;
+            font-weight: bold;
+        }
+    }
+
+    .nav {
+        display: flex;
+        .el {
+            text-decoration: none;
+            color: #1D1D1B;
+            font-size: 16px;
+            margin: 0 25px;
+        }
+    }
+
+    .cart {
+        .cart__button {
+            text-decoration: none;
+            background-color: #1D1D1B;
+            color: #F0F2F1;
+            padding: 10px 35px;
+            border-radius: 15px;
+        }
+    }
+}
