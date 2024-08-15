@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       {/* <PageReveal /> */}
-      <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence>
+      {/* <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence> */}
       <Landing />
       <Landing />
     </main>

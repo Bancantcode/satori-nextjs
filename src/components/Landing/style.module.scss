@@ -2,12 +2,13 @@
   position: relative;
   display: flex;
   height: 100vh;
-  // overflow: hidden;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
 
   .sliderContainer {
     text-align: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     
     .description, .button {
       text-transform: uppercase;
@@ -17,24 +18,64 @@
     .title {
       text-transform: uppercase;
       font-family: "ITC Avant Garde Gothic LT", sans-serif;
+      color: #1D1D1B;
+      letter-spacing: -3px;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .description {
+      color: #7C7C7C;
+      margin-bottom: 1.5em;
+      margin: auto;
+    }
+
+    .button {
+      background-color: #1D1D1B;
+      color: #F0F2F1;
+      padding: 15px 25px;
+      border-radius: 15px;
+      border: none;
     }
   }
-    
 }
-
 
 // Mobile
 @media only screen and (max-width: 767px) {
-  
+  .title {
+    font-size: 3em;
+    line-height: 95%;
+    
+  }
+
+  .description {
+    font-size: 0.875em;
+    width: 80%;    
+  }
 }
 
 // Tablet
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .title {
+    font-size: 6em;
+    line-height: 90%;
+  }
 
+  .description {
+    font-size: 1.125em;
+    width: 75%;
+  }
 }
 
 // Desktop
 @media only screen and (min-width: 1025px) {
+  .title {
+    font-size: 9.6875em;
+    line-height: 90%;
+  }
 
+  .description {
+    font-size: 1.5em;
+    width: 50%;
+  }
 }
   
