@@ -7,8 +7,7 @@ import PageReveal from '@/components/Preloader/PageReveal.jsx';
 import Landing from '@/components/Landing';
 
 export default function Home() {
-
-  const [isLoading, setIsLoading] = useState(true);
+  const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
 
   useEffect(() => {
       const lenis = new Lenis()
@@ -25,29 +24,27 @@ export default function Home() {
       // }, 2000)
   }, [])
 
-  // OR
+//   return (
+//     <main className={styles.main}>
+//       {!isPreloaderComplete ? (
+//         <PageReveal onAnimationComplete={() => setIsPreloaderComplete(true)} />
+//       ) : (
+//         <Landing />
+//       )}
+//       {/* <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence> */}
+//       <Landing />
+//       {/* <Landing /> */}
+//     </main>
+//   );
+// }
 
-  // useEffect( () => {
-  //   (
-  //     async () => {
-  //         const LocomotiveScroll = (await import('locomotive-scroll')).default
-  //         const locomotiveScroll = new LocomotiveScroll();
-
-  //         setTimeout( () => {
-  //           setIsLoading(false);
-  //           document.body.style.cursor = 'default'
-  //           window.scrollTo(0,0);
-  //         }, 2000)
-  //     }
-  //   )()
-  // }, [])
-
-  return (
-    <main className={styles.main}>
-      {/* <PageReveal /> */}
-      {/* <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence> */}
-      <Landing />
-      <Landing />
-    </main>
+return (
+    <AnimatePresence mode='wait'>
+      {!isPreloaderComplete ? (
+        <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />
+      ) : (
+        <Landing key="landing" />
+      )}
+    </AnimatePresence>
   );
 }
