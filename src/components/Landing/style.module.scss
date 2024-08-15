@@ -1,0 +1,40 @@
+.landing{
+  position: relative;
+  display: flex;
+  height: 100vh;
+  // overflow: hidden;
+  align-items: center;
+  justify-content: center;
+
+  .sliderContainer {
+    text-align: center;
+    
+    .description, .button {
+      text-transform: uppercase;
+      font-family: Neue Montreal;
+    }
+    
+    .title {
+      text-transform: uppercase;
+      font-family: "ITC Avant Garde Gothic LT", sans-serif;
+    }
+  }
+    
+}
+
+
+// Mobile
+@media only screen and (max-width: 767px) {
+  
+}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+// Desktop
+@media only screen and (min-width: 1025px) {
+
+}
+  

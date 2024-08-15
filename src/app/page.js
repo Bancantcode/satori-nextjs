@@ -2,38 +2,52 @@
 import styles from "./page.module.scss";
 import Lenis from 'lenis';
 import { useEffect, useState } from "react";
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import PageReveal from '@/components/Preloader/PageReveal.jsx';
-// import Header from "@/components/Header1/Header";
+import Landing from '@/components/Landing';
 
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    ( 
-      async () => {
-        const lenis = new Lenis()
-
-        await function raf(time) {
-          lenis.raf(time)
-          requestAnimationFrame(raf)
-        }
-
+      const lenis = new Lenis()
+      
+      function raf(time) {
+        lenis.raf(time)
         requestAnimationFrame(raf)
-
-        setTimeout(() => {
-          setIsLoading(false)
-        }, 2000)
       }
-    )
-   
+      
+      requestAnimationFrame(raf)
+      
+      // setTimeout(() => {
+      //   setIsLoading(false)
+      // }, 2000)
   }, [])
+
+  // OR
+
+  // useEffect( () => {
+  //   (
+  //     async () => {
+  //         const LocomotiveScroll = (await import('locomotive-scroll')).default
+  //         const locomotiveScroll = new LocomotiveScroll();
+
+  //         setTimeout( () => {
+  //           setIsLoading(false);
+  //           document.body.style.cursor = 'default'
+  //           window.scrollTo(0,0);
+  //         }, 2000)
+  //     }
+  //   )()
+  // }, [])
 
   return (
     <main className={styles.main}>
-      {/* <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence> */}
-      {/* <Header /> */}
+      {/* <PageReveal /> */}
+      <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence>
+      <Landing />
+      <Landing />
     </main>
   );
 }
