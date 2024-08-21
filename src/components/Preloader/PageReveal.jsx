@@ -21,7 +21,7 @@ export default function PageReveal({ onAnimationComplete }) {
         .to(".loader_imgs", { x: 0, duration: 3, ease: "power3.inOut" }, "-=2.5")
         .to(".img:not(#loader-logo)", { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", duration: 1, ease: "power3.inOut" }, "-=1")
         .to(".loader", { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", duration: 1.2, ease: "power3.inOut" }, "-=0.5")
-        .add(() => onAnimationComplete()); // Notify that animation is complete
+        .add(() => onAnimationComplete());
     }
     else if(isTablet) {
       gsap.set(".img", { y: 250, opacity: 0 });
@@ -32,7 +32,7 @@ export default function PageReveal({ onAnimationComplete }) {
         .to(".loader_imgs", { x: 0, duration: 3, ease: "power3.inOut" }, "-=2.5")
         .to(".img:not(#loader-logo)", { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", duration: 0.7, ease: "power3.inOut" }, "-=1")
         .to(".loader", { clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", duration: 0.8, ease: "power3.inOut" }, "-=0.5")
-        .add(() => onAnimationComplete()); // Notify that animation is complete
+        .add(() => onAnimationComplete());
     }
     else {
       gsap.set(".img", { y: 550, opacity: 0 });

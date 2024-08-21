@@ -12,7 +12,7 @@
     
     .description, .button {
       text-transform: uppercase;
-      font-family: Neue Montreal;
+      font-family: 'Neue Montreal', sans-serif;
     }
 
     .title, .description, .button {
@@ -25,12 +25,12 @@
       color: #1D1D1B;
       letter-spacing: -3px;
       clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      margin-bottom: 0.175em;
     }
 
     .description {
       color: #7C7C7C;
-      margin-bottom: 1.5em;
-      margin: auto;
+      margin: auto auto 1.5em auto;
     }
 
     .button {
@@ -39,6 +39,7 @@
       padding: 15px 25px;
       border-radius: 15px;
       border: none;
+      cursor: pointer;
     }
   }
 }
@@ -46,7 +47,7 @@
 // Mobile
 @media only screen and (max-width: 767px) {
   .title {
-    font-size: 3em;
+    font-size: 3.5em;
     line-height: 95%;
     
   }
@@ -73,12 +74,12 @@
 // Desktop
 @media only screen and (min-width: 1025px) {
   .title {
-    font-size: 9.6875em;
+    font-size: 10em;
     line-height: 90%;
   }
 
   .description {
-    font-size: 1.5em;
+    font-size: 1.3em;
     width: 50%;
   }
 }

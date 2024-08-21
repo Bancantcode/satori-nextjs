@@ -29,7 +29,7 @@ export default function Landing() {
         <div ref={titleRef} className={styles.title}>
           <span>Coffee</span> <br />
           <span>Roasted</span> <br />
-          <span>in Manila</span>
+          <span>in Makati</span>
         </div>
         <p ref={descriptionRef} className={styles.description}>
           A brand of specialty coffee that is dedicated to delivering the finest high-quality flavors and exceptional experiences

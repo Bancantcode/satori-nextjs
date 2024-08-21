@@ -39,12 +39,15 @@ export default function Home() {
 // }
 
 return (
-    <AnimatePresence mode='wait'>
+  <main className={styles.main}>
+    {/* <AnimatePresence mode='wait'>
       {!isPreloaderComplete ? (
         <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />
       ) : (
         <Landing key="landing" />
       )}
-    </AnimatePresence>
+    </AnimatePresence> */}
+    <Landing />
+    </main>
   );
 }
