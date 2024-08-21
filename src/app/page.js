@@ -48,6 +48,7 @@ return (
       )}
     </AnimatePresence> */}
     <Landing />
+    <Landing />
     </main>
   );
 }

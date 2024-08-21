@@ -8,38 +8,16 @@ import Curve from './Curve';
 import Footer from './Footer';
 
 const navItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Menu",
-    href: "/menu",
-  },
-  {
-    title: "Feature",
-    href: "/feature",
-  },
-  {
-    title: "Specials",
-    href: "/specials",
-  },
-  {
-    title: "Careers",
-    href: "/careers",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
+  { title: "Home", href: "/", },
+  { title: "About", href: "/about", },
+  { title: "Menu", href: "/menu", },
+  { title: "Feature", href: "/feature", },
+  { title: "Specials", href: "/specials", },
+  { title: "Careers", href: "/careers", },
+  { title: "Contact", href: "/contact", },
 ]
 
 export default function index() {
-
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
@@ -56,7 +34,7 @@ export default function index() {
                       })
                     }
             </div>
-            <Footer />
+            <Footer className={styles.footer}/>
         </div>
         <Curve />
     </motion.div>
