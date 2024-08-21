@@ -2,9 +2,11 @@
 import styles from "./page.module.scss";
 import Lenis from 'lenis';
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from 'framer-motion';
-import PageReveal from '@/components/Preloader/PageReveal.jsx';
+import { AnimatePresence } from 'framer-motion';
+import PageReveal from '@/components/Preloader';
 import Landing from '@/components/Landing';
+import About from '@/components/About';
+import Feature from '@/components/Feature';
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -24,20 +26,6 @@ export default function Home() {
       // }, 2000)
   }, [])
 
-//   return (
-//     <main className={styles.main}>
-//       {!isPreloaderComplete ? (
-//         <PageReveal onAnimationComplete={() => setIsPreloaderComplete(true)} />
-//       ) : (
-//         <Landing />
-//       )}
-//       {/* <AnimatePresence mode='wait'>{isLoading && <PageReveal />}</AnimatePresence> */}
-//       <Landing />
-//       {/* <Landing /> */}
-//     </main>
-//   );
-// }
-
 return (
   <main className={styles.main}>
     {/* <AnimatePresence mode='wait'>
@@ -47,8 +35,9 @@ return (
         <Landing key="landing" />
       )}
     </AnimatePresence> */}
-    <Landing />
-    <Landing />
+    <About />
+    {/* <Landing />
+    <Landing /> */}
     </main>
   );
 }

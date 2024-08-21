@@ -9,12 +9,12 @@ import Rounded from '../../common/RoundedButton';
 export default function index() {
     const header = useRef(null);
     const [isActive, setIsActive] = useState(false);
-    const pathname = usePathname();
+    // const pathname = usePathname();
     const button = useRef(null);
 
-    useEffect( () => {
-      if(isActive) setIsActive(false)
-    }, [pathname])
+    // useEffect( () => {
+    //   if(isActive) setIsActive(false)
+    // }, [pathname])
 
     return (
         <>
