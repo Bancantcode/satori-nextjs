@@ -1,12 +1,10 @@
 .container {
     display: flex;
     background-color: #1D1D1B;
-    width: 100%;
+    width: 100vw;
     z-index: 1;
-
     .texts {
         color: #fff;
-
         .menu__button {
             background-color: #F0F2F1;
             color: #1D1D1B;
@@ -14,37 +12,43 @@
             border-radius: 15px;
             border: none;
             cursor: pointer;
+            margin-bottom: 3em;
         }
-
         .category {
             text-transform: uppercase;
             color: #7C7C7C;
+            margin: 0;
         }
-
         .title {
             font-family: "Neue Montreal", sans-serif;
             font-weight: 400;
+            margin: 0;
         }
     }
-
     .images {
         display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .container {
         flex-direction: column;
+        padding: 4em 0;
 
         .texts {
             text-align: center;
-            
+            .category {
+                margin-bottom: 0.8em;
+            }
+            .title {
+                font-size: 2.5em;
+                margin-bottom: 0.5em;
+            }
         }
-
         .images {
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
             .img {
                 height: 100%;
                 width: 10em;
@@ -57,17 +61,21 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         flex-direction: column;
-
+        padding: 4em 0;
         .texts {
             text-align: center;
+            .category {
+                margin-bottom: 0.8em;
+            }
+            .title {
+                font-size: 3.5em;
+                margin-bottom: 0.5em;
+            }
         }
-
         .images {
-            gap: 10px;
-            justify-content: center;
             .img {
                 height: 100%;
-                width: 10em;
+                width: 14em;
             }
         }
     }
@@ -77,16 +85,34 @@
 @media only screen and (min-width: 1025px) {
     .container {
         justify-content: center;
+        padding: 8em 0 10em 0;
         .texts {
             text-align: start;
+            width: 20%;
+            .category {
+                margin-bottom: 0.8em;
+            }
+            .title {
+                font-size: 4em;
+                margin-bottom: 0.5em;
+            }
         }
-
         .images {
-            gap: 10px;
-            justify-content: center;
-            .img {
-                height: 100%;
-                width: 10em;
+            gap: 20px;
+            .image__container {
+                position: relative;
+                .img {
+                    height: auto;
+                    width: auto;
+                    max-width: 100%;
+                    max-height: 400px;
+                }
+                &:nth-of-type(2) {
+                    top: 120px;
+                }
+                &:nth-of-type(3) {
+                    top: 60px;
+                }
             }
         }
     }
