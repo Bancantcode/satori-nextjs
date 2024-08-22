@@ -13,4 +13,5 @@ body {
   margin: 0;
   padding: 0;
   background-color: #F0F2F1;
+  /* box-sizing: border-box; */
 }

@@ -35,9 +35,9 @@ return (
         <Landing key="landing" />
       )}
     </AnimatePresence> */}
+
+    <Landing />
     <About />
-    {/* <Landing /> */}
-    {/* <Landing /> */}
     </main>
   );
 }
