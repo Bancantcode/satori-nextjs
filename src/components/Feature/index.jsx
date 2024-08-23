@@ -8,11 +8,10 @@ import Feature4 from '../../../public/images/feature4.png';
 import Feature5 from '../../../public/images/feature5.png';
 
 export default function Feature() {
-    const feature__images = [Feature1, Feature2, Feature3, Feature4, Feature5];
+    const feature__images = [Feature4, Feature2, Feature1, Feature3, Feature5];
 
     return (
         <div className={styles.container}>
-            
             <div className={styles.images}>
                 {
                     feature__images.map((image, i) => {

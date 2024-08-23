@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence } from 'framer-motion';
 import PageReveal from '@/components/Preloader';
 import Landing from '@/components/Landing';
+import LandingVideo from '@/components/LandingVideo';
 import About from '@/components/About';
 import Feature from '@/components/Feature';
 
@@ -37,7 +38,10 @@ return (
     </AnimatePresence> */}
 
     <Landing />
+    {/* <LandingVideo /> */}
     <About />
+    <Feature />
+    <Landing />
     </main>
   );
 }
