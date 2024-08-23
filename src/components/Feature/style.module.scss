@@ -25,41 +25,39 @@
             .image__container {
                 &:nth-of-type(1) {
                     height: 10vh;
-                    width: auto;
+                    top: calc(100vh - 28vh);
+                    left: calc(100vw - 95vw);
                     z-index: 2;
-                    left: 5vw;
-                    top: 70vh;
                 }
 
                 &:nth-of-type(2) {
                     height: 15vh;
                     width: auto;
+                    top: calc(100vh - 60vh);
+                    left: calc(100vw - 110vw);
                     z-index: 2;
-                    left: -7vw;
-                    top: 40vh;
                 }
 
                 &:nth-of-type(3) {
-                    height: 45vh;
-                    width: 60vw;
+                    height: calc(100vh - 45vh);
+                    width: calc(100vw - 40vw);
                     z-index: 1;
                 }
 
                 &:nth-of-type(4) {
                     height: 15vh;
                     width: auto;
+                    top: calc(100vh - 75vh);
+                    right: calc(100vw - 108vw);
                     z-index: 2;
-                    right: -5vw;
-                    top: 35vh;
                 }
 
                 &:nth-of-type(5) {
                     height: 15vh;
                     width: auto;
+                    top: calc(100vh - 30vh);
+                    right: calc(100vw - 98vw);
                     z-index: 2;
-                    right: 4vw;
-                    top: 75vh;
-                    transform: translateY(-50%);
                 }
             }
         }
@@ -89,8 +87,8 @@
                 }
 
                 &:nth-of-type(3) {
-                    height: 65vh;
-                    width: auto;
+                    height: 75vh;
+                    width: 70vw;
                     z-index: 1;
                     left: 50%;
                     transform: translateX(-50%);
@@ -108,9 +106,8 @@
                     height: 20vh;
                     width: auto;
                     z-index: 2;
-                    right: 10vw;
-                    top: 80vh;
-                    transform: translateY(-50%);
+                    right: 4vw;
+                    top: 75vh;
                 }
             }
         }
@@ -120,6 +117,7 @@
 // Desktop
 @media only screen and (min-width: 1025px) {
     .container {
+        background-color: red;
         .images {
             .image__container {
                 // &:nth-of-type(1) {
@@ -164,7 +162,7 @@
                     height: 25vh;
                     width: auto;
                     z-index: 2;
-                    left: 20vw;
+                    left: 10vw;
                     top: 85vh;
                 }
                 
@@ -172,13 +170,13 @@
                     height: 45vh;
                     width: auto;
                     z-index: 2;
-                    left: 13vw;
+                    left: -3vw;
                     top: 20vh;
                 }
                 
                 &:nth-of-type(3) {
-                    height: auto;
-                    width: 60vw;
+                    height: 100%;
+                    width: auto;
                     z-index: 1;
                 }
                 
