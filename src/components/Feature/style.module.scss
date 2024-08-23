@@ -31,14 +31,14 @@
                 &:nth-of-type(1) {
                     height: 10vh;
                     top: calc(100vh - 28vh);
-                    left: calc(100vw - 95vw);
+                    left: calc(100vw - 90vw);
                 }
 
                 &:nth-of-type(2) {
                     height: 15vh;
                     width: auto;
                     top: calc(100vh - 60vh);
-                    left: calc(100vw - 110vw);
+                    left: calc(100vw - 102vw);
                 }
 
                 &:nth-of-type(3) {
@@ -50,13 +50,13 @@
                     height: 15vh;
                     width: auto;
                     top: calc(100vh - 75vh);
-                    right: calc(100vw - 108vw);
+                    right: calc(100vw - 101vw);
                 }
 
                 &:nth-of-type(5) {
                     height: 15vh;
                     width: auto;
-                    top: calc(100vh - 30vh);
+                    top: calc(100vh - 35vh);
                     right: calc(100vw - 98vw);
                 }
             }
@@ -105,83 +105,36 @@
 // Desktop
 @media only screen and (min-width: 1025px) {
     .container {
-        background-color: red;
         .images {
             .image__container {
-                // &:nth-of-type(1) {
-                //     height: 25vh;
-                //     width: auto;
-                //     z-index: 2;
-                //     left: 20vw;
-                //     top: 85vh;
-                // }
-                
-                // &:nth-of-type(2) {
-                //     height: 45vh;
-                //     width: auto;
-                //     z-index: 2;
-                //     left: 13vw;
-                //     top: 20vh;
-                // }
-                
-                // &:nth-of-type(3) {
-                //     height: 95vh;
-                //     width: auto;
-                //     z-index: 1;
-                // }
-                
-                // &:nth-of-type(4) {
-                //     height: 45vh;
-                //     width: auto;
-                //     z-index: 2;
-                //     right: 14.3vw;
-                //     top: 10vh;
-                // }
-                
-                // &:nth-of-type(5) {
-                //     height: 35vh;
-                //     width: auto;
-                //     z-index: 2;
-                //     top: 70vh;
-                //     right: 20vw;
-                // }
-
                 &:nth-of-type(1) {
-                    height: 25vh;
-                    width: auto;
-                    z-index: 2;
-                    left: 10vw;
-                    top: 85vh;
+                    height: calc(100vh - 80vh);
+                    top: calc(100vh - 15vh);
+                    left: calc(100vw - 83vw);
                 }
-                
+
                 &:nth-of-type(2) {
-                    height: 45vh;
-                    width: auto;
-                    z-index: 2;
-                    left: -3vw;
-                    top: 20vh;
+                    height: calc(100vh - 65vh);
+                    top: calc(100vh - 80vh);
+                    left: calc(100vw - 87vw);
                 }
-                
+
                 &:nth-of-type(3) {
-                    height: 100%;
+                    height: calc(100vh - 30vh);
+                    width: calc(100vw - 25vw);
                     width: auto;
-                    z-index: 1;
                 }
-                
+
                 &:nth-of-type(4) {
-                    height: 45vh;
-                    width: auto;
-                    z-index: 2;
-                    right: 14.3vw;
-                    top: 10vh;
+                    height: calc(100vh - 65vh);
+                    top: calc(100vh - 90vh);
+                    right: calc(100vw - 90vw);
                 }
-                
+
                 &:nth-of-type(5) {
-                    height: 35vh;
-                    width: auto;
-                    z-index: 2;
-                    top: 70vh;
-                    right: 20vw;
+                    height: calc(100vh - 75vh);
+                    top: calc(100vh - 25vh);
+                    right: calc(100vw - 78vw);
                 }
             }
         }
