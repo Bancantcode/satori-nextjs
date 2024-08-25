@@ -18,6 +18,7 @@ export default function Feature() {
     const imagesRef = useRef([]);
 
     useLayoutEffect(() => {
+        console.log('Client-side code executed');
         const context = gsap.context(() => {
             const tl = gsap.timeline({
                 scrollTrigger: {

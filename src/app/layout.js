@@ -12,11 +12,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    // add suppressHydrationWarning={true} to remove the error in html and body element
+    <html lang="en" > 
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <body className={inter.className}>
+      <body className={inter.className} >
         <Header />
         {children}
       </body>

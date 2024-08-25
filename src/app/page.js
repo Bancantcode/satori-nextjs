@@ -21,10 +21,6 @@ export default function Home() {
       }
       
       requestAnimationFrame(raf)
-      
-      // setTimeout(() => {
-      //   setIsLoading(false)
-      // }, 2000)
   }, [])
 
 return (
@@ -41,7 +37,6 @@ return (
     {/* <LandingVideo /> */}
     <About />
     <Feature />
-    <Landing />
     </main>
   );
 }

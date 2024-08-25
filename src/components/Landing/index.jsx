@@ -10,17 +10,40 @@ export default function Landing() {
   const buttonRef = useRef(null);
 
   useLayoutEffect(() => {
-    const titleWords = titleRef.current.querySelectorAll('span');
+    const titleWords = titleRef.current.querySelectorAll("span");
 
-    gsap.set(titleWords, { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', y: 200 });
-    gsap.set(descriptionRef.current, { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', y: 200 });
-    gsap.set(buttonRef.current, { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', y: 200 });
+    const setYValues = () => {
+      const yValue = window.innerWidth <= 767 ? 45 : window.innerWidth <= 1024 ? 60 : 200;
+
+      gsap.set(titleWords, { y: yValue, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", opacity: 1 });
+      gsap.set(descriptionRef.current, { y: yValue, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", opacity: 1 });
+      gsap.set(buttonRef.current, { y: yValue, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", opacity: 1 });
+    };
+
+    setYValues();
+    window.addEventListener('resize', setYValues);
 
     const tl = gsap.timeline({ delay: 0.1 });
 
-    tl.to(titleWords, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', y: 0, stagger: 0.1, duration: 0.8, ease: "power3.inOut" })
-      .to(descriptionRef.current, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', y: 0, duration: 1, ease: "power3.inOut" }, "-=0.5")
-      .to(buttonRef.current, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', y: 0, duration: 1, ease: "power3.inOut" }, "-=0.5");
+    tl.to(titleWords, {
+      y: 0,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      stagger: 0.1,
+      duration: 1,
+      ease: "power3.inOut",
+    })
+    .to(descriptionRef.current, {
+      y: 0,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 1,
+      ease: "power3.inOut",
+    }, "-=0.5")
+    .to(buttonRef.current, {
+      y: 0,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 1,
+      ease: "power3.inOut",
+    }, "-=0.5");
   }, []);
 
   return (

@@ -107,35 +107,40 @@
     .container {
         .images {
             .image__container {
-                &:nth-of-type(1) {
-                    height: calc(100vh - 80vh);
-                    top: calc(100vh - 15vh);
-                    left: calc(100vw - 83vw);
-                }
+                // &:nth-of-type(1) {
+                //     height: calc(100vh - 80vh);
+                //     top: calc(100vh - 15vh);
+                //     left: calc(100vw - 83vw);
+                // }
 
-                &:nth-of-type(2) {
-                    height: calc(100vh - 65vh);
-                    top: calc(100vh - 80vh);
-                    left: calc(100vw - 87vw);
-                }
+                // &:nth-of-type(2) {
+                //     height: calc(100vh - 65vh);
+                //     top: calc(100vh - 80vh);
+                //     left: calc(100vw - 87vw);
+                // }
 
-                &:nth-of-type(3) {
-                    height: calc(100vh - 30vh);
-                    width: calc(100vw - 25vw);
-                    width: auto;
-                }
+                // &:nth-of-type(3) {
+                //     height: calc(100vh - 30vh);
+                //     width: calc(100vw - 25vw);
+                //     width: auto;
+                // }
 
-                &:nth-of-type(4) {
-                    height: calc(100vh - 65vh);
-                    top: calc(100vh - 90vh);
-                    right: calc(100vw - 90vw);
-                }
+                // &:nth-of-type(4) {
+                //     height: calc(100vh - 65vh);
+                //     top: calc(100vh - 90vh);
+                //     right: calc(100vw - 90vw);
+                // }
 
-                &:nth-of-type(5) {
-                    height: calc(100vh - 75vh);
-                    top: calc(100vh - 25vh);
-                    right: calc(100vw - 78vw);
-                }
+                // &:nth-of-type(5) {
+                //     height: calc(100vh - 75vh);
+                //     top: calc(100vh - 25vh);
+                //     right: calc(100vw - 78vw);
+                // }
+                &:nth-of-type(1) { z-index: 2; top: 10%; left: 10%; }
+                &:nth-of-type(2) { z-index: 2; top: 20%; left: 20%; }
+                &:nth-of-type(3) { z-index: 1; top: 30%; left: 30%; }
+                &:nth-of-type(4) { z-index: 2; top: 40%; left: 40%; }
+                &:nth-of-type(5) { z-index: 2; top: 50%; left: 50%; }
             }
         }
     }
