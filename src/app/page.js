@@ -35,8 +35,8 @@ return (
 
     <Landing />
     {/* <LandingVideo /> */}
-    <About />
     <Feature />
+    <About />
     </main>
   );
 }

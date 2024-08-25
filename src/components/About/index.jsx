@@ -29,7 +29,7 @@ export default function About() {
                     start: "top bottom",
                     end: "-=300",
                     scrub: true,
-                    markers: true,
+                    // markers: true,
                 }
             });
 
