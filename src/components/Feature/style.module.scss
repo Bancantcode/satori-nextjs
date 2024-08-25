@@ -70,6 +70,7 @@
 // Tablet
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
+        margin-bottom: 150px;
         .images {
             .image__container {
                 &:nth-of-type(1) {
@@ -108,8 +109,8 @@
 // Desktop
 @media only screen and (min-width: 1025px) and (max-width: 1536px) {
     .container {
+        margin-bottom: 250px;
         .images {
-            
             .image__container {
                 &:nth-of-type(1) {
                     height: calc(100vh - 80vh);
@@ -146,6 +147,7 @@
 
 @media only screen and (min-width: 1537px) {
     .container {
+        margin-bottom: 250px;
         .images {
             .image__container {
                 &:nth-of-type(1) {

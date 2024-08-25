@@ -25,25 +25,9 @@ export default function Landing() {
 
     const tl = gsap.timeline({ delay: 0.1 });
 
-    tl.to(titleWords, {
-      y: 0,
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      stagger: 0.1,
-      duration: 1,
-      ease: "power3.inOut",
-    })
-    .to(descriptionRef.current, {
-      y: 0,
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 1,
-      ease: "power3.inOut",
-    }, "-=0.5")
-    .to(buttonRef.current, {
-      y: 0,
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 1,
-      ease: "power3.inOut",
-    }, "-=0.5");
+    tl.to(titleWords, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.1, duration: 1, ease: "power3.inOut", })
+      .to(descriptionRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1, ease: "power3.inOut", }, "-=0.5")
+      .to(buttonRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 1, ease: "power3.inOut", }, "-=0.5");
   }, []);
 
   return (
