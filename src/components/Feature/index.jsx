@@ -6,7 +6,7 @@ import Feature2 from '../../../public/images/feature2.png';
 import Feature3 from '../../../public/images/feature3.png';
 import Feature4 from '../../../public/images/feature4.png';
 import Feature5 from '../../../public/images/feature5.png';
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 

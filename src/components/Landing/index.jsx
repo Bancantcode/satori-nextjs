@@ -38,9 +38,7 @@ export default function Landing() {
           <span>Roasted</span> <br />
           <span>in Makati</span>
         </div>
-        <p ref={descriptionRef} className={styles.description}>
-          A brand of specialty coffee that is dedicated to delivering the finest high-quality flavors and exceptional experiences
-        </p>
+        <p ref={descriptionRef} className={styles.description}>A brand of specialty coffee that is dedicated to delivering the finest high-quality flavors and exceptional experiences</p>
         <a href=""><button ref={buttonRef} className={styles.button}>About us</button></a>
       </div>
     </motion.main>
