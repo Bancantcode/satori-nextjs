@@ -9,11 +9,11 @@
         .menu__button {
             background-color: #F0F2F1;
             color: #1D1D1B;
-            padding: 15px 25px;
-            border-radius: 15px;
+            border-radius: 25px;
             border: none;
-            cursor: pointer;
             margin-bottom: 3em;
+            text-transform: uppercase;
+            cursor: pointer;
         }
         .category {
             text-transform: uppercase;
@@ -40,6 +40,9 @@
 
         .texts {
             text-align: center;
+            .menu__button {
+                padding: 15px 25px;
+            }
             .category {
                 margin-bottom: 0.8em;
             }
@@ -65,6 +68,10 @@
         padding: 4em 0;
         .texts {
             text-align: center;
+            .menu__button {
+                padding: 20px 35px;
+                font-size: 1em;
+            }
             .category {
                 margin-bottom: 0.8em;
             }
@@ -90,6 +97,10 @@
         .texts {
             text-align: start;
             width: 20%;
+            .menu__button {
+                padding: 20px 35px;
+                font-size: 0.8em;
+            }
             .category {
                 margin-bottom: 0.8em;
             }
