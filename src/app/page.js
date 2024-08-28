@@ -23,20 +23,19 @@ export default function Home() {
       requestAnimationFrame(raf)
   }, [])
 
-return (
-  <main className={styles.main}>
-    {/* <AnimatePresence mode='wait'>
-      {!isPreloaderComplete ? (
-        <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />
-      ) : (
-        <Landing key="landing" />
-      )}
-    </AnimatePresence> */}
-
-    <Landing />
-    {/* <LandingVideo /> */}
-    <Feature />
-    <About />
+  return (
+    <main className={styles.main}>
+      <AnimatePresence mode='wait'>
+        {!isPreloaderComplete ? (
+          <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />
+        ) : (
+          <>
+            <Landing key="landing" />
+            <About />
+            <Feature />
+          </>
+        )}
+      </AnimatePresence>
     </main>
   );
 }

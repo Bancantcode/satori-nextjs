@@ -20,7 +20,7 @@ export default function About() {
 
     useLayoutEffect(() => {
         gsap.set([categoryRef.current, titleRef.current, buttonRef.current], { y: 200, opacity: 0, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
-        gsap.set(imageRef.current, { y: 200, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
+        gsap.set(imageRef.current, { y: 100, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
 
         const context = gsap.context(() => {
             const tl = gsap.timeline({
@@ -37,6 +37,17 @@ export default function About() {
               .to(titleRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
               .to(buttonRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
               .to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
+        });
+
+        gsap.to(container.current, {
+            y: window.innerWidth >= 1024 ? '-15%' : window.innerWidth >= 768 ? '-20%' : '-25%',
+            scrollTrigger: {
+                trigger: container.current,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+                // markers: true,
+            }
         });
 
         return () => context.revert();

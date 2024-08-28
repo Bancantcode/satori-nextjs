@@ -30,9 +30,7 @@ export default function index({children, backgroundColor="#455CE9", ...attribute
   return (
     <Magnetic>
       <div className={styles.roundedButton} style={{overflow: "hidden"}} onMouseEnter={() => {manageMouseEnter()}} onMouseLeave={() => {manageMouseLeave()}} {...attributes}>
-          {
-            children
-          }
+          {children}
         <div ref={circle} style={{backgroundColor}} className={styles.circle}></div>
       </div>
     </Magnetic>
