@@ -1,0 +1,35 @@
+// components/FAQ.module.scss
+.faqItem {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .questionButton {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+  
+  .answer {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  .answerOpen {
+    max-height: 1000px; /* Or an appropriate max height */
+    opacity: 1;
+  }
+  
+  .answerContent {
+    padding: 1rem;
+  }
+  

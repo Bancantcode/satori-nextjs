@@ -8,6 +8,7 @@ import Landing from '@/components/Landing';
 import LandingVideo from '@/components/LandingVideo';
 import About from '@/components/About';
 import Feature from '@/components/Feature';
+import FAQ from "@/components/Faqs";
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -25,7 +26,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <AnimatePresence mode='wait'>
+      {/* <AnimatePresence mode='wait'>
         {!isPreloaderComplete ? ( <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />) 
         : (
           <>
@@ -34,7 +35,8 @@ export default function Home() {
             <Feature />
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <FAQ />
     </main>
   );
 }
