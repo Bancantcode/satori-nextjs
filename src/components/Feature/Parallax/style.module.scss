@@ -1,0 +1,44 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    .parallax {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Neue Montreal', sans-serif;
+        line-height: 85%;
+        color: #1D1D1B;
+        letter-spacing: -3px;
+        
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 767px) {
+    .container {
+        .parallax {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        .parallax {
+            font-size: 3rem;
+        }
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 1025px) {
+    .container {
+        .parallax {
+            font-size: 5.5rem;
+        }
+    }
+}
