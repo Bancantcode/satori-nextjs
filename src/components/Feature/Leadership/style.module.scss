@@ -1,4 +1,141 @@
 .container {
     position: relative;
+    width: 97%;
+    margin: auto;
+
+    .title {
+        color: #1D1D1B;
+        font-family: 'Neue Montreal', sans-serif;
+        text-transform: uppercase;
+        display: flex;
+        line-height: 85%;
+        letter-spacing: -3px;
+    }
+
+    .description {
+        color: #7C7C7C;
+        font-family: 'Neue Montreal', sans-serif;
+        font-size: 1em;
+    }
+
+    .leadership__container {
+        display: grid;
+
+        .leadership__item {
+            margin-bottom: 2em;
+
+
+
+
+
+            .leadership__image {
+                width: 100%;
+                object-fit: cover;
+                margin-bottom: 0.5em;
+            }
+
+            .leadership__name {
+                color: #1D1D1B;
+            }
+
+            .leadership__role {
+                color: #7C7C7C;
+            }
+
+            .leadership__name, .leadership__role {
+                font-size: 0.9em;
+                font-family: 'Neue Montreal', sans-serif;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 767px) {
+    .container {
+        .title {
+            flex-direction: column;
+            font-size: 3em;
+        }
     
+        .description {
+            width: 68%;
+        }
+    
+        .leadership__container {
+            grid-template-columns: 50% 50%;
+    
+            .leadership__item {
+                &:nth-of-type(1) {
+                    grid-row: 2;
+                }
+    
+                &:nth-of-type(8) {
+                    grid-row: 6;
+                }
+                
+                .leadership__image {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        .title {
+            flex-direction: column;
+            font-size: 3em;
+        }
+    
+        .description {
+            width: 60%;
+        }
+    
+        .leadership__container {
+            grid-template-columns: 50% 50%;
+    
+            .leadership__item {
+                &:nth-of-type(1) {
+                    grid-row: 2;
+                }
+    
+                &:nth-of-type(8) {
+                    grid-row: 6;
+                }
+
+                .leadership__image {
+                    height: 450px;
+                }
+            }
+        }
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 1025px) {
+    .container {
+        .title {
+            justify-content: space-between;
+            font-size: 6.5em;
+        }
+    
+        .description {
+            width: 30%;
+            font-size: 1.25em;
+        }
+    
+        .leadership__container {
+            grid-template-columns: 25% 25% 25% 25%;
+    
+            .leadership__item {
+                .leadership__image {
+                    height: 550px;
+                }
+            }
+        }
+    }
 }

@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     
+    
     .parallax {
         display: flex;
         flex-direction: column;
@@ -12,13 +13,13 @@
         line-height: 85%;
         color: #1D1D1B;
         letter-spacing: -3px;
-        
     }
 }
 
 // Mobile
 @media only screen and (max-width: 767px) {
     .container {
+        height: 35vh;
         .parallax {
             font-size: 2.2rem;
         }
@@ -28,6 +29,7 @@
 // Tablet
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
+        height: 35vh;
         .parallax {
             font-size: 3rem;
         }
@@ -37,8 +39,9 @@
 // Desktop
 @media only screen and (min-width: 1025px) {
     .container {
+        height: 85vh;
         .parallax {
-            font-size: 5.5rem;
+            font-size: 6.5rem;
         }
     }
 }
