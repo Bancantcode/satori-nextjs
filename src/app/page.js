@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import Lenis from 'lenis';
 import { useEffect, useState } from "react";
 import { AnimatePresence } from 'framer-motion';
-import PageReveal from '@/components/Preloader';
+import PageReveal from '@/components/Home/Preloader';
 import Landing from '@/components/Home/Landing';
 import LandingVideo from '@/components/Home/LandingVideo';
 import About from '@/components/Home/About';
@@ -12,7 +12,7 @@ import FAQ from "@/components/Home/Faqs";
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
-
+2
   useEffect(() => {
       const lenis = new Lenis()
       
