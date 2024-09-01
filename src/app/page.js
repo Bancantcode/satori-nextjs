@@ -4,11 +4,11 @@ import Lenis from 'lenis';
 import { useEffect, useState } from "react";
 import { AnimatePresence } from 'framer-motion';
 import PageReveal from '@/components/Preloader';
-import Landing from '@/components/Landing';
-import LandingVideo from '@/components/LandingVideo';
-import About from '@/components/About';
-import Feature from '@/components/Feature';
-import FAQ from "@/components/Faqs";
+import Landing from '@/components/Home/Landing';
+import LandingVideo from '@/components/Home/LandingVideo';
+import About from '@/components/Home/About';
+import Feature from '@/components/Home/Feature';
+import FAQ from "@/components/Home/Faqs";
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      {/* <AnimatePresence mode='wait'>
+      <AnimatePresence mode='wait'>
         {!isPreloaderComplete ? ( <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />) 
         : (
           <>
@@ -35,8 +35,8 @@ export default function Home() {
             <Feature />
           </>
         )}
-      </AnimatePresence> */}
-      <FAQ />
+      </AnimatePresence>
+      {/* <FAQ /> */}
     </main>
   );
 }

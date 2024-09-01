@@ -1,11 +1,11 @@
 'use client';
 import Image from 'next/image';
 import styles from './style.module.scss';
-import Feature1 from '../../../public/images/feature1.webp';
-import Feature2 from '../../../public/images/feature2.webp';
-import Feature3 from '../../../public/images/feature3.webp';
-import Feature4 from '../../../public/images/feature4.webp';
-import Feature5 from '../../../public/images/feature5.webp';
+import Feature1 from '../../../../public/images/feature1.webp';
+import Feature2 from '../../../../public/images/feature2.webp';
+import Feature3 from '../../../../public/images/feature3.webp';
+import Feature4 from '../../../../public/images/feature4.webp';
+import Feature5 from '../../../../public/images/feature5.webp';
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';

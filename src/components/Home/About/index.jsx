@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image';
 import styles from './style.module.scss'
-import About1 from '../../../public/images/about1.webp';
-import About2 from '../../../public/images/about2.webp';
-import About3 from '../../../public/images/about3.webp';
+import About1 from '../../../../public/images/about1.webp';
+import About2 from '../../../../public/images/about2.webp';
+import About3 from '../../../../public/images/about3.webp';
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
