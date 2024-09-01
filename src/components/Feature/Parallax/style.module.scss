@@ -45,3 +45,13 @@
         }
     }
 }
+
+// 2560 x 1440 (large desktop)
+@media only screen and (min-width: 1921px) {
+    .container {
+        height: 55vh;
+        .parallax {
+            font-size: 7.5rem;
+        }
+    }
+}

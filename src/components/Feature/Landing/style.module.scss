@@ -111,3 +111,22 @@
         }
     }
 }
+
+//2540 x 1440p (large desktop)
+@media only screen and (min-width: 1921px) {
+    .container {
+        height: 95vh;
+        .title {
+            font-size: 8.5em;
+            span {
+                &:nth-of-type(2) {
+                    text-align: left;
+                    padding-left: 6em;
+                }
+            }
+        }
+        .description {
+            font-size: 1.5em;
+        }
+    }
+}

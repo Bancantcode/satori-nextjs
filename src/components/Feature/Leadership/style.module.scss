@@ -16,6 +16,7 @@
         color: #7C7C7C;
         font-family: 'Neue Montreal', sans-serif;
         font-size: 1em;
+        margin-bottom: 3em;
     }
 
     .leadership__container {
@@ -23,10 +24,6 @@
 
         .leadership__item {
             margin-bottom: 2em;
-
-
-
-
 
             .leadership__image {
                 width: 100%;
@@ -134,6 +131,33 @@
             .leadership__item {
                 .leadership__image {
                     height: 550px;
+                }
+            }
+        }
+    }
+}
+
+// 2560 x 1440 (large desktop)
+@media only screen and (min-width: 1921px) {
+    .container {
+        .title {
+            justify-content: space-between;
+            font-size: 6.5em;
+        }
+    
+        .description {
+            width: 30%;
+            font-size: 1.5em;
+        }
+    
+        .leadership__container {
+            .leadership__item {
+                .leadership__image {
+                    height: 750px;
+                }
+
+                .leadership__name, .leadership__role {
+                    font-size: 1.5em;
                 }
             }
         }
