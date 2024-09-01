@@ -13,6 +13,10 @@
         line-height: 85%;
         color: #1D1D1B;
         letter-spacing: -3px;
+
+        span {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
     }
 }
 
