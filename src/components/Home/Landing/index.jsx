@@ -1,7 +1,6 @@
 'use client'
 import styles from './style.module.scss'
 import { useRef, useLayoutEffect } from 'react';
-import { motion } from 'framer-motion';
 import gsap from 'gsap';
 
 export default function Landing() {
@@ -35,7 +34,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <motion.main initial="initial" animate="enter" className={styles.landing}>
+    <main className={styles.landing}>
       <div className={styles.sliderContainer}>
         <div ref={titleRef} className={styles.title}>
           <span>Coffee</span> <br />
@@ -49,6 +48,6 @@ export default function Landing() {
           <button ref={buttonRef} className={styles.button}>About us</button>
         </div>
       </div>
-    </motion.main>
+    </main>
   );
 }
