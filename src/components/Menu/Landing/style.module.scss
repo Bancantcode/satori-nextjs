@@ -2,12 +2,12 @@
     position: relative;
     font-family: 'Neue Montreal', sans-serif;
     color: #1D1D1B;
-    width: 95%;
     margin: auto;
 
     .title {
         text-transform: uppercase;
         letter-spacing: -1px;
+        font-weight: 600;
     }
 
     .offers{
@@ -36,6 +36,7 @@
 @media only screen and (max-width: 767px) {
     .container {
         width: 90%;
+        padding: 7.5em 0;
 
         .title {
             font-size: 2.6em;
@@ -72,8 +73,11 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         width: 90%;
+        padding: 7em 0;
+
         .title {
             font-size: 3.6em;
+            
         }
     
         .offers{
@@ -106,9 +110,11 @@
 // Desktop
 @media only screen and (min-width: 1025px) {
     .container {
+        padding: 5.5em 0;
+
         width: 85%;
         .title {
-            font-size: 3.7em;
+            font-size: 4.5em;
         }
     
         .offers{
@@ -132,6 +138,32 @@
                     }
                     .offer__description {
                         font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1567px) {
+    .container {
+        .offers{
+            grid-template-columns: 25% 25% 25% 25%;
+            gap: 5px;
+
+            .offer__container {
+                .image {
+                    width: calc(100% - 15px);
+                }
+
+                .offer__info {
+                    width: calc(100% - 15px);
+
+                    .offer__name {
+                        font-size: 1.6em;
+                    }
+                    .offer__description {
+                        font-size: 1.1rem;
                     }
                 }
             }
