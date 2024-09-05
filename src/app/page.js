@@ -5,10 +5,8 @@ import { useEffect, useState } from "react";
 import { AnimatePresence } from 'framer-motion';
 import PageReveal from '@/components/Home/Preloader';
 import Landing from '@/components/Home/Landing';
-import LandingVideo from '@/components/Home/LandingVideo';
 import About from '@/components/Home/About';
 import Feature from '@/components/Home/Feature';
-import FAQ from "@/components/Home/Faqs";
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -36,7 +34,6 @@ export default function Home() {
           </>
         )}
       </AnimatePresence>
-      {/* <FAQ /> */}
     </main>
   );
 }

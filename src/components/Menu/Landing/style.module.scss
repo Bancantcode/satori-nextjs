@@ -1,0 +1,146 @@
+.container {
+    position: relative;
+    font-family: 'Neue Montreal', sans-serif;
+    color: #1D1D1B;
+    width: 95%;
+    margin: auto;
+
+    .title {
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+    .offers{
+        display: grid;
+
+        .offer__container {
+
+            .image {
+                height: auto;
+            }
+            .offer__info {
+                .offer__name {
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    margin: 0 0 0.4rem 0;
+                    line-height: 90%;
+                }
+                .offer__description {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+
+        .title {
+            font-size: 2.6em;
+        }
+    
+        .offers{
+            grid-template-columns: 50% 50%;
+            gap: 5px;
+
+            .offer__container {
+                margin-bottom: 2em;
+
+                .image {
+                    width: calc(100% - 5px);
+                    margin-bottom: 0.8em;
+                }
+
+                .offer__info {
+                    width: calc(100% - 5px);
+
+                    .offer__name {
+                        font-size: 1.2em;
+                    }
+                    .offer__description {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        .title {
+            font-size: 3.6em;
+        }
+    
+        .offers{
+            grid-template-columns: 50% 50%;
+            gap: 10px;
+
+            .offer__container {
+                margin-bottom: 2em;
+
+                .image {
+                    width: calc(100% - 10px);
+                    margin-bottom: 1.2em;
+                }
+
+                .offer__info {
+                    width: calc(100% - 10px);
+
+                    .offer__name {
+                        font-size: 1.8em;
+                    }
+                    .offer__description {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 1025px) {
+    .container {
+        width: 85%;
+        .title {
+            font-size: 3.7em;
+        }
+    
+        .offers{
+            grid-template-columns: 33% 33% 33%;
+            gap: 10px;
+            grid-auto-rows: auto;
+
+            .offer__container {
+                margin-bottom: 3em;
+
+                .image {
+                    width: calc(100% - 10px);
+                    margin-bottom: 1.2em;
+                }
+
+                .offer__info {
+                    width: calc(100% - 10px);
+
+                    .offer__name {
+                        font-size: 1.8em;
+                    }
+                    .offer__description {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .container {
+        width: 70%;
+    }
+}

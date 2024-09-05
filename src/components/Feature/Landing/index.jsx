@@ -1,4 +1,3 @@
-import '../../../app/globals.css'
 import styles from './style.module.scss';
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
@@ -19,10 +18,10 @@ function Landing() {
       gsap.set(titleWords, { y: yValue, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", opacity: 1 });
       gsap.set(descriptionRef.current, { y: 90, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", opacity: 1 });
 
-      tl = gsap.timeline({ delay: 0.1 }); //create new timeline
+      tl = gsap.timeline({ delay: 0.2 }); //create new timeline
 
       tl.to(titleWords, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.1, duration: 1, ease: "power3.inOut", })
-        .to(descriptionRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7, ease: "power3.inOut", }, "-=0.4");
+        .to(descriptionRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.8, ease: "power3.inOut", }, "-=0.4");
     };
 
     animateContent();

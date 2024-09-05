@@ -2,9 +2,7 @@ import '../app/globals.css';
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 import Header from '@/components/Header'
-import Landing from '@/components/Feature/Landing'
-import Parallax from '@/components/Feature/Parallax'
-import Leadership from '@/components/Feature/Leadership'
+import Landing from '@/components/Menu/Landing';
 
 export default function FeaturePage() {
   useEffect(() => {
@@ -20,10 +18,8 @@ export default function FeaturePage() {
 
   return (
     <>
-        <Header />
+        {/* <Header /> */}
         <Landing />
-        <Parallax />
-        <Leadership />
     </>
   )
 }
