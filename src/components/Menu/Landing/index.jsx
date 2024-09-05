@@ -15,16 +15,16 @@ import Menu10 from '../../../../public/images/menu/ConicalBrewer.webp';
 export default function Landing() {
     const menu__images = [ Menu1, Menu2, Menu3, Menu4, Menu5, Menu6, Menu7, Menu8, Menu9, Menu10 ];
     const menu__name = [
-        '*SATORI* 4 set of 3oz', //signature
-        'Colombia Tolima Guava Banana', //pour-over
-        'Rwanda Gicumbi Karisimbi', //espresso
-        'Ethiopia Banko Taratu', //espresso
-        'Ethiopia Yirgachef Banko Taratu', //espresso
-        'Gishiki Matcha', //matcha
-        'Honduras Ocotepeque', //espresso & milk based
-        'Guatamela Genuine', //pour-over & milk based
-        'Usucha Matcha', //matcha
-        'Conical Brewer' //pour-over
+        '*SATORI* 4 set of 3oz',
+        'Colombia Tolima Guava Banana',
+        'Rwanda Gicumbi Karisimbi',
+        'Ethiopia Banko Taratu',
+        'Ethiopia Yirgachef Banko Taratu',
+        'Gishiki Matcha',
+        'Honduras Ocotepeque',
+        'Guatamela Genuine',
+        'Usucha Matcha',
+        'Conical Brewer'
     ];
     const menu__description = [
         'Tokyo Drip / Cold Brew / Tokyo Drip Tonic', 
@@ -39,18 +39,17 @@ export default function Landing() {
         'Origami (Hot / Iced) (Pour-over)', 
     ];
 
-    // Add a corresponding category for each menu item
     const menu__category = [
-        'signature', // for Satori set
-        'pour-over', // for Colombia Tolima Guava Banana
-        'espresso', // for Rwanda Gicumbi Karisimbi
-        'espresso', // for Ethiopia Banko Taratu
-        'espresso', // for Ethiopia Yirgachef Banko Taratu
-        'matcha', // for Gishiki Matcha
-        'milk-based', // for Honduras Ocotepeque
-        'pour-over', // for Guatamela Genuine
-        'matcha', // for Usucha Matcha
-        'pour-over' // for Conical Brewer
+        'signature',
+        'pour-over',
+        'espresso',
+        'espresso',
+        'espresso',
+        'matcha',
+        'milk-based',
+        'pour-over',
+        'matcha',
+        'pour-over'
     ];
 
     const [searchQuery, setSearchQuery] = useState('');
@@ -66,11 +65,12 @@ export default function Landing() {
         image: menu__images[index],
         name,
         description: menu__description[index],
-        category: menu__category[index] // Add the category to the product object
-    })).filter((product) => {
-        const isSearchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                              product.description.toLowerCase().includes(searchQuery.toLowerCase());
+        category: menu__category[index]
+    }))
+    .filter((product) => {
+        const isSearchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || product.description.toLowerCase().includes(searchQuery.toLowerCase());
         const isFilterMatch = selectedFilter ? product.category === selectedFilter : true;
+        
         return isSearchMatch && isFilterMatch;
     });
 

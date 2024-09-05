@@ -3,7 +3,6 @@
     font-family: 'Neue Montreal', sans-serif;
     color: #1D1D1B;
     margin: auto;
-
     .title {
         text-transform: uppercase;
         letter-spacing: -1px;
@@ -11,21 +10,17 @@
         padding: 0;
         margin: 0;
     }
-
     .interfaces {
         display: flex;
         justify-content: space-between;
-
         .search__input {
             border: 1px solid #1D1D1B;
             background-color: transparent;
             padding: 15px 30px;
-
             &::placeholder {
                 color: #7C7C7C;
             }
         }
-
         .dropdown__container {
             .dropdown {
                 padding: 15px 10px;
@@ -36,12 +31,9 @@
             }
         }
     }
-
     .offers{
         display: grid;
-
         .offer__container {
-
             .image {
                 object-fit: cover;
             }
@@ -64,40 +56,32 @@
     .container {
         width: 90%;
         padding: 10em 0;
-
         .title {
             font-size: 2.6em;
         }
-
         .interfaces {
             margin: 1em 0 2.5em 0;
             .search__input {
                 padding: 10px 30px;
             }
-    
             .dropdown__container {
                 .dropdown {
                     padding: 10px 10px;
                 }
             }
         }
-    
         .offers{
             grid-template-columns: 50% 50%;
             gap: 5px;
-
             .offer__container {
                 margin-bottom: 2em;
-
                 .image {
                     width: calc(100% - 5px);
                     margin-bottom: 0.8em;
                     height: 15em;
                 }
-
                 .offer__info {
                     width: calc(100% - 5px);
-
                     .offer__name {
                         font-size: 1.2em;
                     }
@@ -115,31 +99,24 @@
     .container {
         width: 90%;
         padding: 8.5em 0;
-
         .title {
             font-size: 3.6em;
         }
-
         .interfaces {
             margin: 1em 0 2.5em 0;
         }
-    
         .offers{
             grid-template-columns: 50% 50%;
             gap: 10px;
-
             .offer__container {
-                margin-bottom: 2em;
-
+                margin-bottom: 3em;
                 .image {
                     width: calc(100% - 10px);
                     margin-bottom: 1.2em;
                     height: 30em;
                 }
-
                 .offer__info {
                     width: calc(100% - 10px);
-
                     .offer__name {
                         font-size: 1.8em;
                     }
@@ -157,32 +134,25 @@
     .container {
         padding: 8.5em 0;
         width: 85%;
-
         .title {
             font-size: 4.5em;
         }
-
         .interfaces {
             margin: 1em 0 2em 0;
         }
-        
         .offers{
             grid-template-columns: 33% 33% 33%;
             gap: 10px;
             grid-auto-rows: auto;
-
             .offer__container {
-                margin-bottom: 3em;
-
+                margin-bottom: 3.2em;
                 .image {
                     width: calc(100% - 10px);
                     margin-bottom: 1.2em;
                     height: 25em;
                 }
-
                 .offer__info {
                     width: calc(100% - 10px);
-
                     .offer__name {
                         font-size: 1.8em;
                     }
@@ -200,16 +170,13 @@
         .offers{
             grid-template-columns: 25% 25% 25% 25%;
             gap: 5px;
-
             .offer__container {
                 .image {
                     width: calc(100% - 15px);
                     height: 30em;
                 }
-
                 .offer__info {
                     width: calc(100% - 15px);
-
                     .offer__name {
                         font-size: 1.6em;
                     }
