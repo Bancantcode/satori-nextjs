@@ -8,6 +8,33 @@
         text-transform: uppercase;
         letter-spacing: -1px;
         font-weight: 600;
+        padding: 0;
+        margin: 0;
+    }
+
+    .interfaces {
+        display: flex;
+        justify-content: space-between;
+
+        .search__input {
+            border: 1px solid #1D1D1B;
+            background-color: transparent;
+            padding: 15px 30px;
+
+            &::placeholder {
+                color: #7C7C7C;
+            }
+        }
+
+        .dropdown__container {
+            .dropdown {
+                padding: 15px 10px;
+                border: none;
+                border: 1px solid #1D1D1B;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
     }
 
     .offers{
@@ -16,7 +43,7 @@
         .offer__container {
 
             .image {
-                height: auto;
+                object-fit: cover;
             }
             .offer__info {
                 .offer__name {
@@ -36,10 +63,23 @@
 @media only screen and (max-width: 767px) {
     .container {
         width: 90%;
-        padding: 7.5em 0;
+        padding: 10em 0;
 
         .title {
             font-size: 2.6em;
+        }
+
+        .interfaces {
+            margin: 1em 0 2.5em 0;
+            .search__input {
+                padding: 10px 30px;
+            }
+    
+            .dropdown__container {
+                .dropdown {
+                    padding: 10px 10px;
+                }
+            }
         }
     
         .offers{
@@ -52,6 +92,7 @@
                 .image {
                     width: calc(100% - 5px);
                     margin-bottom: 0.8em;
+                    height: 15em;
                 }
 
                 .offer__info {
@@ -73,11 +114,14 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         width: 90%;
-        padding: 7em 0;
+        padding: 8.5em 0;
 
         .title {
             font-size: 3.6em;
-            
+        }
+
+        .interfaces {
+            margin: 1em 0 2.5em 0;
         }
     
         .offers{
@@ -90,6 +134,7 @@
                 .image {
                     width: calc(100% - 10px);
                     margin-bottom: 1.2em;
+                    height: 30em;
                 }
 
                 .offer__info {
@@ -110,13 +155,17 @@
 // Desktop
 @media only screen and (min-width: 1025px) {
     .container {
-        padding: 5.5em 0;
-
+        padding: 8.5em 0;
         width: 85%;
+
         .title {
             font-size: 4.5em;
         }
-    
+
+        .interfaces {
+            margin: 1em 0 2em 0;
+        }
+        
         .offers{
             grid-template-columns: 33% 33% 33%;
             gap: 10px;
@@ -128,6 +177,7 @@
                 .image {
                     width: calc(100% - 10px);
                     margin-bottom: 1.2em;
+                    height: 25em;
                 }
 
                 .offer__info {
@@ -154,6 +204,7 @@
             .offer__container {
                 .image {
                     width: calc(100% - 15px);
+                    height: 30em;
                 }
 
                 .offer__info {

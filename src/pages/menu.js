@@ -18,7 +18,7 @@ export default function FeaturePage() {
 
   return (
     <>
-        {/* <Header /> */}
+        <Header />
         <Landing />
     </>
   )
