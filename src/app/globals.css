@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Neue Montreal';
+  font-family: 'Neue Montreal', sans-serif;
   src: url('../../public/fonts/NeueMontreal-Regular.otf'),
        url('../../public/fonts/NeueMontreal-Bold.otf');
 }
 
 @font-face {
-  font-family: 'ITC Avant Garde';
+  font-family: 'ITC Avant Garde', sans-serif;
   src: url('../../public/fonts/ITC\ Avant\ Garde\ Gothic\ LT\ Bold.otf');
 }
 

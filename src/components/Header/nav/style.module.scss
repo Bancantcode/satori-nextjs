@@ -1,11 +1,12 @@
 .menu{
     height: 100vh;
-    background-color: rgb(41, 41, 41);
+    background-color: #1D1D1B;
     position: fixed;
     right: 0;
     top: 0;
-    color: white;
+    color: #F0F2F1;
     z-index: 3;
+    
     .body{
         box-sizing: border-box;
         height: 100%;
@@ -24,8 +25,8 @@
             font-family: 'Neue Montreal', sans-serif;
 
             .header{
-                color: rgb(153, 153, 153);
-                border-bottom: 1px solid rgb(153, 153, 153);
+                color: #F0F2F1;
+                border-bottom: 1px solid #F0F2F1;
                 text-transform: uppercase;
                 font-size: 11px;
                 margin-bottom: 40px;
@@ -33,7 +34,7 @@
 
             a{
                 text-decoration: none;
-                color: white;
+                color: #F0F2F1;
                 font-weight: 300;
             }
             

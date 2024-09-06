@@ -11,7 +11,7 @@ import Feature from '@/components/Home/Feature';
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
-2
+
   useEffect(() => {
       const lenis = new Lenis()
       

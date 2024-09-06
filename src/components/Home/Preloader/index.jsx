@@ -1,8 +1,9 @@
 'use client'
 import { useEffect } from 'react';
 import Image from 'next/image';
-import gsap from 'gsap';
 import './styles.scss';
+import Logo from '../../../../public/images/satori_logo.png'
+import gsap from 'gsap';
 
 export default function PageReveal({ onAnimationComplete }) {
 
@@ -52,7 +53,7 @@ export default function PageReveal({ onAnimationComplete }) {
       <div className="loader">
         <div className="loader_imgs">
           <div className="img">
-            <Image className="image" src="/images/about_filter.png" alt="loader" width={500} height={300} priority/>
+            <Image className="image" src="/images/about_image1.png" alt="loader" width={500} height={300} priority/>
           </div>
           <div className="img">
             <Image className="image" src="/images/about_image1.png" alt="loader" width={500} height={300} />
@@ -61,7 +62,7 @@ export default function PageReveal({ onAnimationComplete }) {
             <Image className="image" src="/images/about_image4.png" alt="loader" width={500} height={300} />
           </div>
           <div className="img" id="loader-logo">
-            <Image className="image" src="/images/about_filter.png" alt="loader" width={500} height={300}/>
+            <Image className="image" src={Logo} alt="loader" width={500} height={300}/>
           </div>
           <div className="img">
             <Image className="image" src="/images/about_milk.png" alt="loader" width={500} height={300} />

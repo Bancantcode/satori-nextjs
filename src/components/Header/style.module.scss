@@ -1,44 +1,41 @@
 .header{
     position: absolute;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
     top: 0;
-    color: #000;
-    padding: 50px;
+    color: #1D1D1B;
     width: 100%;
-    font-weight: 300;
-    box-sizing: border-box;
-    
+    z-index: 99;
     .logo{
         display: flex;
         cursor: pointer;
-        p{
-            margin: 0px;
-            transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        .brand__name {
+            font-family: 'Neue Montreal', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin: 0;
+            padding: 0;
         }
     }
 }
+
 .headerButtonContainer{
     transform: scale(1);
     position: fixed;
     right: 0px;
     z-index: 4;
-
     .button{
         position: relative;
-        margin: 20px;
-        width: 80px;
-        height: 80px;
         border-radius: 50%;
-        background-color: #1C1D20;
-        cursor: pointer;
+        background-color: #1D1D1B;
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
-    
     .burger{
         width: 100%;
         position: relative;
@@ -46,10 +43,10 @@
         &::after, &::before{
             content: "";
             display: block;
-            height: 1px;
+            height: 2px;
             width: 40%;
             margin: auto;
-            background-color: white;
+            background-color: #F0F2F1;
             position: relative;
             transition: transform 0.3s;
         }
@@ -57,7 +54,6 @@
         &::after{
             top: -5px;
         }
-    
         &::before{
             top: 5px;
         }
@@ -68,21 +64,74 @@
             transform: rotate(45deg);
             top: -1px;
         }
-    
         &::before{
             transform: rotate(-45deg);
             top: 0px;
         }
-        
     }
 }
 
 // Mobile
 @media only screen and (max-width: 767px) {
-    .headerButtonContainer {
-        .button {
-            width: 60px;
-            height: 60px;
+    .header {
+        font-size: 1.75em;
+        padding: 25px 15px;
+
+        .headerButtonContainer {
+            padding-right: 15px;
+            .button {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        font-size: 2.2em;
+        padding: 30px 25px;
+
+        .headerButtonContainer {
+            padding-right: 25px;
+            .button {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 1025px) {
+    .header {
+        font-size: 2.3em;
+        padding: 35px 45px;
+
+        .headerButtonContainer {
+            padding-right: 25px;
+            .button {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}
+
+// 2560 x 1440 (large desktop)
+@media only screen and (min-width: 1921px) {
+    .header {
+        font-size: 2.8em;
+        padding: 50px 45px;
+
+        .headerButtonContainer {
+            padding-right: 45px;
+            .button {
+                width: 90px;
+                height: 90px;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 .roundedButton{
     border-radius: 3em;
-    border: 1px solid rgb(136, 136, 136);
+    border: 1px solid #1D1D1B;
     cursor: pointer;
     position: relative;
     display: flex;
@@ -16,7 +16,7 @@
 
     &:hover{
         p{
-            color: white;
+            color: #F0F2F1;
         }
     }
 }
