@@ -4,6 +4,7 @@ import Lenis from 'lenis';
 import { useEffect, useState } from "react";
 import { AnimatePresence } from 'framer-motion';
 import PageReveal from '@/components/Home/Preloader';
+import Header from '@/components/Header'
 import Landing from '@/components/Home/Landing';
 import About from '@/components/Home/About';
 import Feature from '@/components/Home/Feature';
@@ -28,6 +29,7 @@ export default function Home() {
         {!isPreloaderComplete ? ( <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />) 
         : (
           <>
+            <Header />
             <Landing key="landing" />
             <About />
             <Feature />

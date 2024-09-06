@@ -13,7 +13,7 @@ import Menu9 from '../../../../public/images/menu/UsuchaMatcha.webp';
 import Menu10 from '../../../../public/images/menu/ConicalBrewer.webp';
 
 export default function Landing() {
-    const menu__images = [ Menu1, Menu2, Menu3, Menu4, Menu5, Menu6, Menu7, Menu8, Menu9, Menu10 ];
+    const menu__images = [Menu1, Menu2, Menu3, Menu4, Menu5, Menu6, Menu7, Menu8, Menu9, Menu10];
     const menu__name = [
         '*SATORI* 4 set of 3oz',
         'Colombia Tolima Guava Banana',
@@ -27,16 +27,16 @@ export default function Landing() {
         'Conical Brewer'
     ];
     const menu__description = [
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic', 
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
         'Hario Switch / Aeropress (Pour-over)',
-        'Single shot espresso + 3oz (Espresso)', 
-        'Single shot (with complimentary Rosquillos) (Espresso)', 
-        '(Hot / Iced / Blended) (Espresso)', 
-        '(Hot / Iced) + Syrup', 
+        'Single shot espresso + 3oz (Espresso)',
+        'Single shot (with complimentary Rosquillos) (Espresso)',
+        '(Hot / Iced / Blended) (Espresso)',
+        '(Hot / Iced) + Syrup',
         'Frozen Beans (Espresso & Milk based)',
-        'Kyoto Tonic (Pour-over)', 
-        '(Hot / Iced) + Syrup', 
-        'Origami (Hot / Iced) (Pour-over)', 
+        'Kyoto Tonic (Pour-over)',
+        '(Hot / Iced) + Syrup',
+        'Origami (Hot / Iced) (Pour-over)',
     ];
 
     const menu__category = [
@@ -52,12 +52,35 @@ export default function Landing() {
         'pour-over'
     ];
 
+    const initialPrice = 1;
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('');
+    const [cart, setCart] = useState([]);
 
     // Handle dropdown filter change
     const handleFilterChange = (e) => {
         setSelectedFilter(e.target.value);
+    };
+
+    // Add product to cart
+    const addToCart = (product) => {
+        const existingProduct = cart.find(item => item.name === product.name);
+        if (existingProduct) {
+            setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
+        } 
+        else {
+            setCart([...cart, { ...product, quantity: 1 }]);
+        }
+    };
+
+    // Update cart quantity
+    const updateQuantity = (productName, quantity) => {
+        setCart(cart.map(item => item.name === productName ? { ...item, quantity } : item)); 
+    };
+
+    // Remove item from cart
+    const removeFromCart = (productName) => {
+        setCart(cart.filter(item => item.name !== productName));
     };
 
     // Filter products based on search query or selected filter
@@ -65,7 +88,8 @@ export default function Landing() {
         image: menu__images[index],
         name,
         description: menu__description[index],
-        category: menu__category[index]
+        category: menu__category[index],
+        price: initialPrice
     }))
     .filter((product) => {
         const isSearchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || product.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -74,12 +98,14 @@ export default function Landing() {
         return isSearchMatch && isFilterMatch;
     });
 
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>What we offer</h1>
 
             <div className={styles.interfaces}>
-                <input type="text" className={styles.search__input}placeholder="SEARCH" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                <input type="text" className={styles.search__input} placeholder="SEARCH" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 <div className={styles.dropdown__container}>
                     <select id="filter" className={styles.dropdown} value={selectedFilter} onChange={handleFilterChange}>
                         <option value="">All</option>
@@ -96,15 +122,47 @@ export default function Landing() {
                 {
                     filteredMenu.map((product, index) => (
                         <div className={styles.offer__container} key={`l_${index}`}>
-                            <Image src={product.image} className={styles.image} alt={product.name} placeholder='blur' priority/>
+                            <Image src={product.image} className={styles.image} alt={product.name} placeholder='blur' priority />
                             <div className={styles.offer__info}>
                                 <h2 className={styles.offer__name}>{product.name}</h2>
                                 <p className={styles.offer__description}>{product.description}</p>
+                                <p className={styles.offer__price}>Price: ${product.price}</p>
+                                <button className={styles.addToCart} onClick={() => addToCart(product)}>Add to Cart</button>
                             </div>
                         </div>
                     ))
                 }
             </div>
+
+            {cart.length > 0 && (
+                <div className={styles.cart}>
+                    <h2>Cart</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cart.map((item) => (
+                                <tr key={item.name}>
+                                    <td>{item.name}</td>
+                                    <td><input type="number" value={item.quantity} min="1" onChange={(e) => updateQuantity(item.name, parseInt(e.target.value, 10))} /></td>
+                                    <td>${item.price * item.quantity}</td>
+                                    <td><button onClick={() => removeFromCart(item.name)}>Remove</button></td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    <div className={styles.cartTotal}>
+                        <p>Total: ${totalPrice}</p>
+                        <button className={styles.checkout}>Checkout</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
