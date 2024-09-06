@@ -57,12 +57,10 @@ export default function Landing() {
     const [selectedFilter, setSelectedFilter] = useState('');
     const [cart, setCart] = useState([]);
 
-    // Handle dropdown filter change
     const handleFilterChange = (e) => {
         setSelectedFilter(e.target.value);
     };
 
-    // Add product to cart
     const addToCart = (product) => {
         const existingProduct = cart.find(item => item.name === product.name);
         if (existingProduct) {
@@ -73,17 +71,14 @@ export default function Landing() {
         }
     };
 
-    // Update cart quantity
     const updateQuantity = (productName, quantity) => {
         setCart(cart.map(item => item.name === productName ? { ...item, quantity } : item)); 
     };
 
-    // Remove item from cart
     const removeFromCart = (productName) => {
         setCart(cart.filter(item => item.name !== productName));
     };
 
-    // Filter products based on search query or selected filter
     const filteredMenu = menu__name.map((name, index) => ({
         image: menu__images[index],
         name,
@@ -136,29 +131,29 @@ export default function Landing() {
 
             {cart.length > 0 && (
                 <div className={styles.cart}>
-                    <h2>Cart</h2>
-                    <table>
+                    <h2 className={styles.cart__name}>Cart</h2>
+                    <table className={styles.cart__table}>
                         <thead>
                             <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Actions</th>
+                                <th className={styles.table__header}>Product</th>
+                                <th className={styles.table__header}>Quantity</th>
+                                <th className={styles.table__header}>Price</th>
+                                <th className={styles.table__header}>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
                             {cart.map((item) => (
                                 <tr key={item.name}>
-                                    <td>{item.name}</td>
-                                    <td><input type="number" value={item.quantity} min="1" onChange={(e) => updateQuantity(item.name, parseInt(e.target.value, 10))} /></td>
-                                    <td>${item.price * item.quantity}</td>
-                                    <td><button onClick={() => removeFromCart(item.name)}>Remove</button></td>
+                                    <td className={styles.table__data}>{item.name}</td>
+                                    <td className={styles.table__data}><input className={styles.item__quantity} type="number" value={item.quantity} min="1" onChange={(e) => updateQuantity(item.name, parseInt(e.target.value, 10))} /></td>
+                                    <td className={styles.table__data}>${item.price * item.quantity}</td>
+                                    <td className={styles.table__data}><button className={styles.remove__item} onClick={() => removeFromCart(item.name)}>Remove</button></td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                     <div className={styles.cartTotal}>
-                        <p>Total: ${totalPrice}</p>
+                        <p className={styles.total__price}>Total: ${totalPrice}</p>
                         <button className={styles.checkout}>Checkout</button>
                     </div>
                 </div>

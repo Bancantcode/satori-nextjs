@@ -64,26 +64,26 @@
         border-top: 2px solid #1D1D1B;
         padding-top: 2rem;
 
-        h2 {
+        .cart__name {
             margin-bottom: 1rem;
         }
 
-        table {
+        .cart__table {
             width: 100%;
             border-collapse: collapse;
 
-            th, td {
+            .table__header, .table__data {
                 padding: 10px;
                 border: 1px solid #1D1D1B;
                 text-align: left;
             }
 
-            input {
+            .item__quantity {
                 width: 50px;
                 text-align: center;
             }
 
-            button {
+            .remove__item {
                 background-color: #F44336;
                 color: white;
                 border: none;
@@ -96,7 +96,7 @@
             margin-top: 1rem;
             text-align: right;
 
-            p {
+            .total__price {
                 font-size: 1.2rem;
             }
 
