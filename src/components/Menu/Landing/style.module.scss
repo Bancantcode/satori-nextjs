@@ -73,6 +73,7 @@
 
         .cart__name {
             margin-bottom: 1rem;
+            text-transform: uppercase;
         }
 
         .cart__table {
@@ -88,13 +89,17 @@
             .item__quantity {
                 width: 50px;
                 text-align: center;
+                background-color: #1D1D1B;
+                color: #F0F2F1;
+                border: none;
             }
 
             .remove__item {
-                background-color: #F44336;
-                color: white;
+                background-color: #1D1D1B;
+                color: #F0F2F1;
+                padding: 10px 25px;
+                text-transform: uppercase;
                 border: none;
-                padding: 5px 10px;
                 cursor: pointer;
             }
         }
@@ -110,10 +115,11 @@
             .checkout {
                 background-color: #1D1D1B;
                 color: #F0F2F1;
-                padding: 10px 20px;
+                padding: 15px 25px;
+                text-transform: uppercase;
                 border: none;
+                border-radius: 10px;
                 cursor: pointer;
-                font-size: 1rem;
             }
         }
     }

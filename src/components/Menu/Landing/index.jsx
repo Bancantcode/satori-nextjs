@@ -134,12 +134,12 @@ export default function Landing() {
                 <div className={styles.cart}>
                     <h2 className={styles.cart__name}>Cart</h2>
                     <table className={styles.cart__table}>
-                        <thead>
+                        <thead className={styles.cart__header}>
                             <tr>
                                 <th className={styles.table__header}>Product</th>
                                 <th className={styles.table__header}>Quantity</th>
                                 <th className={styles.table__header}>Price</th>
-                                <th className={styles.table__header}>Actions</th>
+                                <th className={styles.table__header}></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -154,7 +154,7 @@ export default function Landing() {
                         </tbody>
                     </table>
                     <div className={styles.cartTotal}>
-                        <p className={styles.total__price}>Total: ${totalPrice}</p>
+                        <p className={styles.total__price}>Total: ₱{totalPrice}</p>
                         <button className={styles.checkout}>Checkout</button>
                     </div>
                 </div>
