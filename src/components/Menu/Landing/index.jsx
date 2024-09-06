@@ -52,7 +52,8 @@ export default function Landing() {
         'pour-over'
     ];
 
-    const initialPrice = 1;
+    const menu__price = [465, 300, 390, 290, 225, 270, 330, 300, 205, 300];
+
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('');
     const [cart, setCart] = useState([]);
@@ -84,7 +85,7 @@ export default function Landing() {
         name,
         description: menu__description[index],
         category: menu__category[index],
-        price: initialPrice
+        price: menu__price[index]
     }))
     .filter((product) => {
         const isSearchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || product.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -121,8 +122,8 @@ export default function Landing() {
                             <div className={styles.offer__info}>
                                 <h2 className={styles.offer__name}>{product.name}</h2>
                                 <p className={styles.offer__description}>{product.description}</p>
-                                <p className={styles.offer__price}>Price: ${product.price}</p>
-                                <button className={styles.addToCart} onClick={() => addToCart(product)}>Add to Cart</button>
+                                <p className={styles.offer__price}>Price: <span className={styles.highlight}>₱{product.price}</span></p>
+                                <button className={styles.add__item} onClick={() => addToCart(product)}>Add to Cart</button>
                             </div>
                         </div>
                     ))

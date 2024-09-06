@@ -47,15 +47,22 @@
                 .offer__description {
                     margin: 0;
                 }
+                .offer__price {
+                    .highlight {
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
 
-    .addToCart {
+    .add__item {
         background-color: #1D1D1B;
         color: #F0F2F1;
-        padding: 10px 15px;
+        padding: 15px 25px;
+        text-transform: uppercase;
         border: none;
+        border-radius: 10px;
         cursor: pointer;
     }
 
@@ -151,6 +158,13 @@
                     }
                 }
             }
+        }
+
+        .add__item {
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            cursor: pointer;
         }
     }
 }
