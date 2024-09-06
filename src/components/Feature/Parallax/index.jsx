@@ -1,42 +1,43 @@
 'use client'
-import styles from './style.module.scss';
-import { useRef, useLayoutEffect } from 'react';
-import gsap from 'gsap';
-// import ScrollTrigger from 'gsap/ScrollTrigger';
 
-// gsap.registerPlugin(ScrollTrigger);
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import styles from './style.module.scss';
 
 export default function Parallax() {
+  const sentence1 = 'A coffee space designed';
+  const sentence2 = 'to create, connect';
+  const sentence3 = 'and celebrate';
+  const sentence4 = 'the love of coffee';
+  const sentence5 = 'together in every cup.';
+
   const container = useRef(null);
-  const parallaxRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start 0.9", "start 0.25"]
+  });
 
-  // useLayoutEffect(() => {
-  //   console.log('Client side')
-  //   const context = gsap.context(() => {
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: container.current,
-  //         start: "top bottom",
-  //         end: "bottom top",
-  //         scrub: true,
-  //       }
-  //     });
-
-
-  //   });
-
-  //   return () => context.revert();
-  // }, [])
+  const sentences = [sentence1, sentence2, sentence3, sentence4, sentence5];
 
   return (
     <div ref={container} className={styles.container}>
-      <div ref={parallaxRef} className={styles.parallax}>
-        <span>A coffee space designed</span>
-        <span>to create, connect</span>
-        <span>and celebrate</span>
-        <span>the love of coffee</span>
-        <span>together in every cup.</span>
+      <div className={styles.parallax}>
+        {sentences.map((sentence, index) => (
+          <motion.div key={index} className={styles.sentence}>
+            {sentence.split("").map((char, i) => {
+              const start = i / sentence.length;
+              const end = start + 1 / sentence.length;
+              const color = useTransform(scrollYProgress, [start, end], ["#7C7C7C", "#1D1D1B"]);
+
+              return (
+                <motion.span key={i} style={{ color }} className={styles.character}>
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              );
+            })}
+          </motion.div>
+        ))}
       </div>
     </div>
-  )
+  );
 }

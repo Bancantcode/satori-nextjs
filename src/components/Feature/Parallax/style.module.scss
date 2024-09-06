@@ -2,8 +2,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    
-    
+
     .parallax {
         display: flex;
         flex-direction: column;
@@ -12,11 +11,16 @@
         font-family: 'Neue Montreal', sans-serif;
         line-height: 85%;
         color: #1D1D1B;
-        letter-spacing: -3px;
+        letter-spacing: -2px;
+    }
 
-        span {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-        }
+    .sentence {
+        display: inline-block;
+    }
+
+    .character {
+        display: inline-block;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 }
 
@@ -50,7 +54,7 @@
     }
 }
 
-// 2560 x 1440 (large desktop)
+// Large desktop
 @media only screen and (min-width: 1921px) {
     .container {
         height: 55vh;
