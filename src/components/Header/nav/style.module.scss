@@ -32,10 +32,16 @@
                 margin-bottom: 40px;
             }
 
-            a{
+            a {
                 text-decoration: none;
                 color: #F0F2F1;
-                font-weight: 300;
+                font-weight: 400;
+                letter-spacing: -1px;
+                transition: 0.4s;
+                
+                &:hover {
+                    color: #7C7C7C;
+                }
             }
             
         }
