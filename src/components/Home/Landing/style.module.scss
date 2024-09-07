@@ -1,10 +1,9 @@
 .landing {
   position: relative;
   display: flex;
-  height: 100vh;
-  overflow: hidden;
-  align-items: center;
   justify-content: center;
+  overflow: hidden;
+  margin-bottom: 10.5em;
 
   .sliderContainer {
     text-align: center;
@@ -15,7 +14,6 @@
       color: #1D1D1B;
       letter-spacing: -3px;
       
-
       span {
         display: inline-block;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -23,10 +21,9 @@
     }
 
     .descriptionContainer {
-      overflow: hidden; // Ensure the clip-path effect works properly
+      overflow: hidden;
 
       .description {
-        // color: #7C7C7C;
         color: #1D1D1B;
         margin: auto auto 1.5em auto;
         text-transform: uppercase;
@@ -37,7 +34,7 @@
     }
 
     .buttonContainer {
-      overflow: hidden; // Ensure the clip-path effect works properly
+      overflow: hidden;
 
       .button {
         background-color: #1D1D1B;
@@ -49,22 +46,27 @@
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
       }
     }
+
+    .video {
+      border-radius: 10px;
+    }
   }
 }
 
 // Mobile
 @media only screen and (max-width: 767px) {
   .landing {
+    padding-top: 8.5em;
     .sliderContainer {
       .title {
-        font-size: 4em;
-        line-height: 95%;
+        font-size: 3.8em;
+        line-height: 85%;
         margin-bottom: 0.25em;
       }
       
       .descriptionContainer {
         .description {
-          font-size: 0.8em;
+          font-size: 0.7em;
           width: 80%;
         }
       }
@@ -76,12 +78,19 @@
         }
       }
     }
+
+    .video {
+      width: 90%;
+      padding-top: 4.5em;
+    }
   }
 }
 
 // Tablet
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .landing {
+    padding-top: 10em;
+    
     .sliderContainer {
       .title {
         font-size: 6em;
@@ -92,7 +101,7 @@
       .descriptionContainer {
         .description {
           font-size: 1.125em;
-          width: 75%;
+          width: 70%;
         }
       }
       
@@ -101,6 +110,11 @@
           padding: 20px 35px;
           font-size: 1em;
         }
+      }
+
+      .video {
+        width: 80%;
+        padding-top: 3.5em;
       }
     }
   }
@@ -108,23 +122,20 @@
 
 // Desktop
 @media only screen and (min-width: 1025px) {
-  .description {
-    font-size: 1.3em;
-    width: 50%;
-  }
-
   .landing {
+    padding-top: 12em;
     .sliderContainer {
+      width: 100%;
       .title {
-        font-size: 10em;
-        line-height: 90%;
+        font-size: 8em;
+        line-height: 85%;
         margin-bottom: 0.15em;
       }
       
       .descriptionContainer {
         .description {
           font-size: 1.3em;
-          width: 50%;
+          width: 55%;
         }
       }
       
@@ -134,6 +145,31 @@
           font-size: 1em;
         }
       }
+
+      .video {
+        width: 75%;
+        padding-top: 4.5em;
+      }
     }
   }
 }
+
+// Large Desktop
+@media only screen and (min-width: 1330px) {
+  .landing {
+    .sliderContainer {
+      .title {
+        font-size: 9.5em;
+      }
+      
+      .descriptionContainer {
+        .description {
+          font-size: 1.3em;
+          width: 35%;
+        }
+      }
+    }
+  }
+}
+
+// 1440p : not made yet
