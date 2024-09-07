@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import PageReveal from '@/components/Home/Preloader';
 import Header from '@/components/Header'
 import Landing from '@/components/Home/Landing';
+import LandingVideo from '@/components/Home/LandingVideo'
 import About from '@/components/Home/About';
 import Feature from '@/components/Home/Feature';
 
@@ -25,7 +26,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <AnimatePresence mode='wait'>
+      {/* <AnimatePresence mode='wait'>
         {!isPreloaderComplete ? ( <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />) 
         : (
           <>
@@ -35,7 +36,10 @@ export default function Home() {
             <Feature />
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <Header />
+      <Landing />
+      <LandingVideo />
     </main>
   );
 }
