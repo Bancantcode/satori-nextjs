@@ -4,9 +4,9 @@
     height: 100vh;
     background: #1D1D1B;
     pointer-events: none;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     z-index: 99;
     overflow: hidden;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
     .loader_imgs {
         width: 150%;
@@ -51,7 +51,6 @@
 
 // Tablet
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
     .loader_imgs {
         gap: 15px;
         opacity: 0;

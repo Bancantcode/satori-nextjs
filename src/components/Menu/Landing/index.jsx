@@ -118,7 +118,7 @@ export default function Landing() {
                 {
                     filteredMenu.map((product, index) => (
                         <div className={styles.offer__container} key={`l_${index}`}>
-                            <Image src={product.image} className={styles.image} alt={product.name} placeholder='blur' priority />
+                            <Image src={product.image} className={styles.image} alt={product.name} quality={75} priority={true} placeholder="blur" />
                             <div className={styles.offer__info}>
                                 <h2 className={styles.offer__name}>{product.name}</h2>
                                 <p className={styles.offer__description}>{product.description}</p>
@@ -147,7 +147,7 @@ export default function Landing() {
                                 <tr key={item.name}>
                                     <td className={styles.table__data}>{item.name}</td>
                                     <td className={styles.table__data}><input className={styles.item__quantity} type="number" value={item.quantity} min="1" onChange={(e) => updateQuantity(item.name, parseInt(e.target.value, 10))} /></td>
-                                    <td className={styles.table__data}>${item.price * item.quantity}</td>
+                                    <td className={styles.table__data}>₱{item.price * item.quantity}</td>
                                     <td className={styles.table__data}><button className={styles.remove__item} onClick={() => removeFromCart(item.name)}>Remove</button></td>
                                 </tr>
                             ))}

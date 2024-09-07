@@ -14,7 +14,7 @@ export default function index() {
         <>
         <div ref={header} className={styles.header}>
             <div className={styles.logo}>
-                <p className={styles.brand__name}>Satori</p>
+                <p className={styles.brand__name} rel="preload">Satori</p>
             </div>
             <div ref={button} className={styles.headerButtonContainer}>
                 <Rounded onClick={() => {setIsActive(!isActive)}} className={`${styles.button}`}>
