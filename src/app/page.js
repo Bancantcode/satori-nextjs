@@ -40,6 +40,7 @@ export default function Home() {
       <Landing />
       <About />
       <Feature />
+      <About />
     </main>
   );
 }

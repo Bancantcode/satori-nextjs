@@ -30,10 +30,10 @@ export default function Feature() {
             });
 
             tl.to(imagesRef.current[0], { x: -60, y: 40 }, 0);
-            tl.to(imagesRef.current[1], { x: -55, y: 40 }, 0);
+            tl.to(imagesRef.current[1], { x: -30, y: 40 }, 0);
             tl.to(imagesRef.current[2], { y: 50 }, 0);
-            tl.to(imagesRef.current[3], { x: 50, y: 50 }, 0);
-            tl.to(imagesRef.current[4], { x: 60, y: 75 }, 0);
+            tl.to(imagesRef.current[3], { x: 30, y: 50 }, 0);
+            tl.to(imagesRef.current[4], { x: 35, y: 75 }, 0);
         });
 
         return () => context.revert();
