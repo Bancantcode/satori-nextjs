@@ -1,10 +1,10 @@
 'use client'
-import Image from 'next/image';
 import styles from './style.module.scss'
+import { useLayoutEffect, useRef } from 'react';
+import Image from 'next/image';
 import About1 from '../../../../public/images/about1.webp';
 import About2 from '../../../../public/images/about2.webp';
 import About3 from '../../../../public/images/about3.webp';
-import { lazy, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -39,16 +39,17 @@ export default function About() {
               tl.to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
         });
 
-        gsap.to(container.current, {
-            y: window.innerWidth >= 1024 ? '-15%' : window.innerWidth >= 768 ? '-20%' : '-25%',
-            scrollTrigger: {
-                trigger: container.current,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-                // markers: true,
-            }
-        });
+        // parallax scroll on view
+        // gsap.to(container.current, {
+        //     y: window.innerWidth >= 1024 ? '-15%' : window.innerWidth >= 768 ? '-20%' : '-25%',
+        //     scrollTrigger: {
+        //         trigger: container.current,
+        //         start: "top bottom",
+        //         end: "bottom top",
+        //         scrub: true,
+        //         // markers: true,
+        //     }
+        // });
 
         return () => context.revert();
     }, []);
