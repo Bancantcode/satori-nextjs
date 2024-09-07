@@ -26,10 +26,12 @@
       overflow: hidden; // Ensure the clip-path effect works properly
 
       .description {
-        color: #7C7C7C;
+        // color: #7C7C7C;
+        color: #1D1D1B;
         margin: auto auto 1.5em auto;
         text-transform: uppercase;
         font-family: 'Neue Montreal', sans-serif;
+        letter-spacing: -0.5px;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
       }
     }

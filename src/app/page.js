@@ -40,6 +40,7 @@ export default function Home() {
       <Header />
       <Landing />
       <LandingVideo />
+      <About />
     </main>
   );
 }
