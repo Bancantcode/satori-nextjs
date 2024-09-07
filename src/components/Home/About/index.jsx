@@ -4,7 +4,7 @@ import styles from './style.module.scss'
 import About1 from '../../../../public/images/about1.webp';
 import About2 from '../../../../public/images/about2.webp';
 import About3 from '../../../../public/images/about3.webp';
-import { useLayoutEffect, useRef } from 'react';
+import { lazy, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -19,7 +19,7 @@ export default function About() {
     const imageRef = useRef([]);
 
     useLayoutEffect(() => {
-        gsap.set([categoryRef.current, titleRef.current, buttonRef.current], { y: 200, opacity: 0, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
+        // gsap.set([categoryRef.current, titleRef.current, buttonRef.current], { y: 200, opacity: 0, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
         gsap.set(imageRef.current, { y: 100, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
 
         const context = gsap.context(() => {
@@ -33,10 +33,10 @@ export default function About() {
                 }
             });
 
-            tl.to(categoryRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 })
-              .to(titleRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
-              .to(buttonRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
-              .to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
+            // tl.to(categoryRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 })
+            //   .to(titleRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
+            //   .to(buttonRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
+              tl.to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
         });
 
         gsap.to(container.current, {
@@ -64,7 +64,7 @@ export default function About() {
                 {
                     about__images.map((image, i) => (
                         <div key={`l_${i}`} className={styles.image__container}>
-                            <Image ref={element => imageRef.current[i] = element} className={styles.img} src={image} placeholder='blur' alt="image" />
+                            <Image ref={element => imageRef.current[i] = element} className={styles.img} src={image} placeholder='blur' alt="image" priority={true}/>
                         </div>
                     ))
                 }
