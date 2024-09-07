@@ -1,7 +1,7 @@
 .container {
     position: relative;
     place-content: center;
-    margin-bottom: 10em;
+    
 
     .images {
         display: flex;
@@ -40,6 +40,8 @@
 @media only screen and (max-width: 767px) {
     .container {
         height: 70vh;
+        margin-bottom: 5em;
+
         .images {
             .image__container {
                 &:nth-of-type(1) {
@@ -82,6 +84,8 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         height: 100vh;
+        margin-bottom: 5em;
+
         .images {
             .image__container {
                 &:nth-of-type(1) {
@@ -121,6 +125,7 @@
 @media only screen and (min-width: 1025px) and (max-width: 1536px) {
     .container {
         height: 100vh;
+        margin-bottom: 10em;
         .images {
             .image__container {
                 &:nth-of-type(1) {
@@ -197,6 +202,7 @@
 @media only screen and (min-width: 1900px) {
     .container {
         height: 110vh;
+        margin-bottom: 10em;
         .images {
             .image__container {
                 &:nth-of-type(1) {

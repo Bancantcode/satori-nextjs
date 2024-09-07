@@ -1,0 +1,90 @@
+.container {
+    text-align: center;
+  
+    span {
+      font-family: 'ITC Avant Garde', sans-serif;
+      font-weight: 800;
+      line-height: 85%;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+      color: #1d1d1b;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); // Initial hidden state
+    }
+  
+    .description {
+      color: #1d1d1b;
+      margin: 1em auto 1.5em auto;
+      text-transform: uppercase;
+      font-family: 'Neue Montreal', sans-serif;
+      letter-spacing: -0.5px;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); // Hidden initially
+      opacity: 0; // Ensure it's hidden initially
+    }
+  
+    .feature__button {
+      background-color: #1d1d1b;
+      color: #f0f2f1;
+      border-radius: 25px;
+      border: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%); // Initial hidden state
+      opacity: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container {
+      span {
+        font-size: 1.7em;
+      }
+  
+      .description {
+        width: 70%;
+        font-size: 0.8em;
+      }
+  
+      .feature__button {
+        padding: 15px 25px;
+        font-size: 0.8em;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      span {
+        font-size: 3.2em;
+      }
+  
+      .description {
+        font-size: 1.125em;
+        max-width: 60%;
+      }
+  
+      .feature__button {
+        padding: 20px 35px;
+        font-size: 1.2em;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    .container {
+      margin-bottom: 10em;
+      span {
+        font-size: 5em;
+      }
+  
+      .description {
+        font-size: 1.2em;
+        max-width: 38%;
+      }
+  
+      .feature__button {
+        padding: 20px 35px;
+        font-size: 1.2em;
+      }
+    }
+  }
+  
