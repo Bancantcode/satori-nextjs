@@ -6,8 +6,8 @@ export default function LandingVideo() {
             <video 
                 className={styles.video}
                 src="/videos/LandingVideo1.mp4"
-                width="640"
-                height="360"
+                // width="640"
+                // height="360"
                 autoPlay
                 loop
                 muted
