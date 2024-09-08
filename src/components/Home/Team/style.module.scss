@@ -3,6 +3,7 @@
     height: 50vh;
   
     .content {
+        // display: inline-block;
         span {
             font-family: 'ITC Avant Garde', sans-serif;
             font-weight: 800;
@@ -10,7 +11,6 @@
             letter-spacing: -3px;
             text-transform: uppercase;
             color: #1d1d1b;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
     }
   
@@ -21,7 +21,6 @@
             text-transform: uppercase;
             font-family: 'Neue Montreal', sans-serif;
             letter-spacing: -0.5px;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
     }
   
@@ -33,7 +32,6 @@
             border: none;
             text-transform: uppercase;
             cursor: pointer;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
     }
   }
