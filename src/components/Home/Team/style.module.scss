@@ -1,6 +1,5 @@
 .container {
     text-align: center;
-    height: 50vh;
   
     .content {
         // display: inline-block;
@@ -34,7 +33,27 @@
             cursor: pointer;
         }
     }
-  }
+
+    .video__container {
+        display: flex;
+        
+        margin: auto;
+        overflow: hidden;
+        object-fit: cover;
+        .video1 {
+            z-index: 99;
+            .video {
+                border-radius: 10px;
+                z-index: 99;
+            }
+        }
+        .video2 {
+            .video {
+                border-radius: 10px;
+            }
+        }
+    }
+}
   
 @media only screen and (max-width: 768px) {
     .container {
@@ -54,6 +73,21 @@
             .feature__button {
                 padding: 15px 25px;
                 font-size: 0.8em;
+                margin-bottom: 4em;
+            }
+        }
+        .video__container {
+            width: 95%;
+            gap: 5px;
+            .video1 {
+                .video {
+                    width: 100%;
+                }
+            }
+            .video2 {
+                .video {
+                    width: 100%;
+                }
             }
         }
     }
@@ -76,6 +110,21 @@
             .feature__button {
                 padding: 20px 35px;
                 font-size: 1.2em;
+                margin-bottom: 4em;
+            }
+        }
+        .video__container {
+            width: 80%;
+            gap: 5px;
+            .video1 {
+                .video {
+                    width: 100%;
+                }
+            }
+            .video2 {
+                .video {
+                    width: 100%;
+                }
             }
         }
     }
@@ -100,6 +149,21 @@
             .feature__button {
                 padding: 20px 35px;
                 font-size: 1.2em;
+                margin-bottom: 4em;
+            }
+        }
+        .video__container {
+            width: 50%;
+            justify-content: center;
+            .video1 {
+                .video {
+                    width: 95%;
+                }
+            }
+            .video2 {
+                .video {
+                    width: 95%;
+                }
             }
         }
     }
