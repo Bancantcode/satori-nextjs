@@ -4,12 +4,13 @@ import Lenis from 'lenis';
 import { useEffect, useState } from "react";
 import { AnimatePresence } from 'framer-motion';
 import PageReveal from '@/components/Home/Preloader';
-import Header from '@/components/Header'
+import Header from '@/components/Header';
 import Landing from '@/components/Home/Landing';
 import About from '@/components/Home/About';
 import Feature from '@/components/Home/Feature';
 import MeetTheTeam from "@/components/Home/Team";
-import FAQs from "@/components/Home/Faqs";
+import FAQs from '@/components/Home/Faqs';
+import Newsletter from '@/components/Home/Newsletter'
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -45,6 +46,7 @@ export default function Home() {
       <Feature />
       <MeetTheTeam />
       <FAQs />
+      <Newsletter />
     </main>
   );
 }
