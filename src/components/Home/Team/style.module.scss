@@ -1,8 +1,7 @@
 .container {
     text-align: center;
-  
+
     .content {
-        // display: inline-block;
         span {
             font-family: 'ITC Avant Garde', sans-serif;
             font-weight: 800;
@@ -41,10 +40,8 @@
         overflow: hidden;
         object-fit: cover;
         .video1 {
-            z-index: 99;
             .video {
                 border-radius: 10px;
-                z-index: 99;
             }
         }
         .video2 {

@@ -9,6 +9,7 @@ import Landing from '@/components/Home/Landing';
 import About from '@/components/Home/About';
 import Feature from '@/components/Home/Feature';
 import MeetTheTeam from "@/components/Home/Team";
+import FAQs from "@/components/Home/Faqs";
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -43,7 +44,7 @@ export default function Home() {
       <About />
       <Feature />
       <MeetTheTeam />
-      <About />
+      <FAQs />
     </main>
   );
 }
