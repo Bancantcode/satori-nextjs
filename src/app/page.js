@@ -36,7 +36,9 @@ export default function Home() {
             <Landing key="landing" />
             <About />
             <Feature />
-            <About />
+            <MeetTheTeam />
+            <FAQs />
+            <Newsletter />
           </>
         )}
       </AnimatePresence> */}
