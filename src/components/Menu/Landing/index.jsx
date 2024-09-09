@@ -155,7 +155,7 @@ export default function Landing() {
                     </table>
                     <div className={styles.cartTotal}>
                         <p className={styles.total__price}>Total: ₱{totalPrice}</p>
-                        <button className={styles.checkout}>Checkout</button>
+                        <button className={styles.checkout}><a onClick={() => alert("Your order has been approved!!")} href="/menu">Checkout</a></button>
                     </div>
                 </div>
             )}

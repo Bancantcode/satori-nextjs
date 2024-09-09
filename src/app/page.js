@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      {/* <AnimatePresence mode='wait'>
+      <AnimatePresence mode='wait'>
         {!isPreloaderComplete ? ( <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />) 
         : (
           <>
@@ -41,14 +41,14 @@ export default function Home() {
             <Newsletter />
           </>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
       {/* <Header /> */}
-      <Landing />
+      {/* <Landing />
       <About />
       <Feature />
       <MeetTheTeam />
       <FAQs />
-      <Newsletter />
+      <Newsletter /> */}
     </main>
   );
 }
