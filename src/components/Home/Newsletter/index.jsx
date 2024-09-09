@@ -8,7 +8,7 @@ export default function Newsletter() {
             <h3 className={styles.title}>Stay in touch</h3>
             <div className={styles.input__container}>
                 <input type="email" className={styles.input} placeholder='Enter email address'/>
-                <input type="submit" className={styles.submit} />
+                <input type="submit" href="#" className={styles.submit} />
             </div>
         </div>
         <div className={styles.career__container}>

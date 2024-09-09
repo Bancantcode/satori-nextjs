@@ -40,6 +40,7 @@
                 border-bottom: 1px solid #F0F2F1;
                 color: #F0F2F1;
                 padding: 5px;
+                cursor: pointer;
             }
         }
 
@@ -167,7 +168,7 @@
 //desktop
 @media screen and (min-width: 1025px) {
     .container {
-        padding: 40px 0px;
+        padding: 70px 40px;
         flex-direction: row;
         justify-content: center;
 
