@@ -42,7 +42,7 @@ export default function Home() {
           </>
         )}
       </AnimatePresence> */}
-      <Header />
+      {/* <Header /> */}
       <Landing />
       <About />
       <Feature />

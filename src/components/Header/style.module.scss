@@ -9,7 +9,6 @@
     width: 100%;
     z-index: 99;
     .logo{
-        display: flex;
         cursor: pointer;
         .brand__name {
             font-family: 'Neue Montreal', sans-serif;
@@ -18,6 +17,16 @@
             letter-spacing: -2px;
             margin: 0;
             padding: 0;
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #1D1D1B;
+                .brand__logo {
+                    height: auto;
+                    width: 40px;
+                }
+            }
         }
     }
 }
@@ -76,6 +85,16 @@
     .header {
         font-size: 1.75em;
         padding: 25px 15px;
+
+        .logo {
+            .brand__name {
+                a {
+                    .brand__logo {
+                        width: 35px;
+                    }
+                }
+            }
+        }
 
         .headerButtonContainer {
             padding-right: 15px;

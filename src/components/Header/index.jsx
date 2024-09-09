@@ -4,6 +4,8 @@ import { useRef, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Nav from './nav';
 import Rounded from '../../common/RoundedButton';
+import Image from 'next/image';
+import Logo from '../../../public/images/satori_logo_black.jpg'
 
 export default function index() {
     const header = useRef(null);
@@ -14,7 +16,7 @@ export default function index() {
         <>
         <div ref={header} className={styles.header}>
             <div className={styles.logo}>
-                <p className={styles.brand__name} rel="preload">Satori</p>
+                <p className={styles.brand__name} rel="preload"><a href="/"><Image className={styles.brand__logo} src={Logo}/>atori</a></p>
             </div>
             <div ref={button} className={styles.headerButtonContainer}>
                 <Rounded onClick={() => {setIsActive(!isActive)}} className={`${styles.button}`}>

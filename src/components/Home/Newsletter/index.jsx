@@ -6,10 +6,10 @@ export default function Newsletter() {
         <div className={styles.newsletter__container}>
             <p className={styles.type}>Newsletter</p>
             <h3 className={styles.title}>Stay in touch</h3>
-            <div className={styles.input__container}>
-                <input type="email" className={styles.input} placeholder='Enter email address'/>
+            <form className={styles.input__container}>
+                <input type="email" className={styles.input} placeholder='Enter email address' required/>
                 <input type="submit" href="#" className={styles.submit} />
-            </div>
+            </form>
         </div>
         <div className={styles.career__container}>
             <p className={styles.type}>Careers</p>

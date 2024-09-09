@@ -63,7 +63,7 @@ export default function Landing() {
           <p ref={descriptionRef} className={styles.description}>A brand of specialty coffee that is dedicated to delivering the finest high-quality flavors and exceptional experiences</p>
         </div>
         <div className={styles.buttonContainer}>
-          <button ref={buttonRef} className={styles.button}>About us</button>
+          <button ref={buttonRef} className={styles.button}><a href="/about">About us</a></button>
         </div>
         <video 
           ref={videoRef}
