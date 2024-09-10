@@ -2,32 +2,27 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    // position: relative;
     height: 100vh;
     overflow: hidden;
     width: 95%;
     margin: auto;
-    
     .title {
         text-transform: uppercase;
         font-family: 'Neue Montreal', sans-serif;
         color: #1D1D1B;
         line-height: 85%;
         letter-spacing: -3px;
-
         span {
             display: inline-block;
             width: 100%;
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); //for the animation
         }
     }
-
     .description {
         text-transform: uppercase;
         font-family: 'Neue Montreal', sans-serif;
         color: #7C7C7C;
         font-size: 1em;
-
         .content {
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
@@ -42,9 +37,7 @@
             width: 100%;
             font-size: 3.5em;
             margin-bottom: 1em;
-
             span {
-
                 &:nth-of-type(1) {
                     text-align: left;
                 }
@@ -69,9 +62,7 @@
         .title {
             font-size: 4em;
             margin-bottom: 1em;
-
             span {
-
                 &:nth-of-type(1) {
                     text-align: left;
                 }
@@ -95,7 +86,6 @@
         .title {
             font-size: 6.5em;
             margin-bottom: 1em;
-
             span {
                 &:nth-of-type(1) {
                     text-align: left;
