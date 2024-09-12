@@ -6,8 +6,10 @@
 }
 
 @font-face {
-  font-family: 'ITC Avant Garde', sans-serif;
-  src: url('../../public/fonts/ITC\ Avant\ Garde\ Gothic\ LT\ Bold.otf');
+  font-family: 'ITCAvantGarde', sans-serif;
+  src: url('/fonts/ITCAvantGarde.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
