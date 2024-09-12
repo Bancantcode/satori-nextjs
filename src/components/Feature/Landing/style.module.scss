@@ -32,7 +32,7 @@
 // Mobile
 @media only screen and (max-width: 767px) {
     .container {
-        height: 95vh;
+        height: 105vh;
         .title {
             width: 100%;
             font-size: 3.5em;
@@ -56,7 +56,7 @@
 }
 
 // Tablet
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
         height: 70vh;
         .title {
@@ -80,8 +80,35 @@
     }
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1567px) {
+    .container {
+        margin-top: 200px;
+        height: 70vh;
+        margin-bottom: 100px;
+        .title {
+            font-size: 5em;
+            margin-bottom: 1em;
+            span {
+                &:nth-of-type(1) {
+                    text-align: left;
+                }
+                &:nth-of-type(2) {
+                    text-align: right;
+                }
+                &:nth-of-type(3) {
+                    text-align: right;
+                }
+            }
+        }
+        .description {
+            width: 54%;
+            font-size: 1.4em;
+        }
+    }
+}
+
 // Desktop
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1567px) {
     .container {
         .title {
             font-size: 6.5em;

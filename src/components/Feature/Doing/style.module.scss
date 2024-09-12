@@ -1,0 +1,53 @@
+.container {
+    .title {
+
+        span {
+
+        }
+    }
+
+    .outer__container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        width: 80%;
+        margin: auto;
+        .inner__container {
+            .video {
+                width: 100%;
+            }
+
+            .flex__container {
+                display: flex;
+                .number {
+                    
+                }
+                
+                .context {
+                    .title {
+                        
+                    }
+                    
+                    .description {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1567px) {
+
+}
+
+@media screen and (min-width: 1567px) {
+
+}

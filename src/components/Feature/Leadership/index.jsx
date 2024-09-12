@@ -24,32 +24,32 @@ const content = [
 function Leadership() {
   const container = useRef(null);
 
-  useLayoutEffect(() => {
-    const loadGSAP = async () => {
-      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-      gsap.registerPlugin(ScrollTrigger);
+  // useLayoutEffect(() => {
+  //   const loadGSAP = async () => {
+  //     const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+  //     gsap.registerPlugin(ScrollTrigger);
 
-      const context = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: container.current,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-            // markers: true
-          }
-        });
+  //     const context = gsap.context(() => {
+  //       const tl = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: container.current,
+  //           start: 'top bottom',
+  //           end: 'bottom top',
+  //           scrub: true,
+  //           // markers: true
+  //         }
+  //       });
         
-        tl.to(container.current, { y: -100 });
-      });
+  //       tl.to(container.current, { y: -100 });
+  //     });
 
-      return () => context.revert();
-    };
+  //     return () => context.revert();
+  //   };
 
-    if (typeof window !== 'undefined') {
-      loadGSAP();
-    }
-  }, []);
+  //   if (typeof window !== 'undefined') {
+  //     loadGSAP();
+  //   }
+  // }, []);
 
   return (
     <div ref={container} className={styles.container}>

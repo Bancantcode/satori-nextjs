@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'Neue Montreal', sans-serif;
-  src: url('../../public/fonts/NeueMontreal-Regular.otf'),
-       url('../../public/fonts/NeueMontreal-Bold.otf');
+  font-family: 'NeueMontreal';
+  src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -17,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #F0F2F1;
+  font-family: 'NeueMontreal', sans-serif;
 }
 
 /* SCROLL BAR */

@@ -11,7 +11,7 @@
         font-family: 'Neue Montreal', sans-serif;
         line-height: 85%;
         color: #1D1D1B;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
     }
 
     .sentence {
@@ -29,7 +29,7 @@
     .container {
         height: 35vh;
         .parallax {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
         }
     }
 }
@@ -45,9 +45,18 @@
 }
 
 // Desktop
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) and (max-width: 1567px) {
     .container {
-        height: 75vh;
+        margin-bottom: 100px;
+        .parallax {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1567px) {
+    .container {
+        margin-bottom: 300px;
         .parallax {
             font-size: 5.5rem;
         }
@@ -57,7 +66,6 @@
 // Large desktop
 @media only screen and (min-width: 1921px) {
     .container {
-        height: 55vh;
         .parallax {
             font-size: 7.5rem;
         }
