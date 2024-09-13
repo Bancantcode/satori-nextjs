@@ -1,29 +1,40 @@
 .container {
+    width: 97%;
+    margin: auto;
     .title {
-
+        color: #1D1D1B;
+        font-family: 'Neue Montreal', sans-serif;
+        text-transform: uppercase;
+        line-height: 85%;
+        letter-spacing: -3px;
         span {
 
         }
     }
 
     .outer__container {
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        width: 80%;
+        display: flex;
         margin: auto;
+
         .inner__container {
+            display: flex;
+            justify-content: space-between;
+
             .video {
-                width: 100%;
             }
 
             .flex__container {
                 display: flex;
+                
+
                 .number {
                     
                 }
                 
                 .context {
-                    .title {
+                    .product__title {
+                        text-transform: uppercase;
+                        letter-spacing: -2px;
                         
                     }
                     
@@ -37,17 +48,159 @@
 }
 
 @media screen and (max-width: 768px) {
-
+    .container {
+        .title {
+            font-size: 3em;
+            span {
+    
+            }
+        }
+    
+        .outer__container {
+            flex-direction: column;
+            .inner__container {
+                .video {
+                    width: 25%;
+                    margin-bottom: 30px;
+                }
+    
+                .flex__container {
+                    justify-content: space-between;
+                    gap: 25px;
+                    .number {
+                        font-size: 1.4em;
+                    }
+                    
+                    .context {
+                        .product__title {
+                            font-size: 1.8em;
+                        }
+                        
+                        .description {
+                            font-size: 0.8em;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
+    .container {
+        .title {
+            font-size: 3em;
+            span {
+    
+            }
+        }
+    
+        .outer__container {
+            flex-direction: column;
+            .inner__container {
+                .video {
+                    width: 30%;
+                    margin-bottom: 30px;
+                }
+    
+                .flex__container {
+                    justify-content: space-between;
+                    gap: 60px;
+                    .number {
+                        font-size: 1.6em;
+                    }
+                    
+                    .context {
+                        .product__title {
+                            font-size: 2.2em;
+                        }
+                        
+                        .description {
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1567px) {
-
+    .container {
+        .title {
+            font-size: 4.5em;
+            span {
+    
+            }
+        }
+    
+        .outer__container {
+            flex-direction: column;
+            .inner__container {
+                .video {
+                    width: 25%;
+                    margin-bottom: 30px;
+                }
+    
+                .flex__container {
+                    justify-content: space-between;
+                    gap: 60px;
+                    .number {
+                        font-size: 2.2em;
+                    }
+                    
+                    .context {
+                        .product__title {
+                            font-size: 2.8em;
+                        }
+                        
+                        .description {
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1567px) {
+    .container {
+        .title {
+            font-size: 5.5em;
+            span {
+    
+            }
+        }
+    
+        .outer__container {
+            align-items: start;
+            width: 60%;
 
+            .inner__container {
+                flex-direction: column-reverse;
+                .video {
+                    height: 100%;
+                    width: auto;
+                }
+    
+                .flex__container {
+                    .number {
+                        font-size: 2.2em;
+                    }
+                    
+                    .context {
+                        .product__title {
+                            font-size: 2.8em;
+                        }
+                        
+                        .description {
+                            font-size: 1.25em;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
