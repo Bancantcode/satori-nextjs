@@ -13,7 +13,7 @@ function Doing() {
                 <div className={styles.number}>01</div>
                 <div className={styles.context}>
                   <div className={styles.product__title}>Strategy</div>
-                  <p className={styles.description}>CRAFTING UNIQUE COFFEE,<br /> ENHANCING CUSTOMER CONNECTIONS,<br /> SHARING COFFEE STORIES,<br /> COLLABORATING WITH COFFEEINFLUENCES,<br /> SOCIAL MEDIA STRATEGY</p>
+                  <p className={styles.description}>CRAFTING UNIQUE COFFEE,<br /> ENHANCING CUSTOMER CONNECTIONS,<br /> SHARING COFFEE STORIES,<br /> COLLABORATING WITH COFFEE INFLUENCES,<br /> SOCIAL MEDIA STRATEGY</p>
                 </div>
               </div>
               <video className={styles.video} src="/videos/Doing2.mp4" autoPlay loop muted controls={false} playsInline style={{ pointerEvents: 'none' }} />

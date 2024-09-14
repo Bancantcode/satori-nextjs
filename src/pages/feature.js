@@ -25,8 +25,8 @@ export default function FeaturePage() {
         <Header />
         <Landing />
         <Parallax />
-        <Leadership />
-        <Doing />
+        {/* <Leadership /> */}
+        {/* <Doing /> */}
         {/* <Infographic /> */}
     </>
   )
