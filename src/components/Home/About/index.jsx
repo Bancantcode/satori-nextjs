@@ -27,7 +27,7 @@ export default function About() {
                 scrollTrigger: {
                     trigger: container.current,
                     start: "top bottom",
-                    end: "+=800 bottom",
+                    end: "+=900 bottom",
                     scrub: true,
                     // markers: true,
                 }

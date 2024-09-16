@@ -27,7 +27,7 @@ export default function FeaturePage() {
         <Parallax />
         <Leadership />
         <Doing />
-        <Infographic />
+        {/* <Infographic /> */}
     </>
   )
 }
