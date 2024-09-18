@@ -1,5 +1,4 @@
 .container {
-    // position: relative;
     font-family: 'Neue Montreal', sans-serif;
     color: #1D1D1B;
     margin: auto;
@@ -84,6 +83,24 @@
                 padding: 10px;
                 border: 1px solid #1D1D1B;
                 text-align: left;
+
+                .rating__icon {
+                    cursor: pointer;
+                    // filter: grayscale(100%);
+                    // transition: filter 0.3s ease;
+                
+                    // &.active {
+                    //     filter: grayscale(0);
+                    // }
+                
+                    // &:hover {
+                    //     filter: grayscale(0);
+                    // }
+                
+                    // &:active {
+                    //     filter: grayscale(0); 
+                    // }
+                }
             }
 
             .item__quantity {
@@ -219,7 +236,7 @@
 @media only screen and (min-width: 1025px) {
     .container {
         padding: 8.5em 0;
-        width: 85%;
+        width: 80%;
         .title {
             font-size: 4.5em;
         }

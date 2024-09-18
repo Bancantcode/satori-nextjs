@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import Menu1 from '../../../../public/images/menu/SatoriSet.webp';
-import Menu2 from '../../../../public/images/menu/ColombiaTolimaGuavaBanana.webp';
-import Menu3 from '../../../../public/images/menu/RwandaGicumbiKarisimbi.webp';
-import Menu4 from '../../../../public/images/menu/EthiopiaBankoTaratu.webp';
-import Menu5 from '../../../../public/images/menu/EthiopiaYirgachefeBankoTaratu.webp';
-import Menu6 from '../../../../public/images/menu/GishikiMatcha.webp';
-import Menu7 from '../../../../public/images/menu/HondurasOcotepeque.webp';
-import Menu8 from '../../../../public/images/menu/KyotoTonic.webp';
-import Menu9 from '../../../../public/images/menu/UsuchaMatcha.webp';
-import Menu10 from '../../../../public/images/menu/ConicalBrewer.webp';
+import Menu1 from '/public/images/menu/SatoriSet.webp';
+import Menu2 from '/public/images/menu/ColombiaTolimaGuavaBanana.webp';
+import Menu3 from '/public/images/menu/RwandaGicumbiKarisimbi.webp';
+import Menu4 from '/public/images/menu/EthiopiaBankoTaratu.webp';
+import Menu5 from '/public/images/menu/EthiopiaYirgachefeBankoTaratu.webp';
+import Menu6 from '/public/images/menu/GishikiMatcha.webp';
+import Menu7 from '/public/images/menu/HondurasOcotepeque.webp';
+import Menu8 from '/public/images/menu/KyotoTonic.webp';
+import Menu9 from '/public/images/menu/UsuchaMatcha.webp';
+import Menu10 from '/public/images/menu/ConicalBrewer.webp';
+import CoffeeIcon from '/public/images/ratings/rating-icon.png';
 
 export default function Landing() {
     const menu__images = [Menu1, Menu2, Menu3, Menu4, Menu5, Menu6, Menu7, Menu8, Menu9, Menu10];
@@ -66,9 +67,8 @@ export default function Landing() {
         const existingProduct = cart.find(item => item.name === product.name);
         if (existingProduct) {
             setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
-        } 
-        else {
-            setCart([...cart, { ...product, quantity: 1 }]);
+        } else {
+            setCart([...cart, { ...product, quantity: 1, rating: 0 }]); // Add rating: 0 by default
         }
     };
 
@@ -78,6 +78,10 @@ export default function Landing() {
 
     const removeFromCart = (productName) => {
         setCart(cart.filter(item => item.name !== productName));
+    };
+
+    const updateRating = (productName, rating) => {
+        setCart(cart.map(item => item.name === productName ? { ...item, rating } : item));
     };
 
     const filteredMenu = menu__name.map((name, index) => ({
@@ -93,6 +97,13 @@ export default function Landing() {
         
         return isSearchMatch && isFilterMatch;
     });
+
+    const handleCheckout = () => {
+        cart.forEach(item => {
+            console.log(`Product: ${item.name}, Rating: ${item.rating}, Quantity: ${item.quantity}, Price: ₱${item.price * item.quantity}`);
+        });
+        alert("Your order has been approved!!");
+    };
 
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -123,6 +134,7 @@ export default function Landing() {
                                 <h2 className={styles.offer__name}>{product.name}</h2>
                                 <p className={styles.offer__description}>{product.description}</p>
                                 <p className={styles.offer__price}>Price: <span className={styles.highlight}>₱{product.price}</span></p>
+
                                 <button className={styles.add__item} onClick={() => addToCart(product)}>Add to Cart</button>
                             </div>
                         </div>
@@ -139,6 +151,7 @@ export default function Landing() {
                                 <th className={styles.table__header}>Product</th>
                                 <th className={styles.table__header}>Quantity</th>
                                 <th className={styles.table__header}>Price</th>
+                                <th className={styles.table__header}>Rating</th>
                                 <th className={styles.table__header}></th>
                             </tr>
                         </thead>
@@ -148,14 +161,29 @@ export default function Landing() {
                                     <td className={styles.table__data}>{item.name}</td>
                                     <td className={styles.table__data}><input className={styles.item__quantity} type="number" value={item.quantity} min="1" onChange={(e) => updateQuantity(item.name, parseInt(e.target.value, 10))} /></td>
                                     <td className={styles.table__data}>₱{item.price * item.quantity}</td>
-                                    <td className={styles.table__data}><button className={styles.remove__item} onClick={() => removeFromCart(item.name)}>Remove</button></td>
+                                    <td className={styles.table__data}>
+                                        {[1, 2, 3, 4, 5].map((value) => (
+                                            <Image
+                                                key={value}
+                                                src={CoffeeIcon}
+                                                alt={`${value} coffee rating`}
+                                                width={30}
+                                                height={30}
+                                                className={`${styles.rating__icon} ${value <= item.rating ? styles.active : ''}`}
+                                                onClick={() => updateRating(item.name, value)}
+                                            />
+                                        ))}
+                                    </td>
+                                    <td className={styles.table__data}>
+                                        <button className={styles.remove__item} onClick={() => removeFromCart(item.name)}>Remove</button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                     <div className={styles.cartTotal}>
                         <p className={styles.total__price}>Total: ₱{totalPrice}</p>
-                        <button className={styles.checkout}><a onClick={() => alert("Your order has been approved!!")} href="/menu">Checkout</a></button>
+                        <button className={styles.checkout}><a onClick={handleCheckout} href="/menu">Checkout</a></button>
                     </div>
                 </div>
             )}
