@@ -5,8 +5,9 @@ import Header from '@/components/Header'
 import Landing from '@/components/Feature/Landing'
 import Parallax from '@/components/Feature/Parallax'
 import Leadership from '@/components/Feature/Leadership'
-import Doing from '@/components/Feature/Doing';
-import Infographic from '@/components/Feature/Infographic';
+import TopPicked from '@/components/Feature/TopPicked'
+import Doing from '@/components/Feature/Doing'
+import Infographic from '@/components/Feature/Infographic'
 
 export default function FeaturePage() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function FeaturePage() {
         <Landing />
         <Parallax />
         <Leadership />
+        <TopPicked />
         <Doing />
         {/* <Infographic /> */}
     </>
