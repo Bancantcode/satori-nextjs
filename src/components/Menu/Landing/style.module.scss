@@ -194,6 +194,30 @@
             font-size: 0.8em;
             cursor: pointer;
         }
+
+        .cart {
+            .cart__table {
+                .table__header, .table__data {
+                    padding: 10px;
+                    border: 1px solid #1D1D1B;
+                    text-align: left;
+    
+                    &:nth-of-type(4) {
+                        display: none;
+                    }
+                }
+
+                .remove__item {
+                    background-color: #1D1D1B;
+                    font-size: 0.7em;
+                    color: #F0F2F1;
+                    padding: 10px 5px;
+                    text-transform: uppercase;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
@@ -286,8 +310,9 @@
                 }
             }
         }
+        
     }
-}
+}   
 
 @media only screen and (min-width: 1921px) {
     .container {

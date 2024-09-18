@@ -163,15 +163,7 @@ export default function Landing() {
                                     <td className={styles.table__data}>₱{item.price * item.quantity}</td>
                                     <td className={styles.table__data}>
                                         {[1, 2, 3, 4, 5].map((value) => (
-                                            <Image
-                                                key={value}
-                                                src={CoffeeIcon}
-                                                alt={`${value} coffee rating`}
-                                                width={30}
-                                                height={30}
-                                                className={`${styles.rating__icon} ${value <= item.rating ? styles.active : ''}`}
-                                                onClick={() => updateRating(item.name, value)}
-                                            />
+                                            <Image key={value} src={CoffeeIcon} alt={`${value} coffee rating`} width={30} height={30} className={`${styles.rating__icon} ${value <= item.rating ? styles.active : ''}`} onClick={() => updateRating(item.name, value)} />
                                         ))}
                                     </td>
                                     <td className={styles.table__data}>
