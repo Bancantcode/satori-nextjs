@@ -34,6 +34,18 @@
             }
         }
     }
+
+    .infographic__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        .infographic__images {
+            height: auto;
+            object-fit: cover;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -71,6 +83,14 @@
                         }
                     }
                 }
+            }
+        }
+
+        .infographic__container {
+            flex-direction: column;
+    
+            .infographic__images {
+                width: 100%;
             }
         }
     }
@@ -112,6 +132,14 @@
                 }
             }
         }
+
+        .infographic__container {
+            flex-direction: column;
+    
+            .infographic__images {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -151,11 +179,20 @@
                 }
             }
         }
+
+        .infographic__container {
+            flex-direction: column;
+    
+            .infographic__images {
+                width: 100%;
+            }
+        }
     }
 }
 
 @media screen and (min-width: 1567px) {
     .container {
+        padding-bottom: 80px;
         .title {
             font-size: 5.5em;
             text-align: center;
@@ -168,15 +205,15 @@
             .inner__container {
                 flex-direction: column-reverse;
                 .video {
-                    width: 500px;
                     object-fit: cover;
                     margin-bottom: 30px;
+                    height: 70%;
+                    width: 400px;
                 }
     
                 .flex__container {
                     height: 100%;
                     gap: 30px;
-                    justify-content: start;
                     .number {
                         font-size: 2.2em;
                         padding-top: 3px;
@@ -194,10 +231,32 @@
                 }
             }
             .inner__container:nth-child(1) {
+                .video {
+                    justify-content: center;
+                }
                 .flex__container {
+                    width: 400px;
+
                     .description {
-                        width: 70%;
+                        width: 80%;
                     }
+                }
+            }
+        }
+
+        .infographic__container {
+            flex-direction: row;
+            width: 75%;
+    
+            .infographic__images {
+                &:nth-of-type(1) {
+                    object-fit: fill;
+                    width: 55%;
+                    height: auto;
+                    margin-top: 80px;
+                }
+                &:nth-of-type(2) {
+                    display: none;                    
                 }
             }
         }

@@ -29,6 +29,9 @@
                 width: 100%;
                 object-fit: cover;
                 margin-bottom: 0.5em;
+                &:hover {
+                    cursor: crosshair;
+                }
             }
 
             .leadership__name {
@@ -36,7 +39,7 @@
             }
 
             .leadership__role {
-                color: #7C7C7C;
+                color: #5c5a5a;
             }
 
             .leadership__name, .leadership__role {

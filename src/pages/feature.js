@@ -29,7 +29,6 @@ export default function FeaturePage() {
         <Leadership />
         <TopPicked />
         <Doing />
-        {/* <Infographic /> */}
     </>
   )
 }

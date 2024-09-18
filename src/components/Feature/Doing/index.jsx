@@ -1,8 +1,37 @@
-import styles from './style.module.scss';
+'use client'
+import styles from './style.module.scss'
+import Image from 'next/image'
+import { useLayoutEffect, useRef } from 'react'
+import Infographic from '/public/images/Infographic.png'
+import Entrance from '/public/images/satori-entrance.webp'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Doing() {
+  const container = useRef(null);
+
+  useLayoutEffect(() => {
+    const context = gsap.context(() => {
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top bottom",
+          end: "+=900 bottom",
+          scrub: true,
+        }
+      })
+      
+      tl.to(container.current, { y: -350 })
+    })
+
+    return () => context.revert();
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={container}>
         <div className={styles.title}>
             <span>What we</span><br />
             <span>Love doing.</span>
@@ -38,6 +67,11 @@ function Doing() {
               </div>
               <video className={styles.video} src="/videos/Doing3.mp4" autoPlay loop muted controls={false} playsInline style={{ pointerEvents: 'none' }} />
             </div>
+        </div>
+
+        <div className={styles.infographic__container}>
+          <Image className={styles.infographic__images} src={Infographic} alt="infographic" />
+          <Image className={styles.infographic__images} src={Entrance} alt="satori" />
         </div>
     </div>
   )

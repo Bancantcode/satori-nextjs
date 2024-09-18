@@ -1,14 +1,12 @@
 'use client';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import Leadership1 from '../../../../public/images/leadership1.webp';
-import Leadership2 from '../../../../public/images/leadership2.webp';
-import Leadership3 from '../../../../public/images/leadership3.webp';
-import Leadership4 from '../../../../public/images/leadership4.webp';
-import Leadership5 from '../../../../public/images/leadership5.webp';
-import Leadership6 from '../../../../public/images/leadership6.webp';
-import { useLayoutEffect, useRef } from 'react';
-import gsap from 'gsap';
+import Leadership1 from '/public/images/leaderboard/leadership1.webp';
+import Leadership2 from '/public/images/leaderboard/leadership2.webp';
+import Leadership3 from '/public/images/leaderboard/leadership3.webp';
+import Leadership4 from '/public/images/leaderboard/leadership4.webp';
+import Leadership5 from '/public/images/leaderboard/leadership5.webp';
+import Leadership6 from '/public/images/leaderboard/leadership6.webp';
 
 const content = [
   {},
@@ -22,44 +20,14 @@ const content = [
 ];
 
 function Leadership() {
-  const container = useRef(null);
-
-  // useLayoutEffect(() => {
-  //   const loadGSAP = async () => {
-  //     const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-  //     gsap.registerPlugin(ScrollTrigger);
-
-  //     const context = gsap.context(() => {
-  //       const tl = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: container.current,
-  //           start: 'top bottom',
-  //           end: 'bottom top',
-  //           scrub: true,
-  //           // markers: true
-  //         }
-  //       });
-        
-  //       tl.to(container.current, { y: -100 });
-  //     });
-
-  //     return () => context.revert();
-  //   };
-
-  //   if (typeof window !== 'undefined') {
-  //     loadGSAP();
-  //   }
-  // }, []);
 
   return (
-    <div ref={container} className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.title}>
         <span>Leadership</span>
         <span>Board</span>
       </div>
-      <p className={styles.description}>
-        A team led by professionals from the entertainment and advertising world, merging skills of both industries together.
-      </p>
+      <p className={styles.description}>A team led by professionals from the entertainment and advertising world, merging skills of both industries together.</p>
       <div className={styles.leadership__container}>
         {content.map((item, index) => (
           <div key={index} className={styles.leadership__item}>
