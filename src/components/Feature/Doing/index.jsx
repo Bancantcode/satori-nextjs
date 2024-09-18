@@ -5,7 +5,7 @@ function Doing() {
     <div className={styles.container}>
         <div className={styles.title}>
             <span>What we</span><br />
-            <span>Love doing</span>
+            <span>Love doing.</span>
         </div>
         <div className={styles.outer__container}>
             <div className={styles.inner__container}>

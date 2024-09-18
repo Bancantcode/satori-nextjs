@@ -1,42 +1,30 @@
 .container {
-    width: 97%;
-    margin: auto;
+    background-color: #1D1D1B;
     .title {
-        color: #1D1D1B;
+        color: #F0F2F1;
         font-family: 'Neue Montreal', sans-serif;
         text-transform: uppercase;
         line-height: 85%;
         letter-spacing: -3px;
         margin-bottom: 0.8em;
-        span {
-
-        }
     }
 
     .outer__container {
         display: flex;
         margin: auto;
+        color: #F0F2F1;
 
         .inner__container {
             display: flex;
             justify-content: space-between;
 
-            .video {
-            }
-
             .flex__container {
                 display: flex;
-                
 
-                .number {
-                    
-                }
-                
                 .context {
                     .product__title {
                         text-transform: uppercase;
                         letter-spacing: -2px;
-                        
                     }
                     
                     .description {
@@ -50,11 +38,11 @@
 
 @media screen and (max-width: 768px) {
     .container {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: 60px 10px;
         .title {
             font-size: 3em;
-            span {
-    
-            }
         }
     
         .outer__container {
@@ -90,11 +78,11 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 80px 20px;
         .title {
             font-size: 3em;
-            span {
-    
-            }
         }
     
         .outer__container {
@@ -129,11 +117,11 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1567px) {
     .container {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 80px 40px;
         .title {
             font-size: 4.5em;
-            span {
-    
-            }
         }
     
         .outer__container {
@@ -170,26 +158,28 @@
     .container {
         .title {
             font-size: 5.5em;
-            span {
-    
-            }
+            text-align: center;
+            padding-top: 120px;
         }
     
         .outer__container {
-            width: 60%;
-            margin: 0;
+            justify-content: center;
 
             .inner__container {
                 flex-direction: column-reverse;
                 .video {
-                    // height: 100%;
                     width: 500px;
-                    height: auto;
+                    object-fit: cover;
+                    margin-bottom: 30px;
                 }
     
                 .flex__container {
+                    height: 100%;
+                    gap: 30px;
+                    justify-content: start;
                     .number {
                         font-size: 2.2em;
+                        padding-top: 3px;
                     }
                     
                     .context {
@@ -200,6 +190,13 @@
                         .description {
                             font-size: 1.25em;
                         }
+                    }
+                }
+            }
+            .inner__container:nth-child(1) {
+                .flex__container {
+                    .description {
+                        width: 70%;
                     }
                 }
             }
