@@ -43,3 +43,6 @@ videos/*
 !videos/*.js
 !videos/*.ts
 public/_next-video
+
+#package
+package.json
