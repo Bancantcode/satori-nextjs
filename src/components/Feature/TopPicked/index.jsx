@@ -6,12 +6,12 @@ import Image from 'next/image'
 
 function Doing() {
   return (
-    <div className={styles.container}>
-        <div className={styles.title}>
+    <main className={styles.container}>
+        <section className={styles.title}>
             <span>Top picked</span><br />
             <span>offerings</span>
-        </div>
-        <div className={styles.outer__container}>
+        </section>
+        <section className={styles.outer__container}>
             <div className={styles.inner__container}>
               <div className={styles.flex__container}>
                 <div className={styles.number}>01</div>
@@ -42,8 +42,8 @@ function Doing() {
               </div>
               <Image className={styles.top__pick} src={TopPicked3} alt="Milk based"/>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
   )
 }
 

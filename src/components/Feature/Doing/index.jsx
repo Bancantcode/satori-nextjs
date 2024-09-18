@@ -31,12 +31,12 @@ function Doing() {
   }, []);
 
   return (
-    <div className={styles.container} ref={container}>
-        <div className={styles.title}>
+    <main className={styles.container} ref={container}>
+        <section className={styles.title}>
             <span>What we</span><br />
             <span>Love doing.</span>
-        </div>
-        <div className={styles.outer__container}>
+        </section>
+        <section className={styles.outer__container}>
             <div className={styles.inner__container}>
               <div className={styles.flex__container}>
                 <div className={styles.number}>01</div>
@@ -67,13 +67,13 @@ function Doing() {
               </div>
               <video className={styles.video} src="/videos/Doing3.mp4" autoPlay loop muted controls={false} playsInline style={{ pointerEvents: 'none' }} />
             </div>
-        </div>
+        </section>
 
-        <div className={styles.infographic__container}>
+        <section className={styles.infographic__container}>
           <Image className={styles.infographic__images} src={Infographic} alt="infographic" />
           <Image className={styles.infographic__images} src={Entrance} alt="satori" />
-        </div>
-    </div>
+        </section>
+    </main>
   )
 }
 
