@@ -75,7 +75,7 @@ export default function Landing() {
           controls={false} //hide control
           playsInline //ensure it works on mobile devices
           style={{ pointerEvents: 'none' }} //disable interaction
-        />
+          />
       </div>
 
     </main>
