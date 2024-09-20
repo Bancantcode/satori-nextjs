@@ -67,7 +67,8 @@ export default function Landing() {
         const existingProduct = cart.find(item => item.name === product.name);
         if (existingProduct) {
             setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
-        } else {
+        } 
+        else {
             setCart([...cart, { ...product, quantity: 1, rating: 0 }]); // Add rating: 0 by default
         }
     };
