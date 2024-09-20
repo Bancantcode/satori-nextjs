@@ -32,6 +32,29 @@
                     .product__title {
                         text-transform: uppercase;
                         letter-spacing: -2px;
+                        position: relative;
+                    
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            display: inline-block;
+                            height: 1em;
+                            width: 100%;
+                            border-bottom: 1px solid;
+                            margin-top: 10px;
+                            opacity: 0;
+                            -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+                            transition: opacity 0.5s, transform 0.5s;
+                            -webkit-transform: scale(0, 1);
+                            transform: scale(0, 1);
+                        }
+                    
+                        &:hover::after {
+                            opacity: 1;
+                            -webkit-transform: scale(1);
+                            transform: scale(1);
+                        }
                     }
                     
                     .description {
@@ -165,6 +188,8 @@
     
         .outer__container {
             justify-content: center;
+            gap: 30px;
+            // background-color: red;
             // gap: 20px;
 
             .inner__container {
@@ -180,15 +205,18 @@
                     .number {
                         font-size: 2.2em;
                         padding-top: 3px;
+                        font-weight: 600;
                     }
                     
                     .context {
                         .product__title {
-                            font-size: 2.8em;
+                            font-size: 2.6em;
+                            font-weight: 600;
                         }
                         
                         .description {
                             font-size: 1.25em;
+                            
                         }
                     }
                 }

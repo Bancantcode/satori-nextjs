@@ -201,6 +201,7 @@
     
         .outer__container {
             justify-content: center;
+            gap: 30px;
 
             .inner__container {
                 flex-direction: column-reverse;
@@ -209,6 +210,8 @@
                     margin-bottom: 30px;
                     height: 70%;
                     width: 400px;
+                    border-top-left-radius: 40px;
+                    border-bottom-right-radius: 40px;
                 }
     
                 .flex__container {

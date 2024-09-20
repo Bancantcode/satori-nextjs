@@ -36,11 +36,16 @@
         .offer__container {
             .image {
                 object-fit: cover;
+                cursor: crosshair;
+                transition: 0.4s;
+                &:hover {
+                    transform: scale(1.015);
+                    filter: drop-shadow(8px 8px 10px gray);
+                }
             }
             .offer__info {
                 .offer__name {
                     text-transform: uppercase;
-                    letter-spacing: -1px;
                     margin: 0 0 0.4rem 0;
                     line-height: 95%;
                 }
