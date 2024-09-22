@@ -30,7 +30,7 @@ export default function MeetTheTeam() {
                     start: "top bottom",
                     end: "=+900 bottom",
                     scrub: true,
-                    markers: true
+                    // markers: true
                 },
             });
 
