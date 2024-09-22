@@ -130,7 +130,7 @@ export default function Landing() {
                 {
                     filteredMenu.map((product, index) => (
                         <div className={styles.offer__container} key={`l_${index}`}>
-                            <Image src={product.image} className={styles.image} alt={product.name} quality={75} priority={true} placeholder="blur" />
+                            <Image src={product.image} className={styles.image} alt={product.name} quality={75} priority placeholder="blur" />
                             <div className={styles.offer__info}>
                                 <h2 className={styles.offer__name}>{product.name}</h2>
                                 <p className={styles.offer__description}>{product.description}</p>
