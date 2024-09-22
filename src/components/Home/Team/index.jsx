@@ -28,8 +28,9 @@ export default function MeetTheTeam() {
                 scrollTrigger: {
                     trigger: videoContainerRef.current,
                     start: "top bottom",
-                    end: "=+1000 bottom",
+                    end: "=+900 bottom",
                     scrub: true,
+                    markers: true
                 },
             });
 

@@ -42,6 +42,7 @@
     margin-bottom: 4em;
     .title {
       font-size: 1.8em;
+      letter-spacing: -1px;
     }
     .accordion {
       .faq__item {
@@ -107,7 +108,7 @@
 @media screen and (min-width: 1024px) {
   .container {
     .title {
-      font-size: 4em;
+      font-size: 3.2em;
     }
     .accordion {
       .faq__item {
