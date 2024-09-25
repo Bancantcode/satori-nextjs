@@ -25,7 +25,7 @@ export default function Landing() {
         'Honduras Ocotepeque',
         'Guatamela Genuine',
         'Usucha Matcha',
-        'Conical Brewer'
+        'Conical Brewer',
     ];
     const menu__description = [
         'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
