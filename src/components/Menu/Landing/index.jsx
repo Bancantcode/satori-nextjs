@@ -57,11 +57,17 @@ export default function Landing() {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('');
+    const [selectedSort, setSelectedSort] = useState(''); 
     const [cart, setCart] = useState([]);
 
     const handleFilterChange = (e) => {
         setSelectedFilter(e.target.value);
     };
+
+    const handleSortChange = (e) => {
+        setSelectedSort(e.target.value);
+    };
+
 
     const addToCart = (product) => {
         const existingProduct = cart.find(item => item.name === product.name);
@@ -69,7 +75,7 @@ export default function Landing() {
             setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
         } 
         else {
-            setCart([...cart, { ...product, quantity: 1, rating: 0 }]); // Add rating: 0 by default
+            setCart([...cart, { ...product, quantity: 1, rating: 0 }]); // rating is 0 by default
         }
     };
 
@@ -97,6 +103,15 @@ export default function Landing() {
         const isFilterMatch = selectedFilter ? product.category === selectedFilter : true;
         
         return isSearchMatch && isFilterMatch;
+    })
+    .sort((a, b) => {
+        if (selectedSort === 'high-to-low') {
+            return b.price - a.price;
+        }
+        if (selectedSort === 'low-to-high') {
+            return a.price - b.price;
+        }
+        return 0;
     });
 
     const handleCheckout = () => {
@@ -122,6 +137,11 @@ export default function Landing() {
                         <option value="pour-over">Pour Over</option>
                         <option value="milk-based">Milk Based</option>
                         <option value="matcha">Matcha</option>
+                    </select>
+                    <select id="sort" className={styles.dropdown} value={selectedSort} onChange={handleSortChange}>
+                        <option value="">Sort by</option>
+                        <option value="low-to-high">Price: Low to High</option>
+                        <option value="high-to-low">Price: High to Low</option>
                     </select>
                 </div>
             </div>
