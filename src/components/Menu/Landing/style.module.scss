@@ -37,6 +37,8 @@
     .offers{
         display: grid;
         .offer__container {
+            display: flex;
+            flex-direction: column;
             .image {
                 object-fit: cover;
                 cursor: crosshair;
@@ -47,6 +49,9 @@
                 }
             }
             .offer__info {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
                 .offer__name {
                     text-transform: uppercase;
                     margin: 0 0 0.4rem 0;
@@ -60,6 +65,17 @@
                         font-weight: 600;
                     }
                 }
+            }
+            .add__item {
+                margin-top: auto;
+                background-color: #1D1D1B;
+                color: #F0F2F1;
+                padding: 15px 25px;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                align-self: flex-start;
             }
         }
     }
