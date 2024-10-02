@@ -25,6 +25,8 @@
             font-family: "Neue Montreal", sans-serif;
             font-weight: 400;
             margin: 0;
+            letter-spacing: -2px;
+            line-height: 100%;
         }
     }
     .images {
@@ -91,7 +93,34 @@
 }
 
 // Desktop
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) and (max-width: 1567px) {
+    .container {
+        flex-direction: column;
+        padding: 4em 0;
+        .texts {
+            text-align: center;
+            .menu__button {
+                padding: 20px 35px;
+                font-size: 1em;
+            }
+            .category {
+                margin-bottom: 0.8em;
+            }
+            .title {
+                font-size: 3.5em;
+                margin-bottom: 0.5em;
+            }
+        }
+        .images {
+            .img {
+                height: 100%;
+                width: 14em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1567px) {
     .container {
         justify-content: center;
         padding: 7em 0 12em 0;
@@ -108,6 +137,7 @@
             .title {
                 font-size: 4em;
                 margin-bottom: 0.5em;
+                width: 80%;
             }
         }
         .images {
