@@ -165,13 +165,30 @@
   .landing {
     .sliderContainer {
       .title {
-        font-size: 9.5em;
+        font-size: 7.5em;
       }
       
       .descriptionContainer {
         .description {
           font-size: 1.3em;
-          width: 35%;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1567px) {
+  .landing {
+    .sliderContainer {
+      .title {
+        font-size: 9em;
+      }
+      
+      .descriptionContainer {
+        .description {
+          font-size: 1.5em;
+          width: 45%;
         }
       }
     }

@@ -121,39 +121,40 @@
 }
 
 // Desktop
-@media only screen and (min-width: 1025px) and (max-width: 1536px) {
+@media only screen and (min-width: 1024px) and (max-width: 1536px) {
     .container {
         height: 100vh;
         margin-bottom: 10em;
         .images {
             .image__container {
                 &:nth-of-type(1) {
-                    height: calc(100vh - 80vh);
                     top: calc(100vh - 15vh);
-                    left: calc(100vw - 93vw);
+                    left: calc(100vw - 90vw);
+                    width: 300px;
                 }
 
                 &:nth-of-type(2) {
-                    height: calc(100vh - 70vh);
-                    top: calc(100vh - 80vh);
-                    left: calc(100vw - 108vw);
+                    top: calc(100vh - 60vh);
+                    left: calc(100vw - 95vw);
+                    width: 200px;
+                    object-fit: fill;
                 }
 
                 &:nth-of-type(3) {
-                    height: calc(100vh - 20vh);
-                    width: calc(100vw - 40vw);
+                    height: 65vh;
+                    width: auto;
                 }
 
                 &:nth-of-type(4) {
-                    height: calc(100vh - 70vh);
-                    top: calc(100vh - 85vh);
-                    right: calc(100vw - 106vw);
+                    width: 200px;
+                    top: calc(100vh - 75vh);
+                    right: calc(100vw - 95vw);
                 }
 
                 &:nth-of-type(5) {
-                    height: calc(100vh - 75vh);
-                    top: calc(100vh - 25vh);
-                    right: calc(100vw - 95vw);
+                    width: 200px;
+                    top: calc(100vh - 20vh);
+                    right: calc(100vw - 90vw);
                 }
             }
         }
