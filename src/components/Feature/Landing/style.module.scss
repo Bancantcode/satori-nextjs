@@ -33,6 +33,7 @@
 @media only screen and (max-width: 767px) {
     .container {
         height: 105vh;
+        margin-top: 50px;
         .title {
             width: 100%;
             font-size: 3.5em;
@@ -59,6 +60,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .container {
         height: 70vh;
+        margin-top: 200px;
         .title {
             font-size: 4em;
             margin-bottom: 1em;
