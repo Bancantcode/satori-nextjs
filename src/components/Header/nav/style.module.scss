@@ -72,3 +72,15 @@
         }
     }
 }
+
+@media only screen and (min-width: 1567px) {
+    .menu {
+        .body {
+            padding: 100px;
+            .nav {
+                margin-top: 80px;
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
