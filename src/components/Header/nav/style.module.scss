@@ -21,7 +21,7 @@
             font-size: 30px;
             text-transform: uppercase;
             gap: 12px;
-            margin-top: 80px;
+            // margin-top: 80px;
             font-family: 'Neue Montreal', sans-serif;
 
             .header{
@@ -53,11 +53,22 @@
     .menu {
         width: 100vw;
         .body {
-            padding: 30px;
+            padding: 50px;
             .nav {
                 font-size: 20px;
             }
-            
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1567px) {
+    .menu {
+        .body {
+            padding: 50px;
+            .nav {
+                font-size: 20px;
+                margin-bottom: 100px;
+            }
         }
     }
 }
