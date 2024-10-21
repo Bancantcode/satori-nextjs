@@ -10,7 +10,6 @@
         width: 100%;
         padding: 20px;
         text-align: center;
-        // box-sizing: border-box;
 
         .title {
             font-style: italic;
@@ -206,5 +205,11 @@
                 margin-bottom: 20px;
             }
         }
+    }
+}
+
+@media screen and (min-width: 1567px) {
+    .container {
+        padding: 70px 10px;
     }
 }
