@@ -2,6 +2,7 @@
 import './globals.css'
 import styles from "./page.module.scss";
 import Lenis from 'lenis';
+import Head from 'next/head';
 import { useEffect, useState } from "react";
 import { AnimatePresence } from 'framer-motion';
 import PageReveal from '@/components/Home/Preloader';
@@ -28,6 +29,9 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <Head>
+        <html lang="en" />
+      </Head>
       <Landing />
       <About />
       <Feature />

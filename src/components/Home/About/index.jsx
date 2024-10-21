@@ -2,9 +2,9 @@
 import styles from './style.module.scss'
 import { useLayoutEffect, useRef } from 'react';
 import Image from 'next/image';
-import About1 from '../../../../public/images/about1.webp';
-import About2 from '../../../../public/images/about2.webp';
-import About3 from '../../../../public/images/about3.webp';
+import About1 from '/public/images/about1.webp';
+import About2 from '/public/images/about2.webp';
+import About3 from '/public/images/about3.webp';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -18,41 +18,25 @@ export default function About() {
     const buttonRef = useRef(null);
     const imageRef = useRef([]);
 
-    useLayoutEffect(() => {
-        // gsap.set([categoryRef.current, titleRef.current, buttonRef.current], { y: 200, opacity: 0, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
-        gsap.set(imageRef.current, { y: 100, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
+    // useLayoutEffect(() => {
+    //     gsap.set(imageRef.current, { y: 100, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
 
-        const context = gsap.context(() => {
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: container.current,
-                    start: "top bottom",
-                    end: "+=900 bottom",
-                    scrub: true,
-                    // markers: true,
-                }
-            });
+    //     const context = gsap.context(() => {
+    //         const tl = gsap.timeline({
+    //             scrollTrigger: {
+    //                 trigger: container.current,
+    //                 start: "top bottom",
+    //                 end: "+=900 bottom",
+    //                 scrub: true,
+    //                 // markers: true,
+    //             }
+    //         });
 
-            // tl.to(categoryRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 })
-            //   .to(titleRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
-            //   .to(buttonRef.current, { y: 0, opacity: 1, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5 },'-=0.3')
-              tl.to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
-        });
+    //         tl.to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
+    //     });
 
-        // parallax scroll on view
-        // gsap.to(container.current, {
-        //     y: window.innerWidth >= 1024 ? '-15%' : window.innerWidth >= 768 ? '-20%' : '-25%',
-        //     scrollTrigger: {
-        //         trigger: container.current,
-        //         start: "top bottom",
-        //         end: "bottom top",
-        //         scrub: true,
-        //         // markers: true,
-        //     }
-        // });
-
-        return () => context.revert();
-    }, []);
+    //     return () => context.revert();
+    // }, []);
 
     return (
         <div ref={container} className={styles.container}>

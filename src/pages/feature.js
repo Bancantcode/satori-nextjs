@@ -24,6 +24,7 @@ export default function feature() {
     <main>
       {/* Search Engine Optimization */}
       <Head>
+        <html lang="en" />
         <title>Satori Specialty Coffee - Feature</title>
         <meta name="description" content="Satori Specialty Coffee offers meticulously sourced, ethically grown, and perfectly roasted beans to elevate your coffee experience." />
         <meta property="og:title" content="Satori Specialty Coffee - Premium Roasts Delivered" />
