@@ -4,7 +4,6 @@
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-    width: 95%;
     margin: auto;
     .title {
         text-transform: uppercase;
@@ -32,11 +31,10 @@
 // Mobile
 @media only screen and (max-width: 767px) {
     .container {
-        height: 105vh;
-        margin-top: 50px;
+        padding: 1em;
         .title {
             width: 100%;
-            font-size: 3.5em;
+            font-size: 2.8em;
             margin-bottom: 1em;
             span {
                 &:nth-of-type(1) {
@@ -52,15 +50,45 @@
         }
         .description {
             width: 75%;
+            font-size: 0.8rem;
         }
     }
 }
 
 // Tablet
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         height: 70vh;
         margin-top: 200px;
+        padding: 1.6em;
+        .title {
+            font-size: 3.6em;
+            margin-bottom: 1em;
+            span {
+                &:nth-of-type(1) {
+                    text-align: left;
+                }
+                &:nth-of-type(2) {
+                    text-align: right;
+                }
+                &:nth-of-type(3) {
+                    text-align: right;
+                }
+            }
+        }
+        .description {
+            width: 54%;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1567px) {
+    .container {
+        margin: 200px 0 220px 0;
+        height: 50vh;
+        padding: 1.8em;
+
         .title {
             font-size: 4em;
             margin-bottom: 1em;
@@ -78,33 +106,7 @@
         }
         .description {
             width: 54%;
-        }
-    }
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1567px) {
-    .container {
-        margin-top: 200px;
-        height: 70vh;
-        margin-bottom: 100px;
-        .title {
-            font-size: 5em;
-            margin-bottom: 1em;
-            span {
-                &:nth-of-type(1) {
-                    text-align: left;
-                }
-                &:nth-of-type(2) {
-                    text-align: right;
-                }
-                &:nth-of-type(3) {
-                    text-align: right;
-                }
-            }
-        }
-        .description {
-            width: 54%;
-            font-size: 1.4em;
+            font-size: 1.2em;
         }
     }
 }
@@ -112,8 +114,10 @@
 // Desktop
 @media only screen and (min-width: 1567px) {
     .container {
+        margin-top: 80px;
+        padding: 1.8em;
         .title {
-            font-size: 6.5em;
+            font-size: 6em;
             margin-bottom: 1em;
             span {
                 &:nth-of-type(1) {
@@ -121,7 +125,7 @@
                 }
                 &:nth-of-type(2) {
                     text-align: left;
-                    padding-left: 2.5em;
+                    padding-left: 5em;
                 }
                 &:nth-of-type(3) {
                     text-align: right;
@@ -131,9 +135,7 @@
         .description {
             font-size: 1.25em;
             width: 33%;
-            position: absolute;
-            right: 0;
-            transform: translateY(10.5em);
+            align-self: end;
         }
     }
 }

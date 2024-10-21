@@ -3,7 +3,13 @@
     width: 100%;
     justify-content: space-between;
     font-size: 12px;
-    gap: 40px;
     font-family: 'Neue Montreal', sans-serif;
+    gap: 10px;
+    bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+    }
 }
 

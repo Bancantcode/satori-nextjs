@@ -79,7 +79,7 @@ export default function Landing() {
 
 
     const addToCart = (product) => {
-        alert("Product added. Scroll down to see cart")
+        alert("Item has been added. Scroll down to see cart")
         const existingProduct = cart.find(item => item.name === product.name);
         if (existingProduct) {
             setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
