@@ -1,6 +1,5 @@
 import '../app/globals.css';
 import { useEffect } from 'react';
-import Lenis from 'lenis';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Landing from '@/components/Feature/Landing';
@@ -8,21 +7,21 @@ import Parallax from '@/components/Feature/Parallax';
 import Leadership from '@/components/Feature/Leadership';
 import TopPicked from '@/components/Feature/TopPicked';
 import Doing from '@/components/Feature/Doing';
+import Lenis from 'lenis';
 
-export default function FeaturePage() {
+export default function feature() {
   useEffect(() => {
-    const lenis = new Lenis();
 
+    const lenis = new Lenis();
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
+    
     requestAnimationFrame(raf);
-  }, []);
-
+  }, [])
   return (
-    <>
+    <main>
       {/* Search Engine Optimization */}
       <Head>
         <title>Satori Specialty Coffee - Feature</title>
@@ -38,6 +37,6 @@ export default function FeaturePage() {
       <Leadership />
       <TopPicked />
       <Doing />
-    </>
+    </main>
   );
 }

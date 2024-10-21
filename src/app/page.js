@@ -12,22 +12,28 @@ import MeetTheTeam from "@/components/Home/Team";
 import FAQs from '@/components/Home/Faqs';
 import Newsletter from '@/components/Home/Newsletter'
 
+
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
-
   useEffect(() => {
-      const lenis = new Lenis()
-      
-      function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-      }
-      
-      requestAnimationFrame(raf)
+
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    
+    requestAnimationFrame(raf);
   }, [])
 
   return (
     <main className={styles.main}>
+      <Landing />
+      <About />
+      <Feature />
+      <MeetTheTeam />
+      <FAQs />
+      <Newsletter />
       {/* <AnimatePresence mode='wait'>
         {!isPreloaderComplete ? ( <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />) 
         : (
@@ -41,13 +47,6 @@ export default function Home() {
           </>
         )}
       </AnimatePresence> */}
-
-      <Landing />
-      <About />
-      <Feature />
-      <MeetTheTeam />
-      <FAQs />
-      <Newsletter />
     </main>
   );
 }

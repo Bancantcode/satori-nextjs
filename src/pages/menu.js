@@ -1,24 +1,23 @@
 import '../app/globals.css';
 import { useEffect } from 'react'
-import Lenis from 'lenis'
 import Header from '@/components/Header'
 import Landing from '@/components/Menu/Landing';
 import Head from 'next/head';
+import Lenis from 'lenis';
 
-export default function FeaturePage() {
+export default function menu() {
   useEffect(() => {
-    const lenis = new Lenis()
 
+    const lenis = new Lenis();
     function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
-
-    requestAnimationFrame(raf)
-  }, []);
-
+    
+    requestAnimationFrame(raf);
+  }, [])
   return (
-    <>
+    <main>
         {/* Search Engine Optimization */}
         <Head>
             <title>Satori Specialty Coffee - Menu</title>
@@ -29,6 +28,6 @@ export default function FeaturePage() {
         {/* Content */}
         <Header />
         <Landing />
-    </>
+    </main>
   )
 }
