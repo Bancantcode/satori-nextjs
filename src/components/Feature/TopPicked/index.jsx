@@ -1,7 +1,7 @@
 import styles from './style.module.scss'
 import TopPicked1 from '/public/images/about3.webp'
 import TopPicked2 from '/public/images/about1.webp'
-import TopPicked3 from '/public/images/menu/EthiopiaYirgachefeBankoTaratu.webp'
+import TopPicked3 from '/public/images/menu/1.webp'
 import Image from 'next/image'
 
 function Doing() {

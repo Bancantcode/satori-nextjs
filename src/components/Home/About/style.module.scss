@@ -91,7 +91,7 @@
     }
 }
 
-// Desktop
+// IPAD
 @media only screen and (min-width: 1024px) and (max-width: 1567px) {
     .container {
         flex-direction: column;
@@ -119,6 +119,7 @@
     }
 }
 
+// DESKTOP
 @media screen and (min-width: 1567px) {
     .container {
         justify-content: center;

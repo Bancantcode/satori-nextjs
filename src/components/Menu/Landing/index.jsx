@@ -1,43 +1,52 @@
 import { useState } from 'react';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import Menu1 from '/public/images/menu/SatoriSet.webp';
-import Menu2 from '/public/images/menu/ColombiaTolimaGuavaBanana.webp';
-import Menu3 from '/public/images/menu/RwandaGicumbiKarisimbi.webp';
-import Menu4 from '/public/images/menu/EthiopiaBankoTaratu.webp';
-import Menu5 from '/public/images/menu/EthiopiaYirgachefeBankoTaratu.webp';
-import Menu6 from '/public/images/menu/GishikiMatcha.webp';
-import Menu7 from '/public/images/menu/HondurasOcotepeque.webp';
-import Menu8 from '/public/images/menu/KyotoTonic.webp';
-import Menu9 from '/public/images/menu/UsuchaMatcha.webp';
-import Menu10 from '/public/images/menu/ConicalBrewer.webp';
+import Menu1 from '/public/images/menu/1.webp';
+import Menu2 from '/public/images/menu/2.webp';
+import Menu3 from '/public/images/menu/3.webp';
+import Menu4 from '/public/images/menu/4.webp';
+import Menu5 from '/public/images/menu/5.webp';
+import Menu6 from '/public/images/menu/6.webp';
+import Menu7 from '/public/images/menu/7.webp';
+import Menu8 from '/public/images/menu/8.webp';
+import Menu9 from '/public/images/menu/9.webp';
+import Menu10 from '/public/images/menu/10.webp';
 import CoffeeIcon from '/public/images/ratings/rating-icon.png';
 
 export default function Landing() {
     const menu__images = [Menu1, Menu2, Menu3, Menu4, Menu5, Menu6, Menu7, Menu8, Menu9, Menu10];
     const menu__name = [
-        '*SATORI* 4 set of 3oz',
-        'Colombia Tolima Guava Banana',
-        'Rwanda Gicumbi Karisimbi',
-        'Ethiopia Banko Taratu',
-        'Ethiopia Yirgachef Banko Taratu',
+        'Satori Set',
+        'Amai Latte',
         'Gishiki Matcha',
-        'Honduras Ocotepeque',
-        'Guatamela Genuine',
-        'Usucha Matcha',
+        'Amai Latte',
+        'Cappuccino',
+        'Usuchi Matcha',
+        'Latte',
+        'Cappuccino',
+        'Cortado',
         'Conical Brewer',
     ];
     const menu__description = [
         'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Hario Switch / Aeropress (Pour-over)',
-        'Single shot espresso + 3oz (Espresso)',
-        'Single shot (with complimentary Rosquillos) (Espresso)',
-        '(Hot / Iced / Blended) (Espresso)',
-        '(Hot / Iced) + Syrup',
-        'Frozen Beans (Espresso & Milk based)',
-        'Kyoto Tonic (Pour-over)',
-        '(Hot / Iced) + Syrup',
-        'Origami (Hot / Iced) (Pour-over)',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
+        // 'Hario Switch / Aeropress (Pour-over)',
+        // 'Single shot espresso + 3oz (Espresso)',
+        // 'Single shot (with complimentary Rosquillos) (Espresso)',
+        // '(Hot / Iced / Blended) (Espresso)',
+        // '(Hot / Iced) + Syrup',
+        // 'Frozen Beans (Espresso & Milk based)',
+        // 'Kyoto Tonic (Pour-over)',
+        // '(Hot / Iced) + Syrup',
+        // 'Origami (Hot / Iced) (Pour-over)',
     ];
 
     const menu__category = [
@@ -53,7 +62,7 @@ export default function Landing() {
         'pour-over'
     ];
 
-    const menu__price = [465, 300, 390, 290, 225, 270, 330, 300, 205, 300];
+    const menu__price = ["465.00", "300.00", "390.00", "290.00", "225.00", "270.00", "330.00", "300.00", "205.00", "300.00"];
 
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('');
@@ -70,6 +79,7 @@ export default function Landing() {
 
 
     const addToCart = (product) => {
+        alert("Product added. Scroll down to see cart")
         const existingProduct = cart.find(item => item.name === product.name);
         if (existingProduct) {
             setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
@@ -154,8 +164,7 @@ export default function Landing() {
                             <div className={styles.offer__info}>
                                 <h2 className={styles.offer__name}>{product.name}</h2>
                                 <p className={styles.offer__description}>{product.description}</p>
-                                <p className={styles.offer__price}>Price: <span className={styles.highlight}>₱{product.price}</span></p>
-
+                                <p className={styles.offer__price}><span className={styles.highlight}>₱{product.price}</span></p>
                                 <button className={styles.add__item} onClick={() => addToCart(product)}>Add to Cart</button>
                             </div>
                         </div>

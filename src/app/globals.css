@@ -14,11 +14,12 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: #F0F2F1;
   font-family: 'NeueMontreal', sans-serif;
 }

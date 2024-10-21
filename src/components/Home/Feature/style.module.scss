@@ -120,7 +120,7 @@
     }
 }
 
-// Desktop
+// IPAD
 @media only screen and (min-width: 1024px) and (max-width: 1536px) {
     .container {
         height: 100vh;
@@ -161,6 +161,7 @@
     }
 }
 
+// DESKTOP
 @media only screen and (min-width: 1537px) and (max-width: 1899px) {
     .container {
         height: 130vh;
