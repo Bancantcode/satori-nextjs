@@ -1,5 +1,8 @@
 .container {
     background-color: #1D1D1B;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
     .title {
         color: #F0F2F1;
         font-family: 'Neue Montreal', sans-serif;
@@ -54,7 +57,7 @@
         border-top-right-radius: 15px;
         padding: 60px 10px;
         .title {
-            font-size: 2.6em;
+            font-size: 2.2em;
         }
     
         .outer__container {
@@ -102,7 +105,7 @@
         border-top-right-radius: 20px;
         padding: 80px 20px;
         .title {
-            font-size: 3em;
+            font-size: 2.8em;
         }
     
         .outer__container {
@@ -149,7 +152,7 @@
         border-top-right-radius: 20px;
         padding: 80px 40px;
         .title {
-            font-size: 4.5em;
+            font-size: 3.6em;
         }
     
         .outer__container {
@@ -262,6 +265,15 @@
                     display: none;                    
                 }
             }
+        }
+    }
+}
+
+// 2560 x 1440 (large desktop)
+@media only screen and (min-width: 1921px) {
+    .container {
+        .title {
+            font-size: 6.5em;
         }
     }
 }

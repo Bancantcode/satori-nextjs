@@ -19,7 +19,7 @@ export default function Parallax() {
   const sentences = [sentence1, sentence2, sentence3, sentence4, sentence5];
 
   return (
-    <div ref={container} className={styles.container}>
+    <section ref={container} className={styles.container}>
       <div className={styles.parallax}>
         {sentences.map((sentence, index) => (
           <motion.div key={index} className={styles.sentence}>
@@ -37,6 +37,6 @@ export default function Parallax() {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -6,9 +6,9 @@ import Satori from '/public/images/satori-entrance.webp'
 
 export default function Infographic() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
         <Image className={styles.infograph} src={Infograph} alt="infographic"/>
         <Image className={styles.satori} src={Satori} alt="Satori" />
-    </div>
+    </section>
   )
 }

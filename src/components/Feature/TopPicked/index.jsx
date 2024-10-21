@@ -1,10 +1,41 @@
 import styles from './style.module.scss'
 import TopPicked1 from '/public/images/about3.webp'
 import TopPicked2 from '/public/images/about1.webp'
-import TopPicked3 from '/public/images/menu/1.webp'
+import TopPicked3 from '/public/images/menu/9.webp'
 import Image from 'next/image'
+import gsap from 'gsap'
+import { useLayoutEffect, useRef } from 'react'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Doing() {
+  // const container = useRef(null);
+
+  // useLayoutEffect(() => {
+  //   const context = gsap.context(() => {
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: container.current,
+  //         start: "top top",
+  //         end: "-=500 top",
+  //         scrub: true,
+  //         markers: true,
+  //         onEnter: () => {
+  //           gsap.to(container.current, { opacity: 1, duration: 0.5 }); // Ensure opacity is set to 1
+  //           gsap.set(container.current, { position: "sticky", bottom: 0, left: 0, width: "100%", zIndex: 1 }); // Set position to sticky and add zIndex
+  //         },
+  //         onLeaveBack: () => {
+  //           gsap.to(container.current, { opacity: 1, duration: 0.5 }); // Ensure opacity is set to 1
+  //           gsap.set(container.current, { position: "relative", zIndex: 0 }); // Reset position and zIndex
+  //         }
+  //       }
+  //     });
+  //   });
+
+  //   return () => context.revert();
+  // }, []);
+
   return (
     <main className={styles.container}>
         <section className={styles.title}>

@@ -12,7 +12,7 @@ const content = [
   {},
   { src: Leadership4, alt: "Leadership1", name: "Yuri Brunet", role: "Co-Founder" },
   { src: Leadership1, alt: "Leadership2", name: "Amber Brunet", role: "Barista" },
-  { src: Leadership2, alt: "Leadership4", name: "Tom Brunet", role: "Co-Founder" },
+  { src: Leadership2, alt: "Leadership4", name: "Maximiliam Yarz", role: "Co-Founder" },
   { src: Leadership6, alt: "Leadership5", name: "Ambroise Soule", role: "Barista" },
   { src: Leadership3, alt: "Leadership6", name: "Lily Traverse", role: "Co-Founder" },
   {},
@@ -22,7 +22,7 @@ const content = [
 function Leadership() {
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.title}>
         <span>Leadership</span>
         <span>Board</span>
@@ -43,7 +43,7 @@ function Leadership() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

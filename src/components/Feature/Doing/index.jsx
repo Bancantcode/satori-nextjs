@@ -12,23 +12,23 @@ gsap.registerPlugin(ScrollTrigger);
 function Doing() {
   const container = useRef(null);
 
-  useLayoutEffect(() => {
-    const context = gsap.context(() => {
+  // useLayoutEffect(() => {
+  //   const context = gsap.context(() => {
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top bottom",
-          end: "+=900 bottom",
-          scrub: true,
-        }
-      })
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: container.current,
+  //         start: "top bottom",
+  //         end: "+=900 bottom",
+  //         scrub: true,
+  //       }
+  //     })
       
-      tl.to(container.current, { y: -350 })
-    })
+  //     tl.to(container.current, { y: -350 })
+  //   })
 
-    return () => context.revert();
-  }, []);
+  //   return () => context.revert();
+  // }, []);
 
   return (
     <main className={styles.container} ref={container}>

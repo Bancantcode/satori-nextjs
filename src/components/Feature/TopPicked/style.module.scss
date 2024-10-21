@@ -8,30 +8,25 @@
         letter-spacing: -3px;
         margin-bottom: 0.8em;
     }
-
     .outer__container {
         display: flex;
         margin: auto;
         color: #1D1D1B;
-
         .inner__container {
             display: flex;
             justify-content: space-between;
-
             .top__pick {
                 object-fit: cover;
                 margin-bottom: 30px;
             }
-
             .flex__container {
                 display: flex;
-
                 .context {
                     .product__title {
                         text-transform: uppercase;
                         letter-spacing: -2px;
                         position: relative;
-                    
+                        margin-bottom: 1rem;
                         &::after {
                             content: '';
                             position: absolute;
@@ -47,14 +42,12 @@
                             -webkit-transform: scale(0, 1);
                             transform: scale(0, 1);
                         }
-                    
                         &:hover::after {
                             opacity: 1;
                             -webkit-transform: scale(1);
                             transform: scale(1);
                         }
                     }
-                    
                     .description {
                         width: 100%;
                     }
@@ -68,9 +61,8 @@
     .container {
         padding: 10px;
         .title {
-            font-size: 2.6em;
+            font-size: 2.2em;
         }
-    
         .outer__container {
             flex-direction: column;
             .inner__container {
@@ -78,19 +70,16 @@
                     width: 100px;
                     height: 170px;
                 }
-    
                 .flex__container {
                     justify-content: space-between;
                     gap: 25px;  
                     .number {
                         font-size: 1.4em;
                     }
-                    
                     .context {
                         .product__title {
                             font-size: 1.8em;
                         }
-                        
                         .description {
                             font-size: 0.8em;
                         }
@@ -105,9 +94,8 @@
     .container {
         padding: 20px;
         .title {
-            font-size: 3em;
+            font-size: 2.8em;
         }
-    
         .outer__container {
             flex-direction: column;
             .inner__container {
@@ -115,19 +103,15 @@
                     width: 200px;
                     height: 300px;
                 }
-    
                 .flex__container {
-                    // justify-content: space-between;
                     gap: 60px;
                     .number {
                         font-size: 1.6em;
                     }
-                    
                     .context {
                         .product__title {
                             font-size: 2.2em;
                         }
-                        
                         .description {
                             font-size: 1em;
                         }
@@ -141,11 +125,9 @@
 @media screen and (min-width: 1024px) and (max-width: 1567px) {
     .container {
         padding: 30px;
-
         .title {
-            font-size: 4.5em;
+            font-size: 3.6em;
         }
-    
         .outer__container {
             flex-direction: column;
             .inner__container {
@@ -183,20 +165,15 @@
             text-align: center;
             padding-top: 120px;
         }
-    
         .outer__container {
             justify-content: center;
             gap: 30px;
-            // background-color: red;
-            // gap: 20px;
-
             .inner__container {
                 flex-direction: column-reverse;
                 .top__pick {
                     width: 400px;
                     height: 550px;
                 }
-    
                 .flex__container {
                     gap: 30px;
                     justify-content: start;
@@ -205,13 +182,10 @@
                         padding-top: 3px;
                         font-weight: 600;
                     }
-                    
                     .context {
                         .product__title {
                             font-size: 2.6em;
-                            font-weight: 600;
                         }
-                        
                         .description {
                             font-size: 1.25em;
                             
@@ -219,6 +193,15 @@
                     }
                 }
             }
+        }
+    }
+}
+
+// 2560 x 1440 (large desktop)
+@media only screen and (min-width: 1921px) {
+    .container {
+        .title {
+            font-size: 6.5em;
         }
     }
 }

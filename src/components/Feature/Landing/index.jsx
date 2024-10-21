@@ -53,7 +53,7 @@ function Landing() {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div ref={titleRef} className={styles.title}>
         <span className={styles.title__span}>Within our community</span><br />
         <span className={styles.title__span}>Each coffee</span><br />
@@ -64,7 +64,7 @@ function Landing() {
           Leveraging a blend of expertise and a personal passion for high-quality coffee, Satori strives to elevate every customer experience and enhance the appreciation of specialty coffee.
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

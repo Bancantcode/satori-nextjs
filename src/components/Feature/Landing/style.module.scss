@@ -87,7 +87,7 @@
     .container {
         margin: 200px 0 220px 0;
         height: 50vh;
-        padding: 1.8em;
+        padding: 1.6em;
 
         .title {
             font-size: 4em;
@@ -116,6 +116,7 @@
     .container {
         margin-top: 80px;
         padding: 1.8em;
+        max-width: 1980px;
         .title {
             font-size: 6em;
             margin-bottom: 1em;
@@ -144,8 +145,10 @@
 @media only screen and (min-width: 1921px) {
     .container {
         height: 95vh;
+        padding: 2.8em;
+        max-width: 2560px;
         .title {
-            font-size: 8.5em;
+            font-size: 8em;
             span {
                 &:nth-of-type(2) {
                     text-align: left;
@@ -154,7 +157,7 @@
             }
         }
         .description {
-            font-size: 1.5em;
+            font-size: 1.8em;
         }
     }
 }
