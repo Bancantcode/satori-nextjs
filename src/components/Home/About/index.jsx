@@ -18,25 +18,25 @@ export default function About() {
     const buttonRef = useRef(null);
     const imageRef = useRef([]);
 
-    // useLayoutEffect(() => {
-    //     gsap.set(imageRef.current, { y: 100, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
+    useLayoutEffect(() => {
+        gsap.set(imageRef.current, { y: 100, clipPath: "polygon(0% 50%, 100% 50%, 100% 50%, 0% 50%)" });
 
-    //     const context = gsap.context(() => {
-    //         const tl = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: container.current,
-    //                 start: "top bottom",
-    //                 end: "+=900 bottom",
-    //                 scrub: true,
-    //                 // markers: true,
-    //             }
-    //         });
+        const context = gsap.context(() => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: container.current,
+                    start: "top bottom",
+                    end: "+=900 bottom",
+                    scrub: true,
+                    // markers: true,
+                }
+            });
 
-    //         tl.to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
-    //     });
+            tl.to(imageRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.5, stagger: 0.2 },'-=0.8');
+        });
 
-    //     return () => context.revert();
-    // }, []);
+        return () => context.revert();
+    }, []);
 
     return (
         <div ref={container} className={styles.container}>
