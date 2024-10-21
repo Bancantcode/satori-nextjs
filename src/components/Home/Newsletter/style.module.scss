@@ -8,15 +8,18 @@
         border: 1px solid #F0F2F1;
         text-transform: uppercase;
         width: 100%;
-        padding: 20px;
         text-align: center;
 
+        .type {
+            margin-bottom: .5em;
+        }
+
         .title {
-            font-style: italic;
             font-weight: 400;
             letter-spacing: -1px;
             margin-bottom: 15px; 
             line-height: 90%;
+            width: 100%;
         }
 
         .input__container {
@@ -61,66 +64,46 @@
 //mobile
 @media screen and (max-width: 768px) {
     .container {
-        padding: 20px;
         flex-direction: column;
+        padding: 1em;
 
-        .newsletter__container {
+        .newsletter__container, .career__container, .learn__container {
             width: 100%;
             padding: 15px 35px;
 
             .type {
                 font-size: 0.8em;
-                margin-bottom: 0;
             }
 
             .title {
-                font-size: 1.6em;
+                font-size: 1.4em;
                 margin: 5px auto 10px auto;
             }
 
             .input__container {
                 margin-bottom: 20px;
-                padding: 10px 0 0 0;
             }
-        }
-    
-        .career__container, .learn__container {
-            width: 100%;
-            padding: 15px;
-
-            .type {
-                font-size: 0.8em;
-                margin-bottom: 0;
-            }
-    
-            .title {
-                font-size: 1.4em;
-                margin: 5px auto 10px auto;
-                width: 59%;
-            }
-    
             .link {
                 font-size: 0.9em;
                 padding: 8px 25px;
                 margin-bottom: 20px;
             }
         }
+    
     }
 }
 
 //tablet
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
-        padding: 40px 60px;
+        padding: 1.6em;
         flex-direction: column;
 
-        .newsletter__container {
-            // width: 100%;
+        .newsletter__container, .career__container, .learn__container {
             padding: 15px 100px;
 
             .type {
                 font-size: 1em;
-                margin-bottom: 0;
             }
 
             .title {
@@ -129,8 +112,6 @@
             }
 
             .input__container {
-                margin-bottom: 20px;
-                padding: 10px 0 0 0;
                 .input {
                     font-size: 1.2em;
                 }
@@ -138,57 +119,36 @@
                     font-size: 1.2em;
                 }
             }
-        }
-    
-        .career__container, .learn__container {
-            width: 100%;
-            padding: 15px;
-
-            .type {
-                font-size: 1em;
-                margin-bottom: 0;
-            }
-    
-            .title {
-                font-size: 2em;
-                margin: 5px auto 10px auto;
-                width: 100%;
-            }
-    
             .link {
                 font-size: 1.2em;
                 padding: 10px 30px;
-                margin-bottom: 20px;
             }
         }
+    
     }
 }
 
 //desktop
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
     .container {
-        padding: 70px 40px;
+        padding: 1.8em;
         flex-direction: row;
         justify-content: center;
 
         .newsletter__container, .career__container, .learn__container {
-            flex-basis: 30%;
-            padding: 20px 70px;
+            padding: 2em;
             text-align: left;
 
             .type {
                 font-size: 1em;
-                margin-bottom: 0;
             }
 
             .title {
-                font-size: 1.6em;
-                margin: 5px auto 15px auto;
+                font-size: 1.2em;
             }
 
             .input__container {
                 margin-top: 40px;
-                padding: 0 50px 0 0;
 
                 .input {
                     font-size: 1em;
@@ -202,7 +162,6 @@
             .link {
                 font-size: 1.2em;
                 padding: 10px 30px;
-                margin-bottom: 20px;
             }
         }
     }
@@ -210,6 +169,21 @@
 
 @media screen and (min-width: 1567px) {
     .container {
-        padding: 70px 10px;
+        padding: 1.8em;
+
+        .newsletter__container, .career__container, .learn__container {
+            padding: 2em;
+            text-align: left;
+            max-width: 600px;
+
+            .title {
+                font-size: 1.5em;
+            }
+
+            .link {
+                font-size: 1.2em;
+                padding: 10px 30px;
+            }
+        }
     }
 }
