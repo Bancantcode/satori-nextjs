@@ -14,7 +14,6 @@ export default function Landing() {
 
     const setYValues = () => {
       const yValue = window.innerWidth <= 767 ? 45 : window.innerWidth <= 1024 ? 60 : 190;
-      
       const titleWords = titleRef.current.querySelectorAll("span");
       
       gsap.set(titleWords, { y: yValue, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", });
@@ -23,30 +22,19 @@ export default function Landing() {
       gsap.set(videoRef.current, { y: yValue, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)", });
     };
 
-    // const animateContent = () => {
-      // if (tl) tl.kill();
-      const titleWords = titleRef.current.querySelectorAll("span");
+    const titleWords = titleRef.current.querySelectorAll("span");
 
-      tl = gsap.timeline({ delay: 0.1 });
+    tl = gsap.timeline({ delay: 0.1 });
 
-      tl.to(titleWords, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.1, duration: 1, ease: "power3.inOut", })
-        .to(descriptionRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7, ease: "power3.inOut", },"-=0.4" )
-        .to(buttonRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7, ease: "power3.inOut", }, "-=0.4" )
-        .to(videoRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7, ease: "power3.inOut", }, "-=0.4" );
-    // };
+    tl.to(titleWords, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.1, duration: 1, ease: "power3.inOut", })
+      .to(descriptionRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7, ease: "power3.inOut", },"-=0.4" )
+      .to(buttonRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7, ease: "power3.inOut", }, "-=0.4" )
+      .to(videoRef.current, { y: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", duration: 0.7, ease: "power3.inOut", }, "-=0.4" );
 
-    //set value for yValue and start animation
     setYValues();
-    // animateContent();
-
-    // window.addEventListener('resize', () => {
-    //   setYValues(); //adjust value every resize
-    //   animateContent(); //run the function animateContent every resize
-    // });
 
     //cleanup
     return () => {
-      // window.removeEventListener('resize', animateContent);
       if (tl) tl.kill(); //kill timeline every unmount
     }
   }, []);
