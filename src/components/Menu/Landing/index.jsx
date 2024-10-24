@@ -141,7 +141,7 @@ export default function Landing() {
                 <input type="text" className={styles.search__input} placeholder="SEARCH" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 <div className={styles.dropdown__container}>
                     <select id="filter" className={styles.dropdown} value={selectedFilter} onChange={handleFilterChange}>
-                        <option value="">All</option>
+                        <option value="all">All</option>
                         <option value="signature">Signature</option>
                         <option value="espresso">Espresso</option>
                         <option value="pour-over">Pour Over</option>
@@ -149,7 +149,7 @@ export default function Landing() {
                         <option value="matcha">Matcha</option>
                     </select>
                     <select id="sort" className={styles.dropdown} value={selectedSort} onChange={handleSortChange}>
-                        <option value="">Sort by</option>
+                        <option value="sort">Sort by</option>
                         <option value="low-to-high">Price: Low to High</option>
                         <option value="high-to-low">Price: High to Low</option>
                     </select>
