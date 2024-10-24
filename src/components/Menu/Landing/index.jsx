@@ -1,84 +1,25 @@
 import { useState } from 'react';
+import { menuData } from './data';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import Menu1 from '/public/images/menu/1.webp';
-import Menu2 from '/public/images/menu/2.webp';
-import Menu3 from '/public/images/menu/3.webp';
-import Menu4 from '/public/images/menu/4.webp';
-import Menu5 from '/public/images/menu/5.webp';
-import Menu6 from '/public/images/menu/6.webp';
-import Menu7 from '/public/images/menu/7.webp';
-import Menu8 from '/public/images/menu/8.webp';
-import Menu9 from '/public/images/menu/9.webp';
-import Menu10 from '/public/images/menu/10.webp';
-import CoffeeIcon from '/public/images/ratings/rating-icon.png';
+import CoffeeIcon from '/public/images/ratings/rating-icon.png'
 
 export default function Landing() {
-    const menu__images = [Menu1, Menu2, Menu3, Menu4, Menu5, Menu6, Menu7, Menu8, Menu9, Menu10];
-    const menu__name = [
-        'Satori Set',
-        'Amai Latte',
-        'Tokyo Drip Tonic',
-        'Tokyo Drip Tonic',
-        '',
-        'Tokyo Drip',
-        'Gishiki Matcha',
-        'Latte',
-        'Cappuccino',
-        'Usuchi Matcha',
-    ];
-    const menu__description = [
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
-        // 'Hario Switch / Aeropress (Pour-over)',
-        // 'Single shot espresso + 3oz (Espresso)',
-        // 'Single shot (with complimentary Rosquillos) (Espresso)',
-        // '(Hot / Iced / Blended) (Espresso)',
-        // '(Hot / Iced) + Syrup',
-        // 'Frozen Beans (Espresso & Milk based)',
-        // 'Kyoto Tonic (Pour-over)',
-        // '(Hot / Iced) + Syrup',
-        // 'Origami (Hot / Iced) (Pour-over)',
-    ];
-
-    const menu__category = [
-        'signature',
-        'pour-over',
-        'espresso',
-        'espresso',
-        'espresso',
-        'matcha',
-        'milk-based',
-        'pour-over',
-        'matcha',
-        'pour-over'
-    ];
-
-    const menu__price = ["465.00", "300.00", "390.00", "290.00", "225.00", "270.00", "330.00", "300.00", "205.00", "300.00"];
+    const menu__images = menuData.map(item => item.image);
+    const menu__name = menuData.map(item => item.name);
+    const menu__description = menuData.map(item => item.description);
+    const menu__category = menuData.map(item => item.category);
+    const menu__price = menuData.map(item => item.price);
 
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedFilter, setSelectedFilter] = useState('');
     const [selectedSort, setSelectedSort] = useState(''); 
     const [cart, setCart] = useState([]);
     const [hoveredRating, setHoveredRating] = useState(null);
-    const [alertShown, setAlertShown] = useState(false); // New state to track alert
+    const [alertShown, setAlertShown] = useState(false);
 
-    const handleFilterChange = (e) => {
-        setSelectedFilter(e.target.value);
-    };
-
-    const handleSortChange = (e) => {
-        setSelectedSort(e.target.value);
-    };
-
+    const handleFilterChange = (e) => { setSelectedFilter(e.target.value); };
+    const handleSortChange = (e) => { setSelectedSort(e.target.value); };
 
     const addToCart = (product) => {
         if (!alertShown) {
@@ -90,44 +31,29 @@ export default function Landing() {
             setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
         } 
         else {
-            setCart([...cart, { ...product, quantity: 1, rating: 0 }]); // rating is 0 by default
+            setCart([...cart, { ...product, quantity: 1, rating: 0 }]); //rating is 0 by default
         }
     };
 
-    const updateQuantity = (productName, quantity) => {
-        setCart(cart.map(item => item.name === productName ? { ...item, quantity } : item)); 
-    };
-
-    const removeFromCart = (productName) => {
-        setCart(cart.filter(item => item.name !== productName));
-    };
-
-    const updateRating = (productName, rating) => {
-        setCart(cart.map(item => item.name === productName ? { ...item, rating } : item));
-    };
-
-    const filteredMenu = menu__name.map((name, index) => ({
-        image: menu__images[index],
-        name,
-        description: menu__description[index],
-        category: menu__category[index],
-        price: menu__price[index]
-    }))
-    .filter((product) => {
-        const isSearchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || product.description.toLowerCase().includes(searchQuery.toLowerCase());
-        const isFilterMatch = selectedFilter ? product.category === selectedFilter : true;
-        
-        return isSearchMatch && isFilterMatch;
-    })
-    .sort((a, b) => {
-        if (selectedSort === 'high-to-low') {
-            return b.price - a.price;
-        }
-        if (selectedSort === 'low-to-high') {
-            return a.price - b.price;
-        }
-        return 0;
-    });
+    const updateQuantity = (productName, quantity) => { setCart(cart.map(item => item.name === productName ? { ...item, quantity } : item)); };
+    const removeFromCart = (productName) => { setCart(cart.filter(item => item.name !== productName)); };
+    const updateRating = (productName, rating) => { setCart(cart.map(item => item.name === productName ? { ...item, rating } : item)); };
+    
+    const filteredMenu = menuData
+        .filter((product) => {
+            const isSearchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || product.description.toLowerCase().includes(searchQuery.toLowerCase());
+            const isFilterMatch = selectedFilter ? product.category === selectedFilter : true;
+            return isSearchMatch && isFilterMatch;
+        })
+        .sort((a, b) => {
+            if (selectedSort === 'high-to-low') {
+                return b.price - a.price;
+            }
+            if (selectedSort === 'low-to-high') {
+                return a.price - b.price;
+            }
+            return 0;
+        });
 
     const handleCheckout = () => {
         cart.forEach(item => {
@@ -146,7 +72,7 @@ export default function Landing() {
                 <input type="text" className={styles.search__input} placeholder="SEARCH" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 <div className={styles.dropdown__container}>
                     <select id="filter" className={styles.dropdown} value={selectedFilter} onChange={handleFilterChange}>
-                        <option value="all">All</option>
+                        <option value="">All</option>
                         <option value="signature">Signature</option>
                         <option value="espresso">Espresso</option>
                         <option value="pour-over">Pour Over</option>
@@ -154,7 +80,7 @@ export default function Landing() {
                         <option value="matcha">Matcha</option>
                     </select>
                     <select id="sort" className={styles.dropdown} value={selectedSort} onChange={handleSortChange}>
-                        <option value="sort">Sort by</option>
+                        <option value="">Sort by</option>
                         <option value="low-to-high">Price: Low to High</option>
                         <option value="high-to-low">Price: High to Low</option>
                     </select>
@@ -165,7 +91,7 @@ export default function Landing() {
                 {
                     filteredMenu.map((product, index) => (
                         <div className={styles.offer__container} key={`l_${index}`}>
-                            <Image src={product.image} className={styles.image} alt={product.name} quality={75} priority placeholder="blur" />
+                            <Image src={product.image} className={styles.image} alt={product.name} quality={75} priority width={product.width} height={product.height} />
                             <div className={styles.offer__info}>
                                 <h2 className={styles.offer__name}>{product.name}</h2>
                                 <p className={styles.offer__description}>{product.description}</p>
