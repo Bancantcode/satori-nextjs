@@ -18,14 +18,14 @@ export default function Landing() {
     const menu__name = [
         'Satori Set',
         'Amai Latte',
+        'Tokyo Drip Tonic',
+        'Tokyo Drip Tonic',
+        '',
+        'Tokyo Drip',
         'Gishiki Matcha',
-        'Amai Latte',
-        'Cappuccino',
-        'Usuchi Matcha',
         'Latte',
         'Cappuccino',
-        'Cortado',
-        'Conical Brewer',
+        'Usuchi Matcha',
     ];
     const menu__description = [
         'Tokyo Drip / Cold Brew / Tokyo Drip Tonic',
@@ -68,6 +68,8 @@ export default function Landing() {
     const [selectedFilter, setSelectedFilter] = useState('');
     const [selectedSort, setSelectedSort] = useState(''); 
     const [cart, setCart] = useState([]);
+    const [hoveredRating, setHoveredRating] = useState(null);
+    const [alertShown, setAlertShown] = useState(false); // New state to track alert
 
     const handleFilterChange = (e) => {
         setSelectedFilter(e.target.value);
@@ -79,7 +81,10 @@ export default function Landing() {
 
 
     const addToCart = (product) => {
-        alert("Item has been added. Scroll down to see cart")
+        if (!alertShown) {
+            alert("Item has been added. Scroll down to see cart");
+            setAlertShown(true);
+        }
         const existingProduct = cart.find(item => item.name === product.name);
         if (existingProduct) {
             setCart(cart.map(item => item.name === product.name ? { ...item, quantity: item.quantity + 1 } : item));
@@ -193,7 +198,17 @@ export default function Landing() {
                                     <td className={styles.table__data}>₱{item.price * item.quantity}</td>
                                     <td className={styles.table__data}>
                                         {[1, 2, 3, 4, 5].map((value) => (
-                                            <Image key={value} src={CoffeeIcon} alt={`${value} coffee rating`} width={30} height={30} className={`${styles.rating__icon} ${value <= item.rating ? styles.active : ''}`} onClick={() => updateRating(item.name, value)} />
+                                            <Image 
+                                                key={value} 
+                                                src={CoffeeIcon} 
+                                                alt={`${value} coffee rating`} 
+                                                width={30} 
+                                                height={30} 
+                                                className={`${styles.rating__icon} ${value <= (item.hoveredRating !== null ? item.hoveredRating : item.rating) ? styles.active : ''}`} 
+                                                onMouseEnter={() => setCart(cart.map(i => i.name === item.name ? { ...i, hoveredRating: value } : i))} 
+                                                onMouseLeave={() => setCart(cart.map(i => i.name === item.name ? { ...i, hoveredRating: null } : i))} 
+                                                onClick={() => updateRating(item.name, value)} 
+                                            />
                                         ))}
                                     </td>
                                     <td className={styles.table__data}>

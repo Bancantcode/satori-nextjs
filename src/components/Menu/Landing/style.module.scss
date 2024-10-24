@@ -109,6 +109,16 @@
 
                 .rating__icon {
                     cursor: pointer;
+                    transition: opacity 0.3s;
+                    opacity: 0.5;
+
+                    &.active {
+                        opacity: 1;
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
             }
 
