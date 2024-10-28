@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style.module.scss'
 
-const index = () => {
+const ContactLanding = () => {
   return (
     <section className={styles.container}>
         <h1>Reach Us.</h1>
@@ -24,4 +24,4 @@ const index = () => {
   )
 }
 
-export default index
+export default ContactLanding

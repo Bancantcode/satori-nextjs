@@ -17,7 +17,7 @@ export default function ContactUs() {
     const [contactNumber, setContactNumber] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [platform, setPlatform] = useState('email'); // Default to email
+    const [platform, setPlatform] = useState('email');
     const [infoOpen, setInfoOpen] = React.useState(false);
 
     const handleSubmit = (e) => {
@@ -45,7 +45,7 @@ export default function ContactUs() {
                     <button type="submit">Send</button>
                 </div>
             </form>
-            <LoadScript className={styles.map} googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+            <LoadScript className={styles.map} googleMapsApiKey={"AIzaSyDwVpWVvXAUyCZIyvrOdLHJQS9mprKfs_0"}> {/* should be in .env but i put it here */}
                 <GoogleMap mapContainerStyle={containerStyle} center={origin} zoom={15} >
                     <Marker position={origin} onClick={() => setInfoOpen(true)} />
                     {infoOpen && (
