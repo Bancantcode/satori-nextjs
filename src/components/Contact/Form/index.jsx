@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker, InfoWindow, AdvancedMarkerElement } from '@react-google-maps/api';
 import styles from './style.module.scss';
 
 const containerStyle = {

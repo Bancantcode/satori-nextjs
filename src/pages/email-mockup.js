@@ -1,3 +1,5 @@
+import '../app/globals.css';
+
 export default function EmailMockup() {
     return (
         <div>

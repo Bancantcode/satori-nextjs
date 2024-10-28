@@ -4,7 +4,7 @@
     gap: clamp(0.875rem, 0.8571rem + 0.0893vi, 0.9375rem);
     max-width: 1920px;
     margin: auto;
-    
+
     form {
         display: flex;
         flex-direction: column;
@@ -84,3 +84,18 @@
         }
     }
 }
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'ITCAvantGarde', sans-serif;
+    src: url('/fonts/ITCAvantGarde.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

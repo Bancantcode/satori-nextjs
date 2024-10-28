@@ -1,3 +1,4 @@
+import '../app/globals.css';
 import Head from 'next/head'
 import Header from '@/components/Header';
 import Landing from '@/components/Contact/Landing'
