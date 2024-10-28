@@ -12,6 +12,7 @@ import Feature from '@/components/Home/Feature';
 import MeetTheTeam from "@/components/Home/Team";
 import FAQs from '@/components/Home/Faqs';
 import Newsletter from '@/components/Home/Newsletter'
+import Footer from '@/components/Footer';
 
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
       <MeetTheTeam />
       <FAQs />
       <Newsletter />
+      <Footer />
       {/* <AnimatePresence mode='wait'>
         {!isPreloaderComplete ? ( <PageReveal key="preloader" onAnimationComplete={() => setIsPreloaderComplete(true)} />) 
         : (
@@ -48,6 +50,7 @@ export default function Home() {
             <MeetTheTeam />
             <FAQs />
             <Newsletter />
+            <Footer />
           </>
         )}
       </AnimatePresence> */}

@@ -2,6 +2,7 @@ import '../app/globals.css';
 import { useEffect } from 'react'
 import Header from '@/components/Header'
 import Landing from '@/components/Menu/Landing';
+import Footer from '@/components/Footer';
 import Head from 'next/head';
 import Lenis from 'lenis';
 
@@ -27,6 +28,7 @@ export default function menu() {
         {/* Content */}
         <Header />
         <Landing />
+        <Footer />
       </main>
     </>
   )

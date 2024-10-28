@@ -1,0 +1,203 @@
+.container {
+    padding: 4em 4em 2em;
+    color: #1D1D1B;
+    border-top: 1px solid #1D1D1B;
+
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin-bottom: clamp(4.5rem, 4.3571rem + 0.7143vi, 5rem);
+
+        a {
+            text-decoration: none;
+            color: #1D1D1B;
+            border-bottom: 1px solid #1D1D1B;
+            letter-spacing: -1px;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            
+            h1 {
+                font-size: 10em;
+                letter-spacing: -10px;
+                line-height: 100%;
+            }
+
+            a {
+                font-size: 2em;
+            }
+        }
+
+        .navigations {
+            
+            a {
+                font-size: 3.6em;
+                display: flex;
+                justify-content: space-between;
+                line-height: 100%;
+                letter-spacing: -4px;
+            }
+        }
+    }
+
+    .copyright {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%;
+        font-size: clamp(1rem, 0.928rem + 0.36vw, 1.25rem);
+        letter-spacing: -.5px;
+
+        .handcraft {
+            a {
+                color: #1D1D1B;
+                font-weight: bold;
+            }
+        }
+        .socials {
+            display: flex;
+            a {
+                color: #1D1D1B;
+                text-decoration: none;
+                i {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 2.4rem 1em;
+        .flex {
+            grid-template-columns: repeat(1, 1fr);
+            .main {
+                h1 {
+                    font-size: 5em;
+                    letter-spacing: -8px;
+                }
+
+                a {
+                    font-size: 1.2em;
+                }
+            }
+
+            .navigations {
+                grid-row: 2;
+                width: 100%;
+
+                a {
+                    font-size: 2.6em;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: clamp(0.9rem, 0.9rem + 0.07vw, 1.05rem);
+            .reserve {
+                grid-column: 1 / 13;
+            }
+
+            .handcraft {
+                grid-column: 1 / 9;
+            }
+
+            .socials {
+                grid-column: 9 / 12;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 2.4rem 1.4em;
+        .flex {
+            grid-template-columns: repeat(6, 1fr);
+            .main {
+                h1 {
+                    font-size: 7em;
+                    letter-spacing: -8px;
+                }
+
+                a {
+                    font-size: 1.2em;
+                }
+            }
+
+            .navigations {
+                grid-row: 2;
+                grid-column: 1 / 4;
+
+                a {
+                    font-size: 2.6em;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: clamp(0.9rem, 0.9rem + 0.07vw, 1.05rem);
+            .reserve {
+                grid-column: 1 / 13;
+            }
+
+            .handcraft {
+                grid-column: 1 / 7;
+            }
+
+            .socials {
+                grid-column: 8 / 13;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        .flex {
+            .navigations {
+                grid-row: 2;
+                grid-column: 1 / 13;
+            }
+        }
+
+        .reserve {
+            grid-column: 1 / 7;
+        }
+
+        .handcraft {
+            grid-column: 7 / 11;
+        }
+
+        .socials {
+            grid-column: 12 / 13;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1567px) {
+    .container {
+        .flex {
+            grid-template-rows: repeat(1, 1fr);
+            .navigations {
+                grid-row: 1;
+                grid-column: 5 / 13;
+                padding-left: 50px;
+            }
+        }
+
+        .copyright {
+            grid-template-rows: repeat(1, 1fr);
+        }
+    }  
+}

@@ -7,6 +7,7 @@ import Parallax from '@/components/Feature/Parallax';
 import Leadership from '@/components/Feature/Leadership';
 import TopPicked from '@/components/Feature/TopPicked';
 import Doing from '@/components/Feature/Doing';
+import Footer from '@/components/Footer';
 import Lenis from 'lenis';
 
 export default function feature() {
@@ -37,6 +38,7 @@ export default function feature() {
       <Leadership />
       <TopPicked />
       <Doing />
+      <Footer />
     </main>
   );
 }

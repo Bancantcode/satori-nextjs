@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '@/components/Header';
 import Landing from '@/components/Contact/Landing'
 import Form from '@/components/Contact/Form'
+import Footer from '@/components/Footer';
 
 const Contact = () => {
   return (
@@ -17,6 +18,7 @@ const Contact = () => {
         <Header />
         <Landing />
         <Form />
+        <Footer />
     </main>
   )
 }
