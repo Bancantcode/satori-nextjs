@@ -1,7 +1,8 @@
-import React from 'react'
+import Head from 'next/head'
+import Header from '@/components/Header';
+import Landing from '@/components/Contact/Landing'
 import Form from '@/components/Contact/Form'
 import Map from '@/components/Contact/Map'
-import Head from 'next/head'
 
 const Contact = () => {
   return (
@@ -13,6 +14,8 @@ const Contact = () => {
             <meta property="og:description" content="Experience the rich, complex flavors of our specialty coffee. Satori believes in sustainability, quality, and bringing the best beans to your cup." />
         </Head>
 
+        <Header />
+        <Landing />
         <Form />
         <Map />
     </main>

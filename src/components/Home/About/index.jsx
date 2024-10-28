@@ -41,7 +41,7 @@ export default function About() {
     return (
         <div ref={container} className={styles.container}>
             <div className={styles.texts}>
-                <p ref={categoryRef} className={styles.category}>• Menu</p>
+                <p ref={categoryRef} className={styles.category}>• Products</p>
                 <h1 ref={titleRef} className={styles.title}>What We Offer</h1>
                 <a href="/menu"><button ref={buttonRef} className={styles.menu__button}>View Menu</button></a>
             </div>

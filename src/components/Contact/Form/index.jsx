@@ -1,4 +1,3 @@
-// src/components/ContactUs/index.jsx
 import { useState } from 'react';
 import styles from './style.module.scss';
 
@@ -11,12 +10,10 @@ export default function ContactUs() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Redirect based on selected platform
         if (platform === 'email') {
-            // Redirect to email mockup page
             window.location.href = '/email-mockup';
-        } else {
-            // Redirect to social media mockup page
+        } 
+        else {
             window.location.href = '/social-media-mockup';
         }
     };
@@ -38,4 +35,3 @@ export default function ContactUs() {
         </div>
     );
 }
-

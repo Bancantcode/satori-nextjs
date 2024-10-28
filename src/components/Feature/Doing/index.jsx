@@ -1,7 +1,7 @@
 'use client'
 import styles from './style.module.scss'
 import Image from 'next/image'
-import { useLayoutEffect, useRef } from 'react'
+import { useRef } from 'react'
 import Infographic from '/public/images/Infographic.png'
 import Entrance from '/public/images/satori-entrance.webp'
 import gsap from 'gsap'
@@ -11,24 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Doing() {
   const container = useRef(null);
-
-  // useLayoutEffect(() => {
-  //   const context = gsap.context(() => {
-
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: container.current,
-  //         start: "top bottom",
-  //         end: "+=900 bottom",
-  //         scrub: true,
-  //       }
-  //     })
-      
-  //     tl.to(container.current, { y: -350 })
-  //   })
-
-  //   return () => context.revert();
-  // }, []);
 
   return (
     <main className={styles.container} ref={container}>

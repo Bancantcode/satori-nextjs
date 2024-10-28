@@ -35,9 +35,20 @@ export default function Landing() {
         }
     };
 
-    const updateQuantity = (productName, quantity) => { setCart(cart.map(item => item.name === productName ? { ...item, quantity } : item)); };
-    const removeFromCart = (productName) => { setCart(cart.filter(item => item.name !== productName)); };
-    const updateRating = (productName, rating) => { setCart(cart.map(item => item.name === productName ? { ...item, rating } : item)); };
+    // updating the quantity
+    const updateQuantity = (productName, quantity) => { 
+        setCart(cart.map(item => item.name === productName ? { ...item, quantity } : item)); 
+    };
+
+    // removing products in the cart
+    const removeFromCart = (productName) => { 
+        setCart(cart.filter(item => item.name !== productName)); 
+    };
+
+    // for the update rating
+    const updateRating = (productName, rating) => { 
+        setCart(cart.map(item => item.name === productName ? { ...item, rating } : item)); 
+    };
     
     const filteredMenu = menuData
         .filter((product) => {
@@ -55,12 +66,33 @@ export default function Landing() {
             return 0;
         });
 
-    const handleCheckout = () => {
-        cart.forEach(item => {
-            console.log(`Product: ${item.name}, Rating: ${item.rating}, Quantity: ${item.quantity}, Price: ₱${item.price * item.quantity}`);
-        });
-        alert("Your order has been approved!!");
-    };
+        const handleCheckout = async () => {
+            const orderDetails = cart.map(item => ({
+                name: item.name,
+                rating: item.rating,
+                quantity: item.quantity,
+                price: item.price * item.quantity
+            }));
+        
+            try {
+                const response = await fetch('/api/ordered-products', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ order: orderDetails })
+                });
+        
+                if (response.ok) {
+                    alert("Your order has been approved!!");
+                } 
+                else {
+                    alert("There was an issue with your order. Please try again.");
+                }
+            } 
+            catch (error) {
+                console.error("Error submitting order:", error);
+                alert("There was an error processing your order. Please try again.");
+            }
+        };
 
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
