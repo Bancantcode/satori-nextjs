@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styles from './style.module.scss';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import styles from './style.module.scss';
 
 const containerStyle = {
   width: '100%',
