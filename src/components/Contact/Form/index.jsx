@@ -45,7 +45,9 @@ export default function ContactUs() {
                     <button type="submit">Send</button>
                 </div>
             </form>
-            <LoadScript className={styles.map} googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+            {/* <LoadScript className={styles.map} googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}> */}
+            {/* having error when i put the api key in .env.local */}
+            <LoadScript className={styles.map} googleMapsApiKey={"AIzaSyDwVpWVvXAUyCZIyvrOdLHJQS9mprKfs_0"}>
                 <GoogleMap mapContainerStyle={containerStyle} center={origin} zoom={15} >
                     <Marker position={origin} onClick={() => setInfoOpen(true)} />
                     {infoOpen && (
