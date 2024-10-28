@@ -20,13 +20,30 @@ export default function ContactUs() {
     const [platform, setPlatform] = useState('email');
     const [infoOpen, setInfoOpen] = React.useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (platform === 'email') {
-            window.location.href = '/email-mockup';
-        } 
-        else {
-            window.location.href = '/social-media-mockup';
+        const order = { name, contactNumber, email, message, platform }; 
+
+        const response = await fetch('/api/customer-messages', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ order }), 
+        });
+
+        const responseData = await response.json();
+        console.log(responseData); 
+
+        if (response.ok) {
+            if (platform === 'email') {
+                window.location.href = '/email-mockup';
+            } else {
+                window.location.href = '/social-media-mockup';
+            }
+        } else {
+            // Handle error (optional)
+            console.error('Failed to submit order', responseData);
         }
     };
 

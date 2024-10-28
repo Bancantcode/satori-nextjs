@@ -3,7 +3,7 @@
     padding: 0 1.6rem;
     gap: clamp(0.875rem, 0.8571rem + 0.0893vi, 0.9375rem);
     max-width: 1920px;
-    margin-bottom: clamp(5.75rem, 6.2571rem + 1.2023vi, 7.25rem);
+    margin: 0 auto clamp(5.75rem, 6.2571rem + 1.2023vi, 7.25rem) auto;
 
     form {
         display: flex;

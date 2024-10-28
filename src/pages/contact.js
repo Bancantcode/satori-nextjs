@@ -4,8 +4,20 @@ import Header from '@/components/Header';
 import Landing from '@/components/Contact/Landing'
 import Form from '@/components/Contact/Form'
 import Footer from '@/components/Footer';
+import Lenis from 'lenis';
+import { useEffect } from 'react';
 
 const Contact = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    
+    requestAnimationFrame(raf);
+  }, [])
+  
   return (
     <main>
         <Head>
