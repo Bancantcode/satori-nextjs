@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GoogleMap, LoadScript, Marker, InfoWindow, AdvancedMarkerElement } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 import styles from './style.module.scss';
 
 const containerStyle = {
@@ -45,7 +45,7 @@ export default function ContactUs() {
                     <button type="submit">Send</button>
                 </div>
             </form>
-            <LoadScript className={styles.map} googleMapsApiKey={"AIzaSyDwVpWVvXAUyCZIyvrOdLHJQS9mprKfs_0"}> {/* should be in .env but i put it here */}
+            <LoadScript className={styles.map} googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
                 <GoogleMap mapContainerStyle={containerStyle} center={origin} zoom={15} >
                     <Marker position={origin} onClick={() => setInfoOpen(true)} />
                     {infoOpen && (
