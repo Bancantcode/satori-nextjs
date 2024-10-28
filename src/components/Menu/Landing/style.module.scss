@@ -7,8 +7,10 @@
         text-transform: uppercase;
         letter-spacing: -1px;
         font-weight: 600;
+        line-height: 85%;
         padding: 0;
-        margin: 0;
+        margin-bottom: clamp(2.25rem, 2.1786rem + 0.3571vi, 2.5rem);
+        // margin: 0;
     }
     .interfaces {
         display: flex;
@@ -171,7 +173,7 @@
     .container {
         padding: 10em 1em;
         .title {
-            font-size: 2.6em;
+            font-size: 2.8em;
         }
         .interfaces {
             margin: 1em 0 2.5em 0;
@@ -325,6 +327,9 @@
         max-width: 1980px;
         margin: auto;
         padding: 11em 2.3em;
+        .title {
+            font-size: 5em;
+        }
         .offers{
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;

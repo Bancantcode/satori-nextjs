@@ -10,13 +10,13 @@ const index = () => {
                 <p>We believe that the youth harness a vibrant energy capable of shaping a brighter tomorrow. Our mission is to channel our resources—our investments, our voice, and our creativity—into amplifying that energy through the exceptional experience of specialty coffee.</p>
             </div>
             <div className={styles.contact}>
-                <p>CEO Flats, Jupiter St. Bel - Air Makati City</p>
-                <p>+63 926 626 3723</p>
+                <a href="mailto:satorispecialtycoffee@gmail.com">CEO Flats, Jupiter St. Bel - Air Makati City</a>
+                <a href="tel:+639266263723">+63 926 626 3723</a>
             </div>
             <div className={styles.socials}>
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>Tiktok</p>
+                <a target="_blank" href="https://www.instagram.com/satori.mnl/">Instagram</a>
+                <a target="_blank" href="https://www.facebook.com/satorispecialtycoffee">Facebook</a>
+                <a target="_blank" href="https://www.tiktok.com/@satori.mnl?is_from_webapp=1&sender_device=pc">Tiktok</a>
             </div>
         </div>
     </section>

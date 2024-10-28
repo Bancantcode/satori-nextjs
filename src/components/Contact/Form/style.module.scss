@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    padding: 0 1.6rem;
+    gap: clamp(0.875rem, 0.8571rem + 0.0893vi, 0.9375rem);
+    max-width: 1920px;
+    margin: auto;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+
+        input, textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #1D1D1B;
+            font-size: clamp(0.9rem, 0.9rem + 0.07vw, 1.05rem);
+            text-transform: uppercase;
+            padding: 8px 0 8px 0;
+            margin-bottom: clamp(1.125rem, 1.0893rem + 0.1786vi, 1.25rem);
+        }
+
+        .flex {
+            gap: clamp(3.375rem, 3.2679rem + 0.5357vi, 3.75rem);
+            button {
+                background-color: #1D1D1B;
+                color: #F0F2F1;
+                border: none;
+                border-radius: .5em;
+                padding: 12px clamp(0.875rem, 0.8571rem + 0.0893vi, 0.9375rem);
+                width: 140px;
+                font-size: clamp(0.9rem, 0.9rem + 0.07vw, 1.05rem);
+                cursor: pointer;
+            }
+            
+            select {
+                width: 100%;
+                min-width: 10ch;
+                max-width: 25ch;
+                margin-right: 20px;
+                border: none;
+                padding: clamp(0.875rem, 0.8571rem + 0.0893vi, 0.9375rem) 0;
+                font-size: clamp(0.9rem, 0.9rem + 0.07vw, 1.05rem);
+                background-color: transparent;
+                margin-bottom: clamp(1.125rem, 1.0893rem + 0.1786vi, 1.25rem);
+                cursor: pointer;
+
+                option {
+                    border: none;
+                    background-color: #F0F2F1;
+                    color: #1D1D1B;
+                    font-size: 1rem;
+                    padding: 5px; 
+                }
+            }
+        }
+    }
+
+    .map {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 0.9rem;
+        flex-direction: column;
+
+        form {
+            width: 100%;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1567px) {
+    .container {
+        padding: 0 2rem;
+
+        form {
+            input, textarea {
+                width: 500px;
+            }
+        }
+    }
+}

@@ -1,5 +1,16 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './style.module.scss';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+
+const containerStyle = {
+  width: '100%',
+  height: '500px'
+};
+
+const origin = {
+  lat: 14.556410794803403,
+  lng: 121.0347952883736
+};
 
 export default function ContactUs() {
     const [name, setName] = useState('');
@@ -7,6 +18,7 @@ export default function ContactUs() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [platform, setPlatform] = useState('email'); // Default to email
+    const [infoOpen, setInfoOpen] = React.useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,19 +31,30 @@ export default function ContactUs() {
     };
 
     return (
-        <div className={styles.contactUs}>
-            <h1>Contact Us</h1>
+        <section className={styles.container}>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
                 <input type="text" placeholder="Contact Number" value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} required />
                 <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} required />
-                <select value={platform} onChange={(e) => setPlatform(e.target.value)}>
-                    <option value="email">Email Marketing</option>
-                    <option value="social-media">Social Media Marketing</option>
-                </select>
-                <button type="submit">Send</button>
+                <div className={styles.flex}>
+                    <select value={platform} onChange={(e) => setPlatform(e.target.value)}>
+                        <option value="email">Email Marketing</option>
+                        <option value="social-media">Social Media Marketing</option>
+                    </select>
+                    <button type="submit">Send</button>
+                </div>
             </form>
-        </div>
+            <LoadScript className={styles.map} googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+                <GoogleMap mapContainerStyle={containerStyle} center={origin} zoom={15} >
+                    <Marker position={origin} onClick={() => setInfoOpen(true)} />
+                    {infoOpen && (
+                    <InfoWindow position={origin} onCloseClick={() => setInfoOpen(false)} >
+                        <div>Satori Specialty Coffee</div>
+                    </InfoWindow>
+                    )}
+                </GoogleMap>
+            </LoadScript>
+        </section>
     );
 }
