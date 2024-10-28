@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react';
 import { menuData } from './data';
 import styles from './style.module.scss';
@@ -73,14 +74,16 @@ export default function Landing() {
                 quantity: item.quantity,
                 price: item.price * item.quantity
             }));
-        
+
+            console.log("Order Details:", orderDetails); // Log order details
+
             try {
                 const response = await fetch('/api/ordered-products', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ order: orderDetails })
                 });
-        
+
                 if (response.ok) {
                     alert("Your order has been approved!!");
                 } 

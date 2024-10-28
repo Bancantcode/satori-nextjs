@@ -1,11 +1,14 @@
-import '../app/globals.css';
+import '../app/globals.css'
+import Header from '@/components/Header'
+import EmailMarketing from '@/components/Marketing/Email';
+import Footer from '@/components/Footer';
 
 export default function EmailMockup() {
     return (
-        <div>
-            <h1>Email Mockup</h1>
-            <p>This is a mockup of the email content that would be sent.</p>
-            {/* Add more details about the email design here */}
-        </div>
+        <main>
+            <Header />
+            <EmailMarketing />
+            <Footer />
+        </main>
     );
 }

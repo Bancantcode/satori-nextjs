@@ -9,11 +9,10 @@ import Footer from './Footer';
 
 const navItems = [
   { title: "Home", href: "/", },
-  // { title: "About", href: "/about", },
   { title: "Menu", href: "/menu", },
   { title: "Feature", href: "/feature", },
-  // { title: "Specials", href: "/specials", },
-  // { title: "Careers", href: "/careers", },
+  { title: "Social Media Marketing", href: "/social-media-mockup", },
+  { title: "Email Marketing", href: "/email-mockup", },
   { title: "Contact", href: "/contact", },
 ]
 
