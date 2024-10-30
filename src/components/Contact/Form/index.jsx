@@ -22,14 +22,31 @@ export default function ContactUs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const order = { name, contactNumber, email, message, platform }; 
+
+        const formattedTimestamp = new Intl.DateTimeFormat('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true,
+        }).format(new Date());
+
+        const messageData = { 
+            name, 
+            contactNumber, 
+            email, 
+            message, 
+            platform, 
+            timestamp: formattedTimestamp
+        }; 
 
         const response = await fetch('/api/customer-messages', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ order }), 
+            body: JSON.stringify(messageData),
         });
 
         const responseData = await response.json();
@@ -42,7 +59,6 @@ export default function ContactUs() {
                 window.location.href = '/social-media-mockup';
             }
         } else {
-            // Handle error (optional)
             console.error('Failed to submit order', responseData);
         }
     };
@@ -63,7 +79,7 @@ export default function ContactUs() {
                 </div>
             </form>
             {/* <LoadScript className={styles.map} googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}> */}
-            {/* having error when i put the api key in .env.local */}
+            {/* im having error when i put the api key in .env.local */}
             <LoadScript className={styles.map} googleMapsApiKey={"AIzaSyDwVpWVvXAUyCZIyvrOdLHJQS9mprKfs_0"}>
                 <GoogleMap mapContainerStyle={containerStyle} center={origin} zoom={15} >
                     <Marker position={origin} onClick={() => setInfoOpen(true)} />

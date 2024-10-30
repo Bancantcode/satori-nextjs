@@ -11,6 +11,7 @@ const navItems = [
   { title: "Home", href: "/", },
   { title: "Menu", href: "/menu", },
   { title: "Feature", href: "/feature", },
+  { title: "Customer Details", href: "/customer", },
   { title: "Social Media Marketing", href: "/social-media-mockup", },
   { title: "Email Marketing", href: "/email-mockup", },
   { title: "Contact", href: "/contact", },

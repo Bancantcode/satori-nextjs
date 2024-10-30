@@ -15,7 +15,7 @@
             border: none;
             border-bottom: 1px solid #1D1D1B;
             font-size: clamp(0.9rem, 0.9rem + 0.07vw, 1.05rem);
-            text-transform: uppercase;
+            // text-transform: uppercase;
             padding: 8px 0 8px 0;
             margin-bottom: clamp(1.125rem, 1.0893rem + 0.1786vi, 1.25rem);
         }
@@ -84,18 +84,3 @@
         }
     }
 }
-
-@font-face {
-    font-family: 'NeueMontreal';
-    src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'ITCAvantGarde', sans-serif;
-    src: url('/fonts/ITCAvantGarde.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
