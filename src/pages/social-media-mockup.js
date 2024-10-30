@@ -14,7 +14,7 @@ export default function EmailMockup() {
         }
         
         requestAnimationFrame(raf);
-      }, [])
+    }, [])
 
     return (
         <main>

@@ -45,7 +45,7 @@ let customerMessages = [
         email: "sara@example.com",
         message: "See you soon!",
         platform: "whatsapp",
-        timestamp: "October 28, 2024 at 6:00 AM",
+        timestamp: "October 24, 2024 at 6:00 AM",
     },
     {
         name: "tom",
@@ -53,7 +53,7 @@ let customerMessages = [
         email: "tom@example.com",
         message: "Thanks for your help!",
         platform: "email",
-        timestamp: "October 28, 2024 at 7:00 AM",
+        timestamp: "October 15, 2024 at 7:00 AM",
     },
     {
         name: "lisa",
@@ -61,7 +61,7 @@ let customerMessages = [
         email: "lisa@example.com",
         message: "Happy to assist!",
         platform: "sms",
-        timestamp: "October 28, 2024 at 8:00 AM",
+        timestamp: "October 23, 2024 at 8:00 AM",
     },
     {
         name: "dave",
@@ -69,7 +69,7 @@ let customerMessages = [
         email: "dave@example.com",
         message: "Looking forward to it!",
         platform: "whatsapp",
-        timestamp: "October 28, 2024 at 9:00 AM",
+        timestamp: "October 25, 2024 at 9:00 AM",
     },
     {
         name: "emma",
@@ -77,7 +77,7 @@ let customerMessages = [
         email: "emma@example.com",
         message: "Have a great day!",
         platform: "email",
-        timestamp: "October 28, 2024 at 10:00 AM",
+        timestamp: "October 24, 2024 at 10:00 AM",
     }
 ];
 

@@ -17,6 +17,7 @@ export default function menu() {
     
     requestAnimationFrame(raf);
   }, [])
+  
   return (
     <>
       <Head>
