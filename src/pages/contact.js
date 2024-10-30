@@ -27,6 +27,7 @@ const Contact = () => {
             <meta property="og:description" content="Experience the rich, complex flavors of our specialty coffee. Satori believes in sustainability, quality, and bringing the best beans to your cup." />
         </Head>
 
+        {/* Content */}
         <Header />
         <Landing />
         <Form />
