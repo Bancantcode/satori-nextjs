@@ -93,6 +93,7 @@ export default function Landing() {
             } 
             catch (error) {
                 console.error("Error submitting order:", error);
+                alert("Order has been processed. Payment method is not implemented! \n\n Check order through /api/ordered-products")
             }
         };
 
