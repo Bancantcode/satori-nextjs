@@ -93,7 +93,6 @@ export default function Landing() {
             } 
             catch (error) {
                 console.error("Error submitting order:", error);
-                alert("There was an error processing your order. Please try again.");
             }
         };
 
