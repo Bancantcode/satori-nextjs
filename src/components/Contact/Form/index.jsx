@@ -23,6 +23,11 @@ export default function ContactUs() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        if (!/^\d{11}$/.test(contactNumber)) {
+            alert('Please enter a valid contact number that contains exactly 11 digits.');
+            return;
+        }
+
         const formattedTimestamp = new Intl.DateTimeFormat('en-US', {
             year: 'numeric',
             month: 'long',
