@@ -6,10 +6,9 @@
     font-family: 'Neue Montreal', sans-serif;
     gap: 10px;
     bottom: 0;
-}
 
-@media screen and (min-width: 768px) {
-    .footer {
+    a {
+        color: #F0F2F1;
+        text-decoration: none;
     }
 }
-
