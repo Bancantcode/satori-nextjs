@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import Nav from './nav';
 import Rounded from '../../common/RoundedButton';
 import Image from 'next/image';
-import Logo from '../../../public/images/satori_logo_black.jpg'
+import Logo from '/public/images/satori_logo_black.jpg'
 
 export default function index() {
     const header = useRef(null);

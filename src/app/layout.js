@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
     // add suppressHydrationWarning={true} to remove the error in html and body element
     <html lang="en" suppressHydrationWarning={true}> 
       <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body className={inter.className} suppressHydrationWarning={true}>

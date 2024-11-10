@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './style.module.scss'
 import 'remixicon/fonts/remixicon.css'
 
