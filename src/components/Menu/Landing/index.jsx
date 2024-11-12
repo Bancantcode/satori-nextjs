@@ -68,33 +68,7 @@ export default function Landing() {
         });
 
         const handleCheckout = async () => {
-            const orderDetails = cart.map(item => ({
-                name: item.name,
-                rating: item.rating,
-                quantity: item.quantity,
-                price: item.price * item.quantity
-            }));
-
-            console.log("Order Details:", orderDetails); // Log order details
-
-            try {
-                const response = await fetch('/api/ordered-products', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ order: orderDetails })
-                });
-
-                if (response.ok) {
-                    alert("Your order has been approved!!");
-                } 
-                else {
-                    alert("There was an issue with your order. Please try again.");
-                }
-            } 
-            catch (error) {
-                console.error("Error submitting order:", error);
-                alert("Order has been processed. Payment method is not implemented! \n\n Check order through /api/ordered-products")
-            }
+            alert("Order has been processed!")
         };
 
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);

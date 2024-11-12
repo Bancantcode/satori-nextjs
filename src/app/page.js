@@ -14,7 +14,6 @@ import FAQs from '@/components/Home/Faqs';
 import Newsletter from '@/components/Home/Newsletter'
 import Footer from '@/components/Footer';
 
-
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
   useEffect(() => {

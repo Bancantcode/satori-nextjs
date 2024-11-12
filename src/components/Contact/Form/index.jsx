@@ -28,44 +28,12 @@ export default function ContactUs() {
             return;
         }
 
-        const formattedTimestamp = new Intl.DateTimeFormat('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: 'numeric',
-            minute: 'numeric',
-            hour12: true,
-        }).format(new Date());
+        alert("Thank you for submitting!");
 
-        const messageData = { 
-            name, 
-            contactNumber, 
-            email, 
-            message, 
-            platform, 
-            timestamp: formattedTimestamp
-        }; 
-
-        const response = await fetch('/api/customer-messages', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(messageData),
-        });
-
-        const responseData = await response.json();
-        console.log(responseData); 
-
-        if (response.ok) {
-            if (platform === 'email') {
-                window.location.href = '/email-mockup';
-            } else {
-                window.location.href = '/social-media-mockup';
-            }
-        } else {
-            console.error('Failed to submit order', responseData);
-        }
+        setName('');
+        setContactNumber('');
+        setEmail('');
+        setMessage('');
     };
 
     return (
@@ -76,11 +44,7 @@ export default function ContactUs() {
                 <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} required />
                 <div className={styles.flex}>
-                    <select value={platform} onChange={(e) => setPlatform(e.target.value)}>
-                        <option value="email">Email Marketing</option>
-                        <option value="social-media">Social Media Marketing</option>
-                    </select>
-                    <button type="submit">Send</button>
+                    <button type="submit" onClick={() => handleSubmit}>Send</button>
                 </div>
             </form>
             {/* <LoadScript className={styles.map} googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}> */}
