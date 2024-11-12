@@ -1,7 +1,7 @@
 'use client'
+import styles from './style.module.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import styles from './style.module.scss';
 
 export default function Parallax() {
   const sentence1 = 'A coffee space designed';

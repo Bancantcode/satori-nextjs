@@ -1,9 +1,6 @@
 'use client'
 import styles from './style.module.scss'
-import Image from 'next/image'
 import { useRef } from 'react'
-import Infographic from '/public/images/Infographic.png'
-import Entrance from '/public/images/satori-entrance.webp'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
@@ -49,11 +46,6 @@ function Doing() {
               </div>
               <video className={styles.video} src="/videos/Doing3.mp4" autoPlay loop muted controls={false} playsInline style={{ pointerEvents: 'none' }} />
             </div>
-        </section>
-
-        <section className={styles.infographic__container}>
-          <Image className={styles.infographic__images} src={Infographic} alt="infographic" />
-          <Image className={styles.infographic__images} src={Entrance} alt="satori" />
         </section>
     </main>
   )
